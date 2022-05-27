@@ -553,12 +553,14 @@ $(document).ready(() => {
 
 <script type="text/javascript" src="assets/js/bodymovin.min.js"></script>
 
-<!-- contribute -->
-<script type="text/javascript" src="assets/js/community/network-node-dark.json"></script>
+<!-- Light version for network node looks ok for both light/dark.-->
+<!-- Dark version for other two and using filter invert and adjust brightness for light mode -->
+<!-- <script type="text/javascript" src="assets/js/community/network-node-dark.json"></script> -->
+<script type="text/javascript" src="assets/js/community/network-node-light.json"></script>
 <script type="text/javascript" src="assets/js/community/XRPL-grants-dark.json"></script>
+<!-- <script type="text/javascript" src="assets/js/community/XRPL-grants-light.json"></script> -->
 <script type="text/javascript" src="assets/js/community/careers-dark.json"></script>
-
-
+<!-- <script type="text/javascript" src="assets/js/community/careers-light.json"></script> -->
 
 <script type="text/javascript">
   function networkNodeAnimation(){
@@ -567,7 +569,7 @@ $(document).ready(() => {
       renderer: 'svg',
       loop: true,
       autoplay: true,
-      animationData: networkNodeDark
+      animationData: networkNodeLight
     });
   };
   
@@ -577,7 +579,7 @@ $(document).ready(() => {
       renderer: 'svg',
       loop: true,
       autoplay: true,
-      animationData: networkNodeDark
+      animationData: networkNodeLight
     });
   };
 
