@@ -53,7 +53,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v4a.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v4.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -125,6 +125,7 @@
           </div><!--./col-->
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
+            <a class="dropdown-item" href="code-samples.html">Code Samples</a>
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
@@ -150,15 +151,17 @@
             <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="contribute.html" id="topnav_contributehtml" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Community</span></a>
         <div class="dropdown-menu" aria-labelledby="topnav_contributehtml" id="topnav_dd_contributehtml">
-          <a class="dropdown-item dropdown-hero" id="dropdown-hero-for-contribute-to-the-xrpl-community" href="contribute.html">
-            <img id="top-nav-hero-contribute" alt="Contribute to the XRPL Community icon" />
+          <a class="dropdown-item dropdown-hero" id="dropdown-hero-for-contribute" href="contribute.html">
+            <img id="top-nav-hero-contribute" alt="Contribute icon" />
             <div class="dropdown-hero-text">
-              <h4>Contribute to the XRPL Community</h4>
+              <h4>Contribute</h4>
               <p>Join the conversation</p>
             </div>
           </a>
           <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="events.html">Events</a>
+            <a class="dropdown-item" href="ambassadors.html">Ambassadors</a>
+            <a class="dropdown-item external-link" href="https://jobs.xrpl.org/" target="_blank">XRPL Jobs</a>
             <a class="dropdown-item external-link" href="https://xrpl.org/blog/" target="_blank">Dev Blog</a>
             <a class="dropdown-item external-link" href="https://xrplgrants.org/" target="_blank">XRPL Grants</a>
             <a class="dropdown-item external-link" href="https://github.com/XRPLF/xrpl-dev-portal/" target="_blank">GitHub</a>
@@ -274,7 +277,7 @@
       <li class="list-inline-item d-block d-lg-inline-block">
         <a class="label label-decentralized-exchange" href="label-decentralized-exchange.html" title="Pages about the Decentralized Exchange built into the XRP Ledger.">
         Decentralized Exchange
-          <span class="badge badge-pill">9</span>
+          <span class="badge badge-pill">10</span>
         </a>
       </li>
       <li class="list-inline-item d-block d-lg-inline-block">
@@ -298,7 +301,7 @@
       <li class="list-inline-item d-block d-lg-inline-block">
         <a class="label label-non-fungible-tokens-nfts" href="label-nfts.html" title="Pages about non-fungible tokens.">
         Non-fungible Tokens, NFTs
-          <span class="badge badge-pill">11</span>
+          <span class="badge badge-pill">12</span>
         </a>
       </li>
       <li class="list-inline-item d-block d-lg-inline-block">
@@ -328,7 +331,7 @@
       <li class="list-inline-item d-block d-lg-inline-block">
         <a class="label label-tokens" href="label-tokens.html" title="Pages about issuing tokens in the XRP Ledger.">
         Tokens
-          <span class="badge badge-pill">28</span>
+          <span class="badge badge-pill">29</span>
         </a>
       </li>
       <li class="list-inline-item d-block d-lg-inline-block">
@@ -410,6 +413,13 @@
     <div class="card-body">
       <h4 class="card-title h5">References</h4>
       <p class="card-text">Complete references for different interfaces to the XRP Ledger.</p>
+    </div>
+    <div class="card-footer">&nbsp;</div>
+  </a>
+  <a class="card" href="code-samples.html">
+    <div class="card-body">
+      <h4 class="card-title h5">Code Samples</h4>
+      <p class="card-text">Browse sample code for building common use cases on the XRP Ledger.</p>
     </div>
     <div class="card-footer">&nbsp;</div>
   </a>
@@ -719,6 +729,8 @@
       <li class="level-1"><a href="use-tokens.html">Use Tokens</a></li>
               <li class="level-2"><a href="issue-a-fungible-token.html">Issue a Fungible Token</a></li>
         
+      <li class="level-2"><a href="trade-in-the-decentralized-exchange.html">Trade in the Decentralized Exchange</a></li>
+        
       <li class="level-2"><a href="nftoken-tester-tutorial.html">NFToken Tester Tutorial</a></li>
         
       <li class="level-2"><a href="enable-no-freeze.html">Enable No Freeze</a></li>
@@ -1003,6 +1015,8 @@
         
       <li class="level-4"><a href="account_lines.html">account_lines</a></li>
         
+      <li class="level-4"><a href="account_nfts.html">account_nfts</a></li>
+        
       <li class="level-4"><a href="account_objects.html">account_objects</a></li>
         
       <li class="level-4"><a href="account_offers.html">account_offers</a></li>
@@ -1042,6 +1056,10 @@
               <li class="level-4"><a href="book_offers.html">book_offers</a></li>
         
       <li class="level-4"><a href="deposit_authorized.html">deposit_authorized</a></li>
+        
+      <li class="level-4"><a href="nft_buy_offers.html">nft_buy_offers</a></li>
+        
+      <li class="level-4"><a href="nft_sell_offers.html">nft_sell_offers</a></li>
         
       <li class="level-4"><a href="path_find.html">path_find</a></li>
         
@@ -1166,6 +1184,16 @@
   </ul>
 </div>    </div>
     <div class="col-md-6 mt-20">
+      <a href="code-samples.html"><h5 class="mb-3">Code Samples</h5></a>
+
+
+
+<div class="children-display">
+  <ul>
+    
+  </ul>
+</div>    </div>
+    <div class="col-md-6 mt-20">
       <a href="dev-tools.html"><h5 class="mb-3">Dev Tools</h5></a>
 
 
@@ -1219,6 +1247,7 @@
             <li class="nav-item"><a href="tutorials.html" class="nav-link">Tutorials</a></li>
             <li class="nav-item"><a href="references.html" class="nav-link">References</a></li>
             <li class="nav-item"><a href="by-label.html" class="nav-link">Browse By Label</a></li>
+            <li class="nav-item"><a href="code-samples.html" class="nav-link">Code Samples</a></li>
             <li class="nav-item"><a href="dev-tools.html" class="nav-link">Dev Tools</a></li>
           </ul>
         </div><!--/.col -->
@@ -1226,9 +1255,11 @@
         <div class="col-lg">
           <h5>Community</h5>
           <ul class="nav footer-nav flex-column">
-            <li class="nav-item"><a href="contribute.html" class="nav-link">Contribute to the XRPL Community</a></li>
+            <li class="nav-item"><a href="contribute.html" class="nav-link">Contribute</a></li>
             <li class="nav-item"><a href="contribute-code.html" class="nav-link">Contribute Code to the XRP Ledger</a></li>
             <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+            <li class="nav-item"><a href="ambassadors.html" class="nav-link">Ambassadors</a></li>
+            <li class="nav-item"><a href="https://jobs.xrpl.org/" class="nav-link external-link">XRPL Jobs</a></li>
             <li class="nav-item"><a href="https://xrpl.org/blog/" class="nav-link external-link">Dev Blog</a></li>
             <li class="nav-item"><a href="https://xrplgrants.org/" class="nav-link external-link">XRPL Grants</a></li>
             <li class="nav-item"><a href="https://github.com/XRPLF/xrpl-dev-portal/" class="nav-link external-link">GitHub</a></li>
