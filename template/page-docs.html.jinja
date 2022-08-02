@@ -70,6 +70,7 @@
     </div>
     {% set curated_cards = currentpage.children|selectattr("html","ne","by-label.html")|selectattr("html","ne","faq.html")|map(attribute="html")|list %}
     {% set mobile_cols = 1 %}
+    {% set desktop_cols = 3 %}
     {% set show_blurbs = True %}
     {% include 'component-curated-cards.html.jinja' %}
   </section><!--/#doc-types-->
