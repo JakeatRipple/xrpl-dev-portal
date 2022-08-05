@@ -89,10 +89,18 @@
   <!-- End Google Tag Manager (noscript) -->
 
 <div class="top-banner fixed-top">
-  <div class="d-flex justify-content-center ">
-    <span><p class="mb-0">Read the proposal for a native AMM on XRPL</p></span>
-    <span><a href="https://github.com/XRPLF/XRPL-Standards/discussions/78" target="_blank" class="btn btn-outline-secondary">Review</a></span>
+  <!-- mobile -->
+  <div class="justify-content-center d-md-none">
+    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
+    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
   </div>
+  <!-- tablet and up -->
+  <div class="d-md-flex justify-content-center d-none">
+    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
+    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
+  </div>
+  
+
 </div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
@@ -373,7 +381,7 @@ Loading: <span class="s2">"/etc/opt/ripple/rippled.cfg"</span>
 <li><a href="require-destination-tags.html">Require destination tags</a> so that users can't send you payments without tagging the reason they sent it or the customer it's intended for.</li>
 <li><a href="set-up-multi-signing.html">Set Up Multi-Signing</a> for a higher bar of account security.</li>
 <li><a href="depositauth.html">Enable DepositAuth</a> so you can only receive payments you've explicitly accepted or from parties you've pre-approved.</li>
-<li><a href="become-an-xrp-ledger-gateway.html#enabling-require-auth">Require Auth</a> so that users can't open <a href="trust-lines-and-issuing.html">trust lines</a> to you without your permission. If you don't plan to use the XRP Ledger's decentralized exchange or <a href="tokens.html">token</a> features, you may want to do this as a precaution.</li>
+<li><a href="authorized-trust-lines.html#enabling-requireauth">Require Auth</a> so that users can't open <a href="trust-lines-and-issuing.html">trust lines</a> to you without your permission. If you don't plan to use the XRP Ledger's decentralized exchange or <a href="tokens.html">token</a> features, you may want to do this as a precaution.</li>
 <li><a href="become-an-xrp-ledger-gateway.html">Token Issuers</a> may have additional setup, such as:<ul>
 <li><a href="become-an-xrp-ledger-gateway.html#transfer-fees">Set a Transfer Fee</a> for users transferring your tokens.</li>
 <li><a href="become-an-xrp-ledger-gateway.html#disallow-xrp">Disallow XRP payments</a> if you plan to use this address for tokens only.</li>
@@ -1356,7 +1364,7 @@ Loading: <span class="s2">"/etc/opt/ripple/rippled.cfg"</span>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="become-an-xrp-ledger-gateway.html">Become an XRP Ledger Gateway</a>
+    <a class="nav-link nav-leaf" href="become-an-xrp-ledger-gateway.html">Become a Stablecoin Issuer</a>
   </div>
 
     </nav>
@@ -1454,7 +1462,7 @@ Loading: <span class="s2">"/etc/opt/ripple/rippled.cfg"</span>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="run-rippled-as-a-wallet-server.html">Run rippled as a Wallet Server</a>
+    <a class="nav-link nav-leaf" href="run-rippled-as-a-stock-server.html">Run rippled as a Stock Server</a>
   </div>
 
       

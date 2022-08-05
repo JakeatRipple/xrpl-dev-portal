@@ -89,10 +89,18 @@
   <!-- End Google Tag Manager (noscript) -->
 
 <div class="top-banner fixed-top">
-  <div class="d-flex justify-content-center ">
-    <span><p class="mb-0">Read the proposal for a native AMM on XRPL</p></span>
-    <span><a href="https://github.com/XRPLF/XRPL-Standards/discussions/78" target="_blank" class="btn btn-outline-secondary">Review</a></span>
+  <!-- mobile -->
+  <div class="justify-content-center d-md-none">
+    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
+    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
   </div>
+  <!-- tablet and up -->
+  <div class="d-md-flex justify-content-center d-none">
+    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
+    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
+  </div>
+  
+
 </div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
@@ -343,7 +351,7 @@ To install CMake 3.16.3:</p>
 </li>
 <li>
 <p>From a working directory, get the <code>rippled</code> source code. The <code>master</code> branch has the latest released version.</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-11" id="codeblock-11button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-11">git clone https://github.com/ripple/rippled.git
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-11" id="codeblock-11button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-11">git clone https://github.com/xrplf/rippled.git
 cd rippled
 git checkout master
 </code></pre></div>
@@ -1318,7 +1326,7 @@ cmake --build . --target dpkg
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="become-an-xrp-ledger-gateway.html">Become an XRP Ledger Gateway</a>
+    <a class="nav-link nav-leaf" href="become-an-xrp-ledger-gateway.html">Become a Stablecoin Issuer</a>
   </div>
 
     </nav>
@@ -1416,7 +1424,7 @@ cmake --build . --target dpkg
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="run-rippled-as-a-wallet-server.html">Run rippled as a Wallet Server</a>
+    <a class="nav-link nav-leaf" href="run-rippled-as-a-stock-server.html">Run rippled as a Stock Server</a>
   </div>
 
       
