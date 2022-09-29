@@ -55,7 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v6a.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -88,20 +88,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<div class="top-banner fixed-top">
-  <!-- mobile -->
-  <div class="justify-content-center d-md-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
-    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
-  </div>
-  <!-- tablet and up -->
-  <div class="d-md-flex justify-content-center d-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
-    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
-  </div>
-  
-
-</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,6 +142,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
+          </div><!--./col-->
+          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
@@ -305,16 +293,16 @@ rippled fetch_info
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left"><code>Field</code></th>
-<th align="left">Type</th>
-<th align="left">Description</th>
+<th style="text-align: left;"><code>Field</code></th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>clear</code></td>
-<td align="left">Boolean</td>
-<td align="left">If <code>true</code>, reset current fetches. Otherwise, only get status of fetches in progress.</td>
+<td style="text-align: left;"><code>clear</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">If <code>true</code>, reset current fetches. Otherwise, only get status of fetches in progress.</td>
 </tr>
 </tbody>
 </table>
@@ -399,16 +387,16 @@ rippled fetch_info
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left"><code>Field</code></th>
-<th align="left">Type</th>
-<th align="left">Description</th>
+<th style="text-align: left;"><code>Field</code></th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>info</code></td>
-<td align="left">Object</td>
-<td align="left">Map of objects being fetched and the status of that object being fetched. A ledger being fetched may be identified by its <a href="basic-data-types.html#ledger-index">ledger index</a>; ledgers and other objects being fetched may also be identified by their hashes.</td>
+<td style="text-align: left;"><code>info</code></td>
+<td style="text-align: left;">Object</td>
+<td style="text-align: left;">Map of objects being fetched and the status of that object being fetched. A ledger being fetched may be identified by its <a href="basic-data-types.html#ledger-index">ledger index</a>; ledgers and other objects being fetched may also be identified by their hashes.</td>
 </tr>
 </tbody>
 </table>
@@ -416,41 +404,41 @@ rippled fetch_info
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left"><code>Field</code></th>
-<th align="left">Type</th>
-<th align="left">Description</th>
+<th style="text-align: left;"><code>Field</code></th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>hash</code></td>
-<td align="left">String</td>
-<td align="left">The hash of the item being fetched.</td>
+<td style="text-align: left;"><code>hash</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">The hash of the item being fetched.</td>
 </tr>
 <tr>
-<td align="left"><code>have_header</code></td>
-<td align="left">Boolean</td>
-<td align="left">For a ledger, whether this server has already obtained the ledger's header section.</td>
+<td style="text-align: left;"><code>have_header</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">For a ledger, whether this server has already obtained the ledger's header section.</td>
 </tr>
 <tr>
-<td align="left"><code>have_transactions</code></td>
-<td align="left">Boolean</td>
-<td align="left">For a ledger, whether this server has already obtained the transaction section of that ledger.</td>
+<td style="text-align: left;"><code>have_transactions</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">For a ledger, whether this server has already obtained the transaction section of that ledger.</td>
 </tr>
 <tr>
-<td align="left"><code>needed_state_hashes</code></td>
-<td align="left">Array of (Hash) Strings</td>
-<td align="left">The hash values of state objects still needed from this item. If more than 16 are needed, the response contains only the first 16.</td>
+<td style="text-align: left;"><code>needed_state_hashes</code></td>
+<td style="text-align: left;">Array of (Hash) Strings</td>
+<td style="text-align: left;">The hash values of state objects still needed from this item. If more than 16 are needed, the response contains only the first 16.</td>
 </tr>
 <tr>
-<td align="left"><code>peers</code></td>
-<td align="left">Number</td>
-<td align="left">The number of peers who have this item available.</td>
+<td style="text-align: left;"><code>peers</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">The number of peers who have this item available.</td>
 </tr>
 <tr>
-<td align="left"><code>timeouts</code></td>
-<td align="left">Number</td>
-<td align="left">The number of times that fetching this item has resulted in a timeout (2.5 seconds).</td>
+<td style="text-align: left;"><code>timeouts</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">The number of times that fetching this item has resulted in a timeout (2.5 seconds).</td>
 </tr>
 </tbody>
 </table>
@@ -957,6 +945,16 @@ rippled fetch_info
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="broker-sale.html">Broker a NFToken Sale</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="authorize-minter.html">Assign an Authorized Minter</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="batch-minting.html">Batch Mint NFTokens</a>
   </div>
 
     </nav>
@@ -2310,11 +2308,6 @@ rippled fetch_info
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info (Clio)</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="server_state.html">server_state</a>
   </div>
 
@@ -2327,9 +2320,36 @@ rippled fetch_info
 
       <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_8" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_8"></a>
 
-        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+        <a class="nav-link" href="clio-methods.html">Clio Server Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_8">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ledger-clio.html">ledger</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="nft_info.html">nft_info</a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_9" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_9"></a>
+
+        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_9">
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="json.html">json</a>

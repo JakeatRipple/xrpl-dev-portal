@@ -55,7 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v6a.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -88,20 +88,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<div class="top-banner fixed-top">
-  <!-- mobile -->
-  <div class="justify-content-center d-md-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
-    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
-  </div>
-  <!-- tablet and up -->
-  <div class="d-md-flex justify-content-center d-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
-    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
-  </div>
-  
-
-</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,6 +142,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
+          </div><!--./col-->
+          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
@@ -294,48 +282,48 @@
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left">Field</th>
-<th align="left">JSON Type</th>
-<th align="left"><a href="serialization.html">Internal Type</a></th>
-<th align="left">Description</th>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">JSON Type</th>
+<th style="text-align: left;"><a href="serialization.html">Internal Type</a></th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>Amount</code></td>
-<td align="left">String</td>
-<td align="left">Amount</td>
-<td align="left">Amount of <a href="basic-data-types.html#specifying-currency-amounts">XRP, in drops</a>, to deduct from the sender's balance and set aside in this channel. While the channel is open, the XRP can only go to the <code>Destination</code> address. When the channel closes, any unclaimed XRP is returned to the source address's balance.</td>
+<td style="text-align: left;"><code>Amount</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">Amount</td>
+<td style="text-align: left;">Amount of <a href="basic-data-types.html#specifying-currency-amounts">XRP, in drops</a>, to deduct from the sender's balance and set aside in this channel. While the channel is open, the XRP can only go to the <code>Destination</code> address. When the channel closes, any unclaimed XRP is returned to the source address's balance.</td>
 </tr>
 <tr>
-<td align="left"><code>Destination</code></td>
-<td align="left">String</td>
-<td align="left">AccountID</td>
-<td align="left">Address to receive XRP claims against this channel. This is also known as the "destination address" for the channel. Cannot be the same as the sender (<code>Account</code>).</td>
+<td style="text-align: left;"><code>Destination</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">AccountID</td>
+<td style="text-align: left;">Address to receive XRP claims against this channel. This is also known as the "destination address" for the channel. Cannot be the same as the sender (<code>Account</code>).</td>
 </tr>
 <tr>
-<td align="left"><code>SettleDelay</code></td>
-<td align="left">Number</td>
-<td align="left">UInt32</td>
-<td align="left">Amount of time the source address must wait before closing the channel if it has unclaimed XRP.</td>
+<td style="text-align: left;"><code>SettleDelay</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">UInt32</td>
+<td style="text-align: left;">Amount of time the source address must wait before closing the channel if it has unclaimed XRP.</td>
 </tr>
 <tr>
-<td align="left"><code>PublicKey</code></td>
-<td align="left">String</td>
-<td align="left">Blob</td>
-<td align="left">The 33-byte public key of the key pair the source will use to sign claims against this channel, in hexadecimal. This can be any secp256k1 or Ed25519 public key. For more information on key pairs, see <a href="cryptographic-keys.html#key-derivation">Key Derivation</a> <!-- STYLE_OVERRIDE: will --></td>
+<td style="text-align: left;"><code>PublicKey</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">Blob</td>
+<td style="text-align: left;">The 33-byte public key of the key pair the source will use to sign claims against this channel, in hexadecimal. This can be any secp256k1 or Ed25519 public key. For more information on key pairs, see <a href="cryptographic-keys.html#key-derivation">Key Derivation</a> <!-- STYLE_OVERRIDE: will --></td>
 </tr>
 <tr>
-<td align="left"><code>CancelAfter</code></td>
-<td align="left">Number</td>
-<td align="left">UInt32</td>
-<td align="left"><em>(Optional)</em> The time, in <a href="basic-data-types.html#specifying-time">seconds since the Ripple Epoch</a>, when this channel expires. Any transaction that would modify the channel after this time closes the channel without otherwise affecting it. This value is immutable; the channel can be closed earlier than this time but cannot remain open after this time.</td>
+<td style="text-align: left;"><code>CancelAfter</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">UInt32</td>
+<td style="text-align: left;"><em>(Optional)</em> The time, in <a href="basic-data-types.html#specifying-time">seconds since the Ripple Epoch</a>, when this channel expires. Any transaction that would modify the channel after this time closes the channel without otherwise affecting it. This value is immutable; the channel can be closed earlier than this time but cannot remain open after this time.</td>
 </tr>
 <tr>
-<td align="left"><code>DestinationTag</code></td>
-<td align="left">Number</td>
-<td align="left">UInt32</td>
-<td align="left"><em>(Optional)</em> Arbitrary tag to further specify the destination for this payment channel, such as a hosted recipient at the destination address.</td>
+<td style="text-align: left;"><code>DestinationTag</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">UInt32</td>
+<td style="text-align: left;"><em>(Optional)</em> Arbitrary tag to further specify the destination for this payment channel, such as a hosted recipient at the destination address.</td>
 </tr>
 </tbody>
 </table>
@@ -837,6 +825,16 @@
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="broker-sale.html">Broker a NFToken Sale</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="authorize-minter.html">Assign an Authorized Minter</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="batch-minting.html">Batch Mint NFTokens</a>
   </div>
 
     </nav>
@@ -2190,11 +2188,6 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info (Clio)</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="server_state.html">server_state</a>
   </div>
 
@@ -2207,9 +2200,36 @@
 
       <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_8" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_8"></a>
 
-        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+        <a class="nav-link" href="clio-methods.html">Clio Server Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_8">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ledger-clio.html">ledger</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="nft_info.html">nft_info</a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_9" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_9"></a>
+
+        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_9">
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="json.html">json</a>

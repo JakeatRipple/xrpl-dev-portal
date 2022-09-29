@@ -55,7 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v6a.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -88,20 +88,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<div class="top-banner fixed-top">
-  <!-- mobile -->
-  <div class="justify-content-center d-md-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
-    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
-  </div>
-  <!-- tablet and up -->
-  <div class="d-md-flex justify-content-center d-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
-    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
-  </div>
-  
-
-</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,6 +142,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
+          </div><!--./col-->
+          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
@@ -336,38 +324,38 @@
 <p>Demurrage was supported in ripple-lib versions <strong>0.7.37</strong> through <strong>0.12.9</strong>. Demurrage is <strong><em>not supported</em></strong> in most modern libraries.</p>
 <p>The following code samples demonstrate how to use compatible versions of ripple-lib to convert between ledger values and display values. Also see the <a class="external-link" href="https://ripple.github.io/ripple-demurrage-tool/" target="_blank">Ripple Demurrage Calculator <i aria-hidden="true" class="fa fa-external-link"></i></a>.</p>
 <p>To convert from a display value to a ledger value, use <code>Amount.from_human()</code>:</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-1" id="codeblock-1button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-1"><span class="c1">// create an Amount object for the display amount of the demurring currency</span>
-<span class="c1">// and pass in a reference_date that represents the current date</span>
-<span class="c1">// (in this case, ledger value 10 XAU with 0.5% annual demurrage,</span>
-<span class="c1">//  at 2017-11-04T00:07:50Z.)</span>
-<span class="kd">var</span> <span class="nx">demAmount</span> <span class="o">=</span> <span class="nx">ripple</span><span class="p">.</span><span class="nx">Amount</span><span class="p">.</span><span class="nx">from_human</span><span class="p">(</span><span class="s1">'10 0158415500000000C1F76FF6ECB0BAC600000000'</span><span class="p">,</span>
-                                  <span class="p">{</span><span class="nx">reference_date</span><span class="o">:</span><span class="mf">563069270</span><span class="p">});</span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-1" id="codeblock-1button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-1"><span class="c1">// create an Amount object for the display amount of the demurring currency</span><span class="w"></span>
+<span class="c1">// and pass in a reference_date that represents the current date</span><span class="w"></span>
+<span class="c1">// (in this case, ledger value 10 XAU with 0.5% annual demurrage,</span><span class="w"></span>
+<span class="c1">//  at 2017-11-04T00:07:50Z.)</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">demAmount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ripple</span><span class="p">.</span><span class="nx">Amount</span><span class="p">.</span><span class="nx">from_human</span><span class="p">(</span><span class="s1">'10 0158415500000000C1F76FF6ECB0BAC600000000'</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                  </span><span class="p">{</span><span class="nx">reference_date</span><span class="o">:</span><span class="mf">563069270</span><span class="p">});</span><span class="w"></span>
 
-<span class="c1">// set the issuer</span>
-<span class="nx">demAmount</span><span class="p">.</span><span class="nx">set_issuer</span><span class="p">(</span><span class="s2">"rHb9CJAWyB4rj91VRWn96DkukG4bwdtyTh"</span><span class="p">);</span>
+<span class="c1">// set the issuer</span><span class="w"></span>
+<span class="nx">demAmount</span><span class="p">.</span><span class="nx">set_issuer</span><span class="p">(</span><span class="s2">"rHb9CJAWyB4rj91VRWn96DkukG4bwdtyTh"</span><span class="p">);</span><span class="w"></span>
 
-<span class="c1">// get the JSON format for the ledger amount</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">demAmount</span><span class="p">.</span><span class="nx">to_json</span><span class="p">());</span>
+<span class="c1">// get the JSON format for the ledger amount</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">demAmount</span><span class="p">.</span><span class="nx">to_json</span><span class="p">());</span><span class="w"></span>
 
-<span class="c1">// { "value": "10.93625123082769",</span>
-<span class="c1">//   "currency": "0158415500000000C1F76FF6ECB0BAC600000000",</span>
-<span class="c1">//   "issuer": "rHb9CJAWyB4rj91VRWn96DkukG4bwdtyTh" }</span>
+<span class="c1">// { "value": "10.93625123082769",</span><span class="w"></span>
+<span class="c1">//   "currency": "0158415500000000C1F76FF6ECB0BAC600000000",</span><span class="w"></span>
+<span class="c1">//   "issuer": "rHb9CJAWyB4rj91VRWn96DkukG4bwdtyTh" }</span><span class="w"></span>
 </code></pre></div>
 <p>To convert from a ledger value to a display value:</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-2" id="codeblock-2button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-2"><span class="c1">// create an Amount object with the ledger value,</span>
-<span class="nx">ledgerAmount</span> <span class="o">=</span> <span class="nx">ripple</span><span class="p">.</span><span class="nx">Amount</span><span class="p">.</span><span class="nx">from_json</span><span class="p">({</span>
-  <span class="s2">"currency"</span><span class="o">:</span> <span class="s2">"015841551A748AD2C1F76FF6ECB0CCCD00000000"</span><span class="p">,</span>
-  <span class="s2">"issuer"</span><span class="o">:</span> <span class="s2">"rHb9CJAWyB4rj91VRWn96DkukG4bwdtyTh"</span><span class="p">,</span>
-  <span class="s2">"value"</span><span class="o">:</span> <span class="s2">"10.93625123082769"</span><span class="p">})</span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-2" id="codeblock-2button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-2"><span class="c1">// create an Amount object with the ledger value,</span><span class="w"></span>
+<span class="nx">ledgerAmount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ripple</span><span class="p">.</span><span class="nx">Amount</span><span class="p">.</span><span class="nx">from_json</span><span class="p">({</span><span class="w"></span>
+<span class="w">  </span><span class="s2">"currency"</span><span class="o">:</span><span class="w"> </span><span class="s2">"015841551A748AD2C1F76FF6ECB0CCCD00000000"</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="s2">"issuer"</span><span class="o">:</span><span class="w"> </span><span class="s2">"rHb9CJAWyB4rj91VRWn96DkukG4bwdtyTh"</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="s2">"value"</span><span class="o">:</span><span class="w"> </span><span class="s2">"10.93625123082769"</span><span class="p">})</span><span class="w"></span>
 
-<span class="c1">// apply interest up to the current time to get the display amount</span>
-<span class="kd">var</span> <span class="nx">displayAmount</span> <span class="o">=</span> <span class="nx">demAmount</span><span class="p">.</span><span class="nx">applyInterest</span><span class="p">(</span><span class="ow">new</span> <span class="nb">Date</span><span class="p">());</span>
+<span class="c1">// apply interest up to the current time to get the display amount</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">displayAmount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">demAmount</span><span class="p">.</span><span class="nx">applyInterest</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">());</span><span class="w"></span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">displayAmount</span><span class="p">.</span><span class="nx">to_json</span><span class="p">());</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">displayAmount</span><span class="p">.</span><span class="nx">to_json</span><span class="p">());</span><span class="w"></span>
 
-<span class="c1">// { "value": "9.999998874657716",</span>
-<span class="c1">//   "currency": "0158415500000000C1F76FF6ECB0BAC600000000",</span>
-<span class="c1">//   "issuer": "rHb9CJAWyB4rj91VRWn96DkukG4bwdtyTh" }</span>
+<span class="c1">// { "value": "9.999998874657716",</span><span class="w"></span>
+<span class="c1">//   "currency": "0158415500000000C1F76FF6ECB0BAC600000000",</span><span class="w"></span>
+<span class="c1">//   "issuer": "rHb9CJAWyB4rj91VRWn96DkukG4bwdtyTh" }</span><span class="w"></span>
 </code></pre></div>
     </div>
   </article>
@@ -860,6 +848,16 @@
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="broker-sale.html">Broker a NFToken Sale</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="authorize-minter.html">Assign an Authorized Minter</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="batch-minting.html">Batch Mint NFTokens</a>
   </div>
 
     </nav>
@@ -2213,11 +2211,6 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info (Clio)</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="server_state.html">server_state</a>
   </div>
 
@@ -2230,9 +2223,36 @@
 
       <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_8" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_8"></a>
 
-        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+        <a class="nav-link" href="clio-methods.html">Clio Server Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_8">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ledger-clio.html">ledger</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="nft_info.html">nft_info</a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_9" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_9"></a>
+
+        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_9">
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="json.html">json</a>

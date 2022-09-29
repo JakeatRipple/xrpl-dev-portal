@@ -55,7 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v6a.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -88,20 +88,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<div class="top-banner fixed-top">
-  <!-- mobile -->
-  <div class="justify-content-center d-md-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
-    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
-  </div>
-  <!-- tablet and up -->
-  <div class="d-md-flex justify-content-center d-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
-    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
-  </div>
-  
-
-</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,6 +142,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
+          </div><!--./col-->
+          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
@@ -294,24 +282,24 @@
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left">Field</th>
-<th align="left">JSON Type</th>
-<th align="left"><a href="serialization.html">Internal Type</a></th>
-<th align="left">Description</th>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">JSON Type</th>
+<th style="text-align: left;"><a href="serialization.html">Internal Type</a></th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>Destination</code></td>
-<td align="left">String - <a href="basic-data-types.html#addresses">Address</a></td>
-<td align="left">AccountID</td>
-<td align="left">The address of an account to receive any leftover XRP after deleting the sending account. Must be a funded account in the ledger, and must not be the sending account.</td>
+<td style="text-align: left;"><code>Destination</code></td>
+<td style="text-align: left;">String - <a href="basic-data-types.html#addresses">Address</a></td>
+<td style="text-align: left;">AccountID</td>
+<td style="text-align: left;">The address of an account to receive any leftover XRP after deleting the sending account. Must be a funded account in the ledger, and must not be the sending account.</td>
 </tr>
 <tr>
-<td align="left"><code>DestinationTag</code></td>
-<td align="left">Number</td>
-<td align="left">UInt32</td>
-<td align="left"><em>(Optional)</em> Arbitrary <a href="source-and-destination-tags.html">destination tag</a> that identifies a hosted recipient or other information for the recipient of the deleted account's leftover XRP.</td>
+<td style="text-align: left;"><code>DestinationTag</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">UInt32</td>
+<td style="text-align: left;"><em>(Optional)</em> Arbitrary <a href="source-and-destination-tags.html">destination tag</a> that identifies a hosted recipient or other information for the recipient of the deleted account's leftover XRP.</td>
 </tr>
 </tbody>
 </table>
@@ -323,42 +311,42 @@
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left">Error Code</th>
-<th align="left">Description</th>
+<th style="text-align: left;">Error Code</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>temDISABLED</code></td>
-<td align="left">Occurs if the <a href="known-amendments.html#deletableaccounts">DeletableAccounts amendment</a> is not enabled.</td>
+<td style="text-align: left;"><code>temDISABLED</code></td>
+<td style="text-align: left;">Occurs if the <a href="known-amendments.html#deletableaccounts">DeletableAccounts amendment</a> is not enabled.</td>
 </tr>
 <tr>
-<td align="left"><code>temDST_IS_SRC</code></td>
-<td align="left">Occurs if the <code>Destination</code> matches the sender of the transaction (<code>Account</code> field).</td>
+<td style="text-align: left;"><code>temDST_IS_SRC</code></td>
+<td style="text-align: left;">Occurs if the <code>Destination</code> matches the sender of the transaction (<code>Account</code> field).</td>
 </tr>
 <tr>
-<td align="left"><code>tecDST_TAG_NEEDED</code></td>
-<td align="left">Occurs if the <code>Destination</code> account requires a <a href="source-and-destination-tags.html">destination tag</a>, but the <code>DestinationTag</code> field was not provided.</td>
+<td style="text-align: left;"><code>tecDST_TAG_NEEDED</code></td>
+<td style="text-align: left;">Occurs if the <code>Destination</code> account requires a <a href="source-and-destination-tags.html">destination tag</a>, but the <code>DestinationTag</code> field was not provided.</td>
 </tr>
 <tr>
-<td align="left"><code>tecNO_DST</code></td>
-<td align="left">Occurs if the <code>Destination</code> account is not a funded account in the ledger.</td>
+<td style="text-align: left;"><code>tecNO_DST</code></td>
+<td style="text-align: left;">Occurs if the <code>Destination</code> account is not a funded account in the ledger.</td>
 </tr>
 <tr>
-<td align="left"><code>tecNO_PERMISSION</code></td>
-<td align="left">Occurs if the <code>Destination</code> account requires <a href="depositauth.html">deposit authorization</a> and the sender is not preauthorized.</td>
+<td style="text-align: left;"><code>tecNO_PERMISSION</code></td>
+<td style="text-align: left;">Occurs if the <code>Destination</code> account requires <a href="depositauth.html">deposit authorization</a> and the sender is not preauthorized.</td>
 </tr>
 <tr>
-<td align="left"><code>tecTOO_SOON</code></td>
-<td align="left">Occurs if the sender's <code>Sequence</code> number is too high. The transaction's <code>Sequence</code> number plus 256 must be less than the current <a href="basic-data-types.html#ledger-index">Ledger Index</a>.</td>
+<td style="text-align: left;"><code>tecTOO_SOON</code></td>
+<td style="text-align: left;">Occurs if the sender's <code>Sequence</code> number is too high. The transaction's <code>Sequence</code> number plus 256 must be less than the current <a href="basic-data-types.html#ledger-index">Ledger Index</a>.</td>
 </tr>
 <tr>
-<td align="left"><code>tecHAS_OBLIGATIONS</code></td>
-<td align="left">Occurs if the account to be deleted is connected to objects that cannot be deleted in the ledger. (This includes objects created by other accounts, such as <a href="escrow.html">escrows</a>.)</td>
+<td style="text-align: left;"><code>tecHAS_OBLIGATIONS</code></td>
+<td style="text-align: left;">Occurs if the account to be deleted is connected to objects that cannot be deleted in the ledger. (This includes objects created by other accounts, such as <a href="escrow.html">escrows</a>.)</td>
 </tr>
 <tr>
-<td align="left"><code>tefTOO_BIG</code></td>
-<td align="left">Occurs if the sending account is linked to more than 1000 objects in the ledger. The transaction could succeed on retry if some of those objects were deleted separately first.</td>
+<td style="text-align: left;"><code>tefTOO_BIG</code></td>
+<td style="text-align: left;">Occurs if the sending account is linked to more than 1000 objects in the ledger. The transaction could succeed on retry if some of those objects were deleted separately first.</td>
 </tr>
 </tbody>
 </table>
@@ -860,6 +848,16 @@
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="broker-sale.html">Broker a NFToken Sale</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="authorize-minter.html">Assign an Authorized Minter</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="batch-minting.html">Batch Mint NFTokens</a>
   </div>
 
     </nav>
@@ -2213,11 +2211,6 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info (Clio)</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="server_state.html">server_state</a>
   </div>
 
@@ -2230,9 +2223,36 @@
 
       <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_8" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_8"></a>
 
-        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+        <a class="nav-link" href="clio-methods.html">Clio Server Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_8">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ledger-clio.html">ledger</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="nft_info.html">nft_info</a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_9" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_9"></a>
+
+        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_9">
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="json.html">json</a>

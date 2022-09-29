@@ -55,7 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v6a.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -88,20 +88,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<div class="top-banner fixed-top">
-  <!-- mobile -->
-  <div class="justify-content-center d-md-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
-    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
-  </div>
-  <!-- tablet and up -->
-  <div class="d-md-flex justify-content-center d-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
-    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
-  </div>
-  
-
-</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,6 +142,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
+          </div><!--./col-->
+          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
@@ -363,15 +351,15 @@ rippled validator_list_sites
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left"><code>Field</code></th>
-<th align="left">Type</th>
+<th style="text-align: left;"><code>Field</code></th>
+<th style="text-align: left;">Type</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>validator_sites</code></td>
-<td align="left">Array</td>
+<td style="text-align: left;"><code>validator_sites</code></td>
+<td style="text-align: left;">Array</td>
 <td>Array of validator site objects.</td>
 </tr>
 </tbody>
@@ -380,31 +368,31 @@ rippled validator_list_sites
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left"><code>Field</code></th>
-<th align="left">Type</th>
-<th align="left">Description</th>
+<th style="text-align: left;"><code>Field</code></th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>last_refresh_status</code></td>
-<td align="left">String</td>
-<td align="left">If present, shows the status of the most recent refresh of the site. If missing, the site has not yet been successfully queried. See <strong>Site Status Values</strong> below for possible states and their meanings.</td>
+<td style="text-align: left;"><code>last_refresh_status</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">If present, shows the status of the most recent refresh of the site. If missing, the site has not yet been successfully queried. See <strong>Site Status Values</strong> below for possible states and their meanings.</td>
 </tr>
 <tr>
-<td align="left"><code>last_refresh_time</code></td>
-<td align="left">String</td>
-<td align="left">Human readable time when the site was last queried. If missing, the site has not yet been successfully queried.</td>
+<td style="text-align: left;"><code>last_refresh_time</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">Human readable time when the site was last queried. If missing, the site has not yet been successfully queried.</td>
 </tr>
 <tr>
-<td align="left"><code>refresh_interval_min</code></td>
-<td align="left">Unsigned Integer</td>
-<td align="left">The number of minutes between refresh attempts.</td>
+<td style="text-align: left;"><code>refresh_interval_min</code></td>
+<td style="text-align: left;">Unsigned Integer</td>
+<td style="text-align: left;">The number of minutes between refresh attempts.</td>
 </tr>
 <tr>
-<td align="left"><code>uri</code></td>
-<td align="left">String</td>
-<td align="left">The URI of the site.</td>
+<td style="text-align: left;"><code>uri</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">The URI of the site.</td>
 </tr>
 </tbody>
 </table>
@@ -413,34 +401,34 @@ rippled validator_list_sites
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left">Value</th>
-<th align="left">Meaning</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>accepted</code></td>
-<td align="left">The site provided a valid list, which your server is now using.</td>
+<td style="text-align: left;"><code>accepted</code></td>
+<td style="text-align: left;">The site provided a valid list, which your server is now using.</td>
 </tr>
 <tr>
-<td align="left"><code>same_sequence</code></td>
-<td align="left">The site provided a list with the same sequence number as your existing list, so your server continued using its existing list.</td>
+<td style="text-align: left;"><code>same_sequence</code></td>
+<td style="text-align: left;">The site provided a list with the same sequence number as your existing list, so your server continued using its existing list.</td>
 </tr>
 <tr>
-<td align="left"><code>unsupported_version</code></td>
-<td align="left">The site provided a list, but your server does not support the list format version number in the list. You might need to <a href="install-rippled.html">update <code>rippled</code></a> to a newer software version.</td>
+<td style="text-align: left;"><code>unsupported_version</code></td>
+<td style="text-align: left;">The site provided a list, but your server does not support the list format version number in the list. You might need to <a href="install-rippled.html">update <code>rippled</code></a> to a newer software version.</td>
 </tr>
 <tr>
-<td align="left"><code>untrusted</code></td>
-<td align="left">The site provided a list from the site that is signed by a cryptographic key pair your server is not configured to trust. You may want to check for typos in your <code>validators.txt</code> file and check to see if the list publisher changed their cryptographic keys.</td>
+<td style="text-align: left;"><code>untrusted</code></td>
+<td style="text-align: left;">The site provided a list from the site that is signed by a cryptographic key pair your server is not configured to trust. You may want to check for typos in your <code>validators.txt</code> file and check to see if the list publisher changed their cryptographic keys.</td>
 </tr>
 <tr>
-<td align="left"><code>stale</code></td>
-<td align="left">The site provided a list with a lower sequence number than the list your server is already using.</td>
+<td style="text-align: left;"><code>stale</code></td>
+<td style="text-align: left;">The site provided a list with a lower sequence number than the list your server is already using.</td>
 </tr>
 <tr>
-<td align="left"><code>invalid</code></td>
-<td align="left">The site provided a list or signature that was not validly formed.</td>
+<td style="text-align: left;"><code>invalid</code></td>
+<td style="text-align: left;">The site provided a list or signature that was not validly formed.</td>
 </tr>
 </tbody>
 </table>
@@ -947,6 +935,16 @@ rippled validator_list_sites
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="broker-sale.html">Broker a NFToken Sale</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="authorize-minter.html">Assign an Authorized Minter</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="batch-minting.html">Batch Mint NFTokens</a>
   </div>
 
     </nav>
@@ -2300,11 +2298,6 @@ rippled validator_list_sites
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info (Clio)</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="server_state.html">server_state</a>
   </div>
 
@@ -2317,9 +2310,36 @@ rippled validator_list_sites
 
       <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_8" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_8"></a>
 
-        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+        <a class="nav-link" href="clio-methods.html">Clio Server Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_8">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ledger-clio.html">ledger</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="nft_info.html">nft_info</a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_9" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_9"></a>
+
+        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_9">
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="json.html">json</a>

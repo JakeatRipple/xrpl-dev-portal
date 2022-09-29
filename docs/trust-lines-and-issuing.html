@@ -55,7 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v6a.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -88,20 +88,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<div class="top-banner fixed-top">
-  <!-- mobile -->
-  <div class="justify-content-center d-md-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
-    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
-  </div>
-  <!-- tablet and up -->
-  <div class="d-md-flex justify-content-center d-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
-    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
-  </div>
-  
-
-</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,6 +142,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
+          </div><!--./col-->
+          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
@@ -250,7 +238,7 @@
     <ul class="page-toc nav flex-column" role="directory">
         <li class="nav-item level-1"><a class="nav-link" href="#trust-lines-and-issuing">Trust Lines and Issuing</a></li>
         <li class="nav-item level-2"><a class="nav-link" href="#creation">Creation</a></li>
-        <li class="nav-item level-2"><a class="nav-link" href="#going-below-the-limit">Going Below the Limit</a></li>
+        <li class="nav-item level-2"><a class="nav-link" href="#going-above-the-limit">Going Above the Limit</a></li>
         <li class="nav-item level-2"><a class="nav-link" href="#trust-line-settings">Trust Line Settings</a></li>
         <li class="nav-item level-2"><a class="nav-link" href="#reserves-and-deletion">Reserves and Deletion</a></li>
         <li class="nav-item level-3"><a class="nav-link" href="#free-trust-lines">Free Trust Lines</a></li>
@@ -283,7 +271,7 @@
 </ul>
 </li>
 <li>Various <strong>settings</strong> and metadata. <em>Each</em> of the two accounts can control its own settings on the trust line.<ul>
-<li>Most importantly, each side sets a <strong>limit</strong> on the trust line, which is 0 by default. Each account's balance (from its perspective on the trust line) can't go above that account's limit, except <a href="#going-below-the-limit">through that account's own actions</a>.</li>
+<li>Most importantly, each side sets a <strong>limit</strong> on the trust line, which is 0 by default. Each account's balance (from its perspective on the trust line) can't go above that account's limit, except <a href="#going-above-the-limit">through that account's own actions</a>.</li>
 </ul>
 </li>
 </ul>
@@ -291,7 +279,7 @@
 <h2 id="creation">Creation<a aria-hidden="true" class="hover_anchor" href="#creation"><i class="fa fa-link"></i></a></h2>
 <p>Any account can unilaterally "trust" another account to issue a token by sending a <a href="trustset.html">TrustSet transaction</a> with a nonzero limit and their own settings. This creates a line with a zero balance, and sets the other side's settings to the default.</p>
 <p>Trust lines can be implicitly created by some transactions, such as when you buy a token in the <a href="decentralized-exchange.html">decentralized exchange</a>. In this case, the trust line uses entirely default settings.</p>
-<h2 id="going-below-the-limit">Going Below the Limit<a aria-hidden="true" class="hover_anchor" href="#going-below-the-limit"><i class="fa fa-link"></i></a></h2>
+<h2 id="going-above-the-limit">Going Above the Limit<a aria-hidden="true" class="hover_anchor" href="#going-above-the-limit"><i class="fa fa-link"></i></a></h2>
 <p>There are three cases where you can hold a balance that is <em>greater</em> than your limit on that trust line:</p>
 <ol>
 <li>When you acquire more of that token through <a href="decentralized-exchange.html">trading</a>.</li>
@@ -839,6 +827,16 @@
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="broker-sale.html">Broker a NFToken Sale</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="authorize-minter.html">Assign an Authorized Minter</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="batch-minting.html">Batch Mint NFTokens</a>
   </div>
 
     </nav>
@@ -2192,11 +2190,6 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info (Clio)</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="server_state.html">server_state</a>
   </div>
 
@@ -2209,9 +2202,36 @@
 
       <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_8" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_8"></a>
 
-        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+        <a class="nav-link" href="clio-methods.html">Clio Server Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_8">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ledger-clio.html">ledger</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="nft_info.html">nft_info</a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_9" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_9"></a>
+
+        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_9">
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="json.html">json</a>

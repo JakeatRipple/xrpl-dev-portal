@@ -55,7 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v6a.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -88,20 +88,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<div class="top-banner fixed-top">
-  <!-- mobile -->
-  <div class="justify-content-center d-md-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
-    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
-  </div>
-  <!-- tablet and up -->
-  <div class="d-md-flex justify-content-center d-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
-    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
-  </div>
-  
-
-</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,6 +142,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
+          </div><!--./col-->
+          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
@@ -336,26 +324,26 @@
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left">Status Code</th>
-<th align="left">Health Status</th>
-<th align="left">Description</th>
+<th style="text-align: left;">Status Code</th>
+<th style="text-align: left;">Health Status</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><strong>200 OK</strong></td>
-<td align="left">Healthy</td>
-<td align="left">All health metrics are within acceptable ranges.</td>
+<td style="text-align: left;"><strong>200 OK</strong></td>
+<td style="text-align: left;">Healthy</td>
+<td style="text-align: left;">All health metrics are within acceptable ranges.</td>
 </tr>
 <tr>
-<td align="left"><strong>503 Service Unavailable</strong></td>
-<td align="left">Warning</td>
-<td align="left">One or more metric is in the warning range. Manual intervention may or may not be necessary.</td>
+<td style="text-align: left;"><strong>503 Service Unavailable</strong></td>
+<td style="text-align: left;">Warning</td>
+<td style="text-align: left;">One or more metric is in the warning range. Manual intervention may or may not be necessary.</td>
 </tr>
 <tr>
-<td align="left"><strong>500 Internal Server Error</strong></td>
-<td align="left">Critical</td>
-<td align="left">One or more metric is in the critical range. There is a serious problem that probably needs manual intervention to fix.</td>
+<td style="text-align: left;"><strong>500 Internal Server Error</strong></td>
+<td style="text-align: left;">Critical</td>
+<td style="text-align: left;">One or more metric is in the critical range. There is a serious problem that probably needs manual intervention to fix.</td>
 </tr>
 </tbody>
 </table>
@@ -364,36 +352,36 @@
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left"><code>Field</code></th>
-<th align="left">Value</th>
-<th align="left">Description</th>
+<th style="text-align: left;"><code>Field</code></th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>amendment_blocked</code></td>
-<td align="left">Boolean</td>
-<td align="left"><em>(May be omitted)</em> If <code>true</code>, the server is <a href="amendments.html#amendment-blocked">amendment blocked</a> and must be upgraded to remain synced with the network; this state is critical. If the server is not amendment blocked, this field is omitted.</td>
+<td style="text-align: left;"><code>amendment_blocked</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;"><em>(May be omitted)</em> If <code>true</code>, the server is <a href="amendments.html#amendment-blocked">amendment blocked</a> and must be upgraded to remain synced with the network; this state is critical. If the server is not amendment blocked, this field is omitted.</td>
 </tr>
 <tr>
-<td align="left"><code>load_factor</code></td>
-<td align="left">Number</td>
-<td align="left"><em>(May be omitted)</em> A measure of the overall load the server is under. This reflects I/O, CPU, and memory limitations. This is a warning if the load factor is over 100, or critical if the load factor is 1000 or higher.</td>
+<td style="text-align: left;"><code>load_factor</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;"><em>(May be omitted)</em> A measure of the overall load the server is under. This reflects I/O, CPU, and memory limitations. This is a warning if the load factor is over 100, or critical if the load factor is 1000 or higher.</td>
 </tr>
 <tr>
-<td align="left"><code>peers</code></td>
-<td align="left">Number</td>
-<td align="left"><em>(May be omitted)</em> The number of <a href="peer-protocol.html">peer servers</a> this server is connected to. This is a warning if connected to 7 or fewer peers, and critical if connected to zero peers.</td>
+<td style="text-align: left;"><code>peers</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;"><em>(May be omitted)</em> The number of <a href="peer-protocol.html">peer servers</a> this server is connected to. This is a warning if connected to 7 or fewer peers, and critical if connected to zero peers.</td>
 </tr>
 <tr>
-<td align="left"><code>server_state</code></td>
-<td align="left">String</td>
-<td align="left"><em>(May be omitted)</em> The current <a href="rippled-server-states.html">server state</a>. This is a warning if the server is in the <code>tracking</code>, <code>syncing</code>, or <code>connected</code> states. This is critical if the server is in the <code>disconnected</code> state.</td>
+<td style="text-align: left;"><code>server_state</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><em>(May be omitted)</em> The current <a href="rippled-server-states.html">server state</a>. This is a warning if the server is in the <code>tracking</code>, <code>syncing</code>, or <code>connected</code> states. This is critical if the server is in the <code>disconnected</code> state.</td>
 </tr>
 <tr>
-<td align="left"><code>validated_ledger</code></td>
-<td align="left">Number</td>
-<td align="left"><em>(May be omitted)</em> The number of seconds since the last time a ledger was validated by <a href="intro-to-consensus.html">consensus</a>. If there is no validated ledger available (<a href="server-doesnt-sync.html#normal-syncing-behavior">as during the initial sync period when starting the server</a>), this is the value <code>-1</code> and is considered a warning. This metric is also a warning if the last validated ledger was at least 7 seconds ago, or critical if the last validated ledger was at least 20 seconds ago.</td>
+<td style="text-align: left;"><code>validated_ledger</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;"><em>(May be omitted)</em> The number of seconds since the last time a ledger was validated by <a href="intro-to-consensus.html">consensus</a>. If there is no validated ledger available (<a href="server-doesnt-sync.html#normal-syncing-behavior">as during the initial sync period when starting the server</a>), this is the value <code>-1</code> and is considered a warning. This metric is also a warning if the last validated ledger was at least 7 seconds ago, or critical if the last validated ledger was at least 20 seconds ago.</td>
 </tr>
 </tbody>
 </table>
@@ -897,6 +885,16 @@
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="broker-sale.html">Broker a NFToken Sale</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="authorize-minter.html">Assign an Authorized Minter</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="batch-minting.html">Batch Mint NFTokens</a>
   </div>
 
     </nav>
@@ -2250,11 +2248,6 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info (Clio)</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="server_state.html">server_state</a>
   </div>
 
@@ -2267,9 +2260,36 @@
 
       <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_8" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_8"></a>
 
-        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+        <a class="nav-link" href="clio-methods.html">Clio Server Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_8">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ledger-clio.html">ledger</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="nft_info.html">nft_info</a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_9" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_9"></a>
+
+        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_9">
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="json.html">json</a>

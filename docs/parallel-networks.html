@@ -55,7 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v6a.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -88,20 +88,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<div class="top-banner fixed-top">
-  <!-- mobile -->
-  <div class="justify-content-center d-md-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
-    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
-  </div>
-  <!-- tablet and up -->
-  <div class="d-md-flex justify-content-center d-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
-    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
-  </div>
-  
-
-</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,6 +142,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
+          </div><!--./col-->
+          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
@@ -271,48 +259,48 @@
     <div class="content">
         <h1 id="parallel-networks">Parallel Networks<a aria-hidden="true" class="hover_anchor" href="#parallel-networks"><i class="fa fa-link"></i></a></h1>
 <p>There is one production XRP Ledger peer-to-peer network, and all business that takes place on the XRP Ledger occurs within the production network—the Mainnet.</p>
-<p>To help members of the XRP Ledger community interact with XRP Ledger technology without affecting anything on the Mainnet, Ripple hosts two alternative networks, or altnets: the Testnet and the Devnet. Here's a breakdown of all three networks:</p>
+<p>To help members of the XRP Ledger community interact with XRP Ledger technology without affecting anything on the Mainnet, there are alternative networks, or altnets. Here's a breakdown of some public altnets:</p>
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left">Network</th>
-<th align="left">Upgrade Cadence</th>
-<th align="left">Description</th>
+<th style="text-align: left;">Network</th>
+<th style="text-align: left;">Upgrade Cadence</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Mainnet</td>
-<td align="left">Stable releases</td>
-<td align="left"><em>The</em> <a href="xrp-ledger-overview.html">XRP Ledger</a>, a  decentralized cryptographic ledger powered by a network of peer-to-peer servers and the home of <a href="xrp.html">XRP</a>.</td>
+<td style="text-align: left;">Mainnet</td>
+<td style="text-align: left;">Stable releases</td>
+<td style="text-align: left;"><em>The</em> <a href="xrp-ledger-overview.html">XRP Ledger</a>, a  decentralized cryptographic ledger powered by a network of peer-to-peer servers and the home of <a href="xrp.html">XRP</a>.</td>
 </tr>
 <tr>
-<td align="left">Testnet</td>
-<td align="left">Stable releases</td>
-<td align="left">An "alternate universe" network that acts as a testing ground for software built on the XRP Ledger, without impacting production XRP Ledger users and without risking real money. The <a href="known-amendments.html">amendment status</a> of the Testnet is intended to closely mirror the Mainnet, although slight variations in timing may occur due to the unpredictable nature of decentralized systems.</td>
+<td style="text-align: left;">Testnet</td>
+<td style="text-align: left;">Stable releases</td>
+<td style="text-align: left;">An "alternate universe" network that acts as a testing ground for software built on the XRP Ledger, without impacting production XRP Ledger users and without risking real money. The <a href="known-amendments.html">amendment status</a> of the Testnet is intended to closely mirror the Mainnet, although slight variations in timing may occur due to the unpredictable nature of decentralized systems.</td>
 </tr>
 <tr>
-<td align="left">Devnet</td>
-<td align="left">Beta releases</td>
-<td align="left">A preview of coming attractions, where unstable changes to the core XRP Ledger software may be tested out. Developers can use this altnet to interact with and learn about planned new XRP Ledger features and amendments that are not yet enabled on the Mainnet.</td>
+<td style="text-align: left;">Devnet</td>
+<td style="text-align: left;">Beta releases</td>
+<td style="text-align: left;">A preview of coming attractions, where unstable changes to the core XRP Ledger software may be tested out. Developers can use this altnet to interact with and learn about planned new XRP Ledger features and amendments that are not yet enabled on the Mainnet.</td>
 </tr>
 <tr>
-<td align="left">NFT-Devnet</td>
-<td align="left"><a class="external-link" href="https://github.com/ripple/rippled/tree/xls20" target="_blank">XLS-20 pre-release <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
-<td align="left">A preview of the <a class="external-link" href="https://github.com/XRPLF/XRPL-Standards/discussions/46" target="_blank">XLS-20d <i aria-hidden="true" class="fa fa-external-link"></i></a> standard for non-fungible tokens on the XRP Ledger.</td>
+<td style="text-align: left;">NFT-Devnet</td>
+<td style="text-align: left;"><a class="external-link" href="https://github.com/ripple/rippled/tree/xls20" target="_blank">XLS-20 pre-release <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;">A preview of the <a class="external-link" href="https://github.com/XRPLF/XRPL-Standards/discussions/46" target="_blank">XLS-20d <i aria-hidden="true" class="fa fa-external-link"></i></a> standard for non-fungible tokens on the XRP Ledger.</td>
 </tr>
 <tr>
-<td align="left"><a class="external-link" href="https://hooks-testnet-v2.xrpl-labs.com/" target="_blank">Hooks Testnet V2 <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
-<td align="left"><a class="external-link" href="https://github.com/XRPL-Labs/xrpld-hooks" target="_blank">Hooks server <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
-<td align="left">A preview of on-chain smart contract functionality using <a class="external-link" href="https://write.as/xumm/xrpl-labs-is-working-on-the-transaction-hooks-amendment-for-the-xrp-ledger" target="_blank">hooks <i aria-hidden="true" class="fa fa-external-link"></i></a>.</td>
+<td style="text-align: left;"><a class="external-link" href="https://hooks-testnet-v2.xrpl-labs.com/" target="_blank">Hooks Testnet V2 <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;"><a class="external-link" href="https://github.com/XRPL-Labs/xrpld-hooks" target="_blank">Hooks server <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;">A preview of on-chain smart contract functionality using <a class="external-link" href="https://write.as/xumm/xrpl-labs-is-working-on-the-transaction-hooks-amendment-for-the-xrp-ledger" target="_blank">hooks <i aria-hidden="true" class="fa fa-external-link"></i></a>.</td>
 </tr>
 </tbody>
 </table>
-<p>Each test network has its own separate supply of test XRP, which is <a href="xrp-testnet-faucet.html">given away for free</a> to parties interested in experimenting with the XRP Ledger and developing applications and integrations. Test XRP does not have real-world value and is lost when the network is reset.</p>
+<p>Each altnet has its own separate supply of test XRP, which is <a href="xrp-testnet-faucet.html">given away for free</a> to parties interested in experimenting with the XRP Ledger and developing applications and integrations. Test XRP does not have real-world value and is lost when the network is reset.</p>
 <p class="devportal-callout caution"><strong>Caution:</strong> Unlike the XRP Ledger Mainnet, test networks are usually <em>centralized</em> and there are no guarantees about the stability and availability of these networks. They have been and continue to be used to test various properties of server configuration, network topology, and network performance.</p>
 <h2 id="parallel-networks-and-consensus">Parallel Networks and Consensus<a aria-hidden="true" class="hover_anchor" href="#parallel-networks-and-consensus"><i class="fa fa-link"></i></a></h2>
-<p>The main factor in determining which network a server follows is its configured UNL—the list of validators it trusts not to collude. Each server uses its configured UNL to know which ledger to accept as the truth. When different consensus groups of <code>rippled</code> instances only trust other members of the same group, each group continues as a parallel network. Even if malicious or misbehaving computers connect to both networks, the consensus process overrides the confusion as long as the members of each network are not configured to trust members of another network in excess of their quorum settings.</p>
-<p>Ripple runs the main servers in the Testnet, Devnet, and NFT-Devnet; you can also <a href="connect-your-rippled-to-the-xrp-test-net.html">connect your own <code>rippled</code> server to these networks</a>. The Testnet and Devnet do not use diverse, censorship-resistant sets of validators. This makes it possible for Ripple to reset the Testnet or Devnet on a regular basis.</p>
+<p>The main factor in determining which network a server follows is its configured UNL—the list of validators it trusts not to collude. Each server uses its configured UNL to know which ledger to accept as the truth. When different consensus groups of <code>rippled</code> instances only trust other members of the same group, each group continues as a parallel network. Even if malicious or misbehaving computers connect to both networks, the consensus process avoids confusion as long as the members of each network are not configured to trust members of another network in excess of their quorum settings.</p>
+<p>Ripple runs the main servers in the Testnet, Devnet, and NFT-Devnet; you can also <a href="connect-your-rippled-to-the-xrp-test-net.html">connect your own <code>rippled</code> server to these networks</a>. The Testnet and Devnet do not use diverse, censorship-resistant sets of validators. This makes it possible for Ripple to reset the Testnet or Devnet at any time.</p>
 <h2 id="see-also">See Also<a aria-hidden="true" class="hover_anchor" href="#see-also"><i class="fa fa-link"></i></a></h2>
 <ul>
 <li><strong>Tools:</strong><ul>
@@ -836,6 +824,16 @@
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="broker-sale.html">Broker a NFToken Sale</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="authorize-minter.html">Assign an Authorized Minter</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="batch-minting.html">Batch Mint NFTokens</a>
   </div>
 
     </nav>
@@ -2189,11 +2187,6 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info (Clio)</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="server_state.html">server_state</a>
   </div>
 
@@ -2206,9 +2199,36 @@
 
       <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_8" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_8"></a>
 
-        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+        <a class="nav-link" href="clio-methods.html">Clio Server Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_8">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ledger-clio.html">ledger</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="nft_info.html">nft_info</a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_9" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_9"></a>
+
+        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_9">
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="json.html">json</a>

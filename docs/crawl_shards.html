@@ -55,7 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v6a.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -88,20 +88,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<div class="top-banner fixed-top">
-  <!-- mobile -->
-  <div class="justify-content-center d-md-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
-    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
-  </div>
-  <!-- tablet and up -->
-  <div class="d-md-flex justify-content-center d-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
-    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
-  </div>
-  
-
-</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,6 +142,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
+          </div><!--./col-->
+          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
@@ -303,21 +291,21 @@
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left"><code>Field</code></th>
-<th align="left">Type</th>
-<th align="left">Description</th>
+<th style="text-align: left;"><code>Field</code></th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>public_key</code></td>
-<td align="left">Boolean</td>
-<td align="left"><em>(Optional)</em> If <code>true</code>, the response includes the node public keys (for peer-to-peer communications) of servers that were crawled. The default is <code>false</code>.</td>
+<td style="text-align: left;"><code>public_key</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;"><em>(Optional)</em> If <code>true</code>, the response includes the node public keys (for peer-to-peer communications) of servers that were crawled. The default is <code>false</code>.</td>
 </tr>
 <tr>
-<td align="left"><code>limit</code></td>
-<td align="left">Number</td>
-<td align="left"><em>(Optional)</em> How many hops deep to search. The default is 0, which searches direct peers only. With a limit of <code>1</code>, searches peers' peers also. The maximum value is <code>3</code>.</td>
+<td style="text-align: left;"><code>limit</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;"><em>(Optional)</em> How many hops deep to search. The default is 0, which searches direct peers only. With a limit of <code>1</code>, searches peers' peers also. The maximum value is <code>3</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -371,21 +359,21 @@
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left"><code>Field</code></th>
-<th align="left">Type</th>
-<th align="left">Description</th>
+<th style="text-align: left;"><code>Field</code></th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>complete_shards</code></td>
-<td align="left">String</td>
-<td align="left"><em>(May be omitted)</em> The range of <a href="history-sharding.html">history shards</a> that are available on the local server. This may be an empty string, or a disjointed range. For example, <code>1-2,5,7-9</code> indicates that shards 1, 2, 5, 7, 8, and 9 are available. Omitted if this server does not have history sharding enabled.</td>
+<td style="text-align: left;"><code>complete_shards</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><em>(May be omitted)</em> The range of <a href="history-sharding.html">history shards</a> that are available on the local server. This may be an empty string, or a disjointed range. For example, <code>1-2,5,7-9</code> indicates that shards 1, 2, 5, 7, 8, and 9 are available. Omitted if this server does not have history sharding enabled.</td>
 </tr>
 <tr>
-<td align="left"><code>peers</code></td>
-<td align="left">Array</td>
-<td align="left"><em>(May be omitted)</em> List of <strong>Peer Shard Objects</strong> (see below) describing which history shards each peer has available. The response omits this field if no peers within the number of hops specified by <code>limit</code> have any shards.</td>
+<td style="text-align: left;"><code>peers</code></td>
+<td style="text-align: left;">Array</td>
+<td style="text-align: left;"><em>(May be omitted)</em> List of <strong>Peer Shard Objects</strong> (see below) describing which history shards each peer has available. The response omits this field if no peers within the number of hops specified by <code>limit</code> have any shards.</td>
 </tr>
 </tbody>
 </table>
@@ -394,26 +382,26 @@
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left"><code>Field</code></th>
-<th align="left">Type</th>
-<th align="left">Description</th>
+<th style="text-align: left;"><code>Field</code></th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>complete_shards</code></td>
-<td align="left">String</td>
-<td align="left">The range of complete history shards this peer has available. This may be disjointed. For example, <code>1-2,5,7-9</code> indicates that shards 1, 2, 5, 7, 8, and 9 are available.</td>
+<td style="text-align: left;"><code>complete_shards</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">The range of complete history shards this peer has available. This may be disjointed. For example, <code>1-2,5,7-9</code> indicates that shards 1, 2, 5, 7, 8, and 9 are available.</td>
 </tr>
 <tr>
-<td align="left"><code>incomplete_shards</code></td>
-<td align="left">String</td>
-<td align="left"><em>(May be omitted)</em> A comma-separated list of history shards this peer has partially downloaded, and percent completion for each. For example, <code>1:50,2:25</code> indicates that shard 1 is 50% downloaded and shard 2 is 25% downloaded. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/1.8.1" target="_blank" title="New in: rippled 1.8.1"><img alt="New in: rippled 1.8.1" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%201.8.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;"><code>incomplete_shards</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><em>(May be omitted)</em> A comma-separated list of history shards this peer has partially downloaded, and percent completion for each. For example, <code>1:50,2:25</code> indicates that shard 1 is 50% downloaded and shard 2 is 25% downloaded. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/1.8.1" target="_blank" title="New in: rippled 1.8.1"><img alt="New in: rippled 1.8.1" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%201.8.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
 </tr>
 <tr>
-<td align="left"><code>public_key</code></td>
-<td align="left">String</td>
-<td align="left"><em>(Omitted unless the request specified <code>"public_key": true</code>)</em> The public key this peer uses for peer-to-peer communications, in the XRP Ledger's <a href="base58-encodings.html">base58 format</a>.</td>
+<td style="text-align: left;"><code>public_key</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><em>(Omitted unless the request specified <code>"public_key": true</code>)</em> The public key this peer uses for peer-to-peer communications, in the XRP Ledger's <a href="base58-encodings.html">base58 format</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -922,6 +910,16 @@
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="broker-sale.html">Broker a NFToken Sale</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="authorize-minter.html">Assign an Authorized Minter</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="batch-minting.html">Batch Mint NFTokens</a>
   </div>
 
     </nav>
@@ -2275,11 +2273,6 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info (Clio)</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="server_state.html">server_state</a>
   </div>
 
@@ -2292,9 +2285,36 @@
 
       <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_8" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_8"></a>
 
-        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+        <a class="nav-link" href="clio-methods.html">Clio Server Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_8">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ledger-clio.html">ledger</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="nft_info.html">nft_info</a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_9" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_9"></a>
+
+        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_9">
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="json.html">json</a>

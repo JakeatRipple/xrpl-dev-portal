@@ -55,7 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v6a.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -88,20 +88,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<div class="top-banner fixed-top">
-  <!-- mobile -->
-  <div class="justify-content-center d-md-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
-    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
-  </div>
-  <!-- tablet and up -->
-  <div class="d-md-flex justify-content-center d-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
-    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
-  </div>
-  
-
-</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,6 +142,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
+          </div><!--./col-->
+          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
@@ -293,36 +281,36 @@
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left"><code>Field</code></th>
-<th align="left">Value</th>
-<th align="left">Description</th>
+<th style="text-align: left;"><code>Field</code></th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>counts</code></td>
-<td align="left">Object</td>
-<td align="left"><em>(May be omitted)</em> Stats about this server's health, similar to the response from the <a href="get_counts.html">get_counts method</a>. The default configuration does not report this field. Information reported includes: how large the ledger and transaction databases are, the cache hit rate for the in-application caches, and how many objects of various types are cached in memory. Types of objects that may be stored in memory include ledgers (<code>Ledger</code>), transactions (<code>STTx</code>), validation messages (<code>STValidation</code>), and more.</td>
+<td style="text-align: left;"><code>counts</code></td>
+<td style="text-align: left;">Object</td>
+<td style="text-align: left;"><em>(May be omitted)</em> Stats about this server's health, similar to the response from the <a href="get_counts.html">get_counts method</a>. The default configuration does not report this field. Information reported includes: how large the ledger and transaction databases are, the cache hit rate for the in-application caches, and how many objects of various types are cached in memory. Types of objects that may be stored in memory include ledgers (<code>Ledger</code>), transactions (<code>STTx</code>), validation messages (<code>STValidation</code>), and more.</td>
 </tr>
 <tr>
-<td align="left"><code>overlay</code></td>
-<td align="left">Object</td>
-<td align="left"><em>(May be omitted)</em> Information about the peer servers currently connected to this one, similar to the response from the <a href="peers.html">peers method</a>. Contains one field, <code>active</code>, which is an array of objects (see below).</td>
+<td style="text-align: left;"><code>overlay</code></td>
+<td style="text-align: left;">Object</td>
+<td style="text-align: left;"><em>(May be omitted)</em> Information about the peer servers currently connected to this one, similar to the response from the <a href="peers.html">peers method</a>. Contains one field, <code>active</code>, which is an array of objects (see below).</td>
 </tr>
 <tr>
-<td align="left"><code>server</code></td>
-<td align="left">Object</td>
-<td align="left"><em>(May be omitted)</em> Information about this server. Contains public fields from the <a href="server_state.html">server_state method</a>, including what <code>rippled</code> version you are running (<code>build_version</code>), which <a href="ledger-history.html">ledger versions</a> your server has available (<code>complete_ledgers</code>), and the amount of load your server is experiencing. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/1.2.1" target="_blank" title="Updated in: rippled 1.2.1"><img alt="Updated in: rippled 1.2.1" class="dactyl_badge" src="https://img.shields.io/badge/Updated%20in-rippled%201.2.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;"><code>server</code></td>
+<td style="text-align: left;">Object</td>
+<td style="text-align: left;"><em>(May be omitted)</em> Information about this server. Contains public fields from the <a href="server_state.html">server_state method</a>, including what <code>rippled</code> version you are running (<code>build_version</code>), which <a href="ledger-history.html">ledger versions</a> your server has available (<code>complete_ledgers</code>), and the amount of load your server is experiencing. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/1.2.1" target="_blank" title="Updated in: rippled 1.2.1"><img alt="Updated in: rippled 1.2.1" class="dactyl_badge" src="https://img.shields.io/badge/Updated%20in-rippled%201.2.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
 </tr>
 <tr>
-<td align="left"><code>unl</code></td>
-<td align="left">Object</td>
-<td align="left"><em>(May be omitted)</em> Information about the validators and validator list sites this server is configured to trust, similar to the response from the <a href="validators.html">validators method</a> and <a href="validator_list_sites.html">validator_list_sites method</a>. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/1.2.1" target="_blank" title="Updated in: rippled 1.2.1"><img alt="Updated in: rippled 1.2.1" class="dactyl_badge" src="https://img.shields.io/badge/Updated%20in-rippled%201.2.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;"><code>unl</code></td>
+<td style="text-align: left;">Object</td>
+<td style="text-align: left;"><em>(May be omitted)</em> Information about the validators and validator list sites this server is configured to trust, similar to the response from the <a href="validators.html">validators method</a> and <a href="validator_list_sites.html">validator_list_sites method</a>. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/1.2.1" target="_blank" title="Updated in: rippled 1.2.1"><img alt="Updated in: rippled 1.2.1" class="dactyl_badge" src="https://img.shields.io/badge/Updated%20in-rippled%201.2.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
 </tr>
 <tr>
-<td align="left"><code>version</code></td>
-<td align="left">Number</td>
-<td align="left">Indicates the version of this peer crawler response format. The current peer crawler version number is <code>2</code>. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/1.2.1" target="_blank" title="Updated in: rippled 1.2.1"><img alt="Updated in: rippled 1.2.1" class="dactyl_badge" src="https://img.shields.io/badge/Updated%20in-rippled%201.2.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;"><code>version</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">Indicates the version of this peer crawler response format. The current peer crawler version number is <code>2</code>. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/1.2.1" target="_blank" title="Updated in: rippled 1.2.1"><img alt="Updated in: rippled 1.2.1" class="dactyl_badge" src="https://img.shields.io/badge/Updated%20in-rippled%201.2.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
 </tr>
 </tbody>
 </table>
@@ -330,51 +318,51 @@
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left"><code>Field</code></th>
-<th align="left">Value</th>
-<th align="left">Description</th>
+<th style="text-align: left;"><code>Field</code></th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>complete_ledgers</code></td>
-<td align="left">String</td>
-<td align="left">The range of <a href="ledger-history.html">ledger versions</a> this peer has available.</td>
+<td style="text-align: left;"><code>complete_ledgers</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">The range of <a href="ledger-history.html">ledger versions</a> this peer has available.</td>
 </tr>
 <tr>
-<td align="left"><code>complete_shards</code></td>
-<td align="left">String</td>
-<td align="left"><em>(May be omitted)</em> The range of <a href="history-sharding.html">ledger history shards</a> this peer has available.</td>
+<td style="text-align: left;"><code>complete_shards</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><em>(May be omitted)</em> The range of <a href="history-sharding.html">ledger history shards</a> this peer has available.</td>
 </tr>
 <tr>
-<td align="left"><code>ip</code></td>
-<td align="left">String (IPv4 Address)</td>
-<td align="left"><em>(May be omitted)</em> The IP address of this connected peer. Omitted if the peer is configured as a validator or a <a href="peer-protocol.html#private-peers">private peer</a>. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/1.2.1" target="_blank" title="Updated in: rippled 1.2.1"><img alt="Updated in: rippled 1.2.1" class="dactyl_badge" src="https://img.shields.io/badge/Updated%20in-rippled%201.2.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;"><code>ip</code></td>
+<td style="text-align: left;">String (IPv4 Address)</td>
+<td style="text-align: left;"><em>(May be omitted)</em> The IP address of this connected peer. Omitted if the peer is configured as a validator or a <a href="peer-protocol.html#private-peers">private peer</a>. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/1.2.1" target="_blank" title="Updated in: rippled 1.2.1"><img alt="Updated in: rippled 1.2.1" class="dactyl_badge" src="https://img.shields.io/badge/Updated%20in-rippled%201.2.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
 </tr>
 <tr>
-<td align="left"><code>port</code></td>
-<td align="left">String (Number)</td>
-<td align="left"><em>(May be omitted)</em> The port number on the peer server that serves RTXP. Typically <code>51235</code>. Omitted if the peer is configured as a validator or a <a href="peer-protocol.html#private-peers">private peer</a>. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/1.2.1" target="_blank" title="Updated in: rippled 1.2.1"><img alt="Updated in: rippled 1.2.1" class="dactyl_badge" src="https://img.shields.io/badge/Updated%20in-rippled%201.2.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;"><code>port</code></td>
+<td style="text-align: left;">String (Number)</td>
+<td style="text-align: left;"><em>(May be omitted)</em> The port number on the peer server that serves RTXP. Typically <code>51235</code>. Omitted if the peer is configured as a validator or a <a href="peer-protocol.html#private-peers">private peer</a>. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/1.2.1" target="_blank" title="Updated in: rippled 1.2.1"><img alt="Updated in: rippled 1.2.1" class="dactyl_badge" src="https://img.shields.io/badge/Updated%20in-rippled%201.2.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
 </tr>
 <tr>
-<td align="left"><code>public_key</code></td>
-<td align="left">String (Base-64 Encoded)</td>
-<td align="left">The public key of the ECDSA key pair used by this peer to sign RTXP messages. (This is the same data as the <code>pubkey_node</code> reported by the peer server's <a href="server_info.html">server_info method</a>.)</td>
+<td style="text-align: left;"><code>public_key</code></td>
+<td style="text-align: left;">String (Base-64 Encoded)</td>
+<td style="text-align: left;">The public key of the ECDSA key pair used by this peer to sign RTXP messages. (This is the same data as the <code>pubkey_node</code> reported by the peer server's <a href="server_info.html">server_info method</a>.)</td>
 </tr>
 <tr>
-<td align="left"><code>type</code></td>
-<td align="left">String</td>
-<td align="left">The value <code>in</code> or <code>out</code>, indicating whether the TCP connection to the peer is incoming or outgoing.</td>
+<td style="text-align: left;"><code>type</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">The value <code>in</code> or <code>out</code>, indicating whether the TCP connection to the peer is incoming or outgoing.</td>
 </tr>
 <tr>
-<td align="left"><code>uptime</code></td>
-<td align="left">Number</td>
-<td align="left">The number of seconds the server has been connected to this peer.</td>
+<td style="text-align: left;"><code>uptime</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">The number of seconds the server has been connected to this peer.</td>
 </tr>
 <tr>
-<td align="left"><code>version</code></td>
-<td align="left">String</td>
-<td align="left">The <code>rippled</code> version number the peer reports to be using.</td>
+<td style="text-align: left;"><code>version</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">The <code>rippled</code> version number the peer reports to be using.</td>
 </tr>
 </tbody>
 </table>
@@ -1072,6 +1060,16 @@
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="broker-sale.html">Broker a NFToken Sale</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="authorize-minter.html">Assign an Authorized Minter</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="batch-minting.html">Batch Mint NFTokens</a>
   </div>
 
     </nav>
@@ -2425,11 +2423,6 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info (Clio)</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="server_state.html">server_state</a>
   </div>
 
@@ -2442,9 +2435,36 @@
 
       <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_8" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_8"></a>
 
-        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+        <a class="nav-link" href="clio-methods.html">Clio Server Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_8">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ledger-clio.html">ledger</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="nft_info.html">nft_info</a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_9" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_9"></a>
+
+        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_9">
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="json.html">json</a>

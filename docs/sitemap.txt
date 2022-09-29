@@ -87,6 +87,8 @@ https://xrpl.org/create-trustline-send-currency.html
 https://xrpl.org/mint-and-burn-nftokens.html
 https://xrpl.org/transfer-nftokens.html
 https://xrpl.org/broker-sale.html
+https://xrpl.org/authorize-minter.html
+https://xrpl.org/batch-minting.html
 https://xrpl.org/get-started.html
 https://xrpl.org/public-servers.html
 https://xrpl.org/get-started-using-python.html
@@ -313,8 +315,11 @@ https://xrpl.org/server-info-methods.html
 https://xrpl.org/fee.html
 https://xrpl.org/manifest.html
 https://xrpl.org/server_info.html
-https://xrpl.org/server_info-clio.html
 https://xrpl.org/server_state.html
+https://xrpl.org/clio-methods.html
+https://xrpl.org/server_info-clio.html
+https://xrpl.org/ledger-clio.html
+https://xrpl.org/nft_info.html
 https://xrpl.org/utility-methods.html
 https://xrpl.org/json.html
 https://xrpl.org/ping.html

@@ -55,7 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v6a.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -88,20 +88,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<div class="top-banner fixed-top">
-  <!-- mobile -->
-  <div class="justify-content-center d-md-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
-    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
-  </div>
-  <!-- tablet and up -->
-  <div class="d-md-flex justify-content-center d-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
-    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
-  </div>
-  
-
-</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,6 +142,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
+          </div><!--./col-->
+          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
@@ -300,31 +288,31 @@
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left">Field</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>tokenid</code></td>
-<td align="left">String</td>
-<td align="left">The unique identifier of a NFToken object.</td>
+<td style="text-align: left;"><code>tokenid</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">The unique identifier of a NFToken object.</td>
 </tr>
 <tr>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td align="left">## Response Format</td>
-<td align="left"></td>
-<td align="left"></td>
+<td style="text-align: left;">## Response Format</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td align="left">An example of a successful response:</td>
-<td align="left"></td>
-<td align="left"></td>
+<td style="text-align: left;">An example of a successful response:</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 </tbody>
 </table>
@@ -367,31 +355,31 @@
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left"><code>Field</code></th>
-<th align="left">Type</th>
-<th align="left">Description</th>
+<th style="text-align: left;"><code>Field</code></th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>nft_id</code></td>
-<td align="left">String</td>
-<td align="left">The NFToken these offers are for, as specified in the request.</td>
+<td style="text-align: left;"><code>nft_id</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">The NFToken these offers are for, as specified in the request.</td>
 </tr>
 <tr>
-<td align="left"><code>offers</code></td>
-<td align="left">Array</td>
-<td align="left">A list of buy offers for the token. Each of these is formatted as a <strong>Sell Offer</strong> (see below).</td>
+<td style="text-align: left;"><code>offers</code></td>
+<td style="text-align: left;">Array</td>
+<td style="text-align: left;">A list of buy offers for the token. Each of these is formatted as a <strong>Sell Offer</strong> (see below).</td>
 </tr>
 <tr>
-<td align="left"><code>limit</code></td>
-<td align="left">Number</td>
-<td align="left">_(May be omitted)_The <code>limit</code>, as specified in the request.</td>
+<td style="text-align: left;"><code>limit</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">_(May be omitted)_The <code>limit</code>, as specified in the request.</td>
 </tr>
 <tr>
-<td align="left"><code>marker</code></td>
-<td align="left"><a href="markers-and-pagination.html">Marker</a></td>
-<td align="left"><em>(May be omitted)</em> Server-defined value indicating the response is paginated. Pass this to the next call to resume where this call left off. Omitted when there are no pages of information after this one.</td>
+<td style="text-align: left;"><code>marker</code></td>
+<td style="text-align: left;"><a href="markers-and-pagination.html">Marker</a></td>
+<td style="text-align: left;"><em>(May be omitted)</em> Server-defined value indicating the response is paginated. Pass this to the next call to resume where this call left off. Omitted when there are no pages of information after this one.</td>
 </tr>
 </tbody>
 </table>
@@ -400,31 +388,31 @@
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left"><code>Field</code></th>
-<th align="left">Type</th>
-<th align="left">Description</th>
+<th style="text-align: left;"><code>Field</code></th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>amount</code></td>
-<td align="left">String or Object</td>
-<td align="left">The amount offered to sell the NFT for, as a String representing an amount in drops of XRP, or an object representing an amount of a fungible token. (See <a href="basic-data-types.html#specifying-currency-amounts">Specifying Currency Amounts</a>)</td>
+<td style="text-align: left;"><code>amount</code></td>
+<td style="text-align: left;">String or Object</td>
+<td style="text-align: left;">The amount offered to sell the NFT for, as a String representing an amount in drops of XRP, or an object representing an amount of a fungible token. (See <a href="basic-data-types.html#specifying-currency-amounts">Specifying Currency Amounts</a>)</td>
 </tr>
 <tr>
-<td align="left"><code>flags</code></td>
-<td align="left">Number</td>
-<td align="left">A set of bit-flags for this offer. See <a href="nftokenoffer.html#nftokenoffer-flags">NFTokenOffer flags</a> for possible values.</td>
+<td style="text-align: left;"><code>flags</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">A set of bit-flags for this offer. See <a href="nftokenoffer.html#nftokenoffer-flags">NFTokenOffer flags</a> for possible values.</td>
 </tr>
 <tr>
-<td align="left"><code>nft_offer_index</code></td>
-<td align="left">String</td>
-<td align="left">The <a href="ledger-object-ids.html">ledger object ID</a> of this offer.</td>
+<td style="text-align: left;"><code>nft_offer_index</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">The <a href="ledger-object-ids.html">ledger object ID</a> of this offer.</td>
 </tr>
 <tr>
-<td align="left"><code>owner</code></td>
-<td align="left">String</td>
-<td align="left">The account that placed this offer.</td>
+<td style="text-align: left;"><code>owner</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">The account that placed this offer.</td>
 </tr>
 </tbody>
 </table>
@@ -932,6 +920,16 @@
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="broker-sale.html">Broker a NFToken Sale</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="authorize-minter.html">Assign an Authorized Minter</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="batch-minting.html">Batch Mint NFTokens</a>
   </div>
 
     </nav>
@@ -2285,11 +2283,6 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info (Clio)</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="server_state.html">server_state</a>
   </div>
 
@@ -2302,9 +2295,36 @@
 
       <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_8" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_8"></a>
 
-        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+        <a class="nav-link" href="clio-methods.html">Clio Server Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_8">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ledger-clio.html">ledger</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="nft_info.html">nft_info</a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_9" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_9"></a>
+
+        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_9">
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="json.html">json</a>

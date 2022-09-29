@@ -55,7 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v6a.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -88,20 +88,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<div class="top-banner fixed-top">
-  <!-- mobile -->
-  <div class="justify-content-center d-md-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
-    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
-  </div>
-  <!-- tablet and up -->
-  <div class="d-md-flex justify-content-center d-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
-    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
-  </div>
-  
-
-</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,6 +142,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
+          </div><!--./col-->
+          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
@@ -415,8 +403,8 @@
   document.getElementById('brokerResultField').value = results
 </code></pre></div>
 <p>Disconnect from the ledger.</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-4" id="codeblock-4button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-4">  <span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span>  
-}<span class="o">//</span> <span class="k">End</span> <span class="nv">of</span> <span class="nv">brGetOffers</span><span class="ss">()</span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-4" id="codeblock-4button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-4"><span class="w">  </span><span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span><span class="w">  </span>
+}<span class="o">//</span><span class="w"> </span><span class="k">End</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">brGetOffers</span><span class="ss">()</span><span class="w"></span>
 </code></pre></div>
 <h2 id="broker-sale">Broker Sale<a aria-hidden="true" class="hover_anchor" href="#broker-sale"><i class="fa fa-link"></i></a></h2>
 <div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-5" id="codeblock-5button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-5">async function brokerSale() {
@@ -459,8 +447,8 @@
   document.getElementById('brokerResultField').value = results
 </code></pre></div>
 <p>Disconnect from the ledger.</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-10" id="codeblock-10button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-10">  <span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span>
-}<span class="o">//</span> <span class="k">End</span> <span class="nv">of</span> <span class="nv">brokerSale</span><span class="ss">()</span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-10" id="codeblock-10button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-10"><span class="w">  </span><span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span><span class="w"></span>
+}<span class="o">//</span><span class="w"> </span><span class="k">End</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">brokerSale</span><span class="ss">()</span><span class="w"></span>
 </code></pre></div>
 <h2 id="broker-cancel-offer">Broker Cancel Offer<a aria-hidden="true" class="hover_anchor" href="#broker-cancel-offer"><i class="fa fa-link"></i></a></h2>
 <div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-11" id="codeblock-11button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-11">async function brCancelOffer() {
@@ -520,8 +508,8 @@
   document.getElementById('brokerResultField').value = results
 </code></pre></div>
 <p>Disconnect from the ledger.</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-19" id="codeblock-19button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-19">  <span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span>
-}<span class="o">//</span> <span class="k">End</span> <span class="nv">of</span> <span class="nv">brCancelOffer</span><span class="ss">()</span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-19" id="codeblock-19button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-19"><span class="w">  </span><span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span><span class="w"></span>
+}<span class="o">//</span><span class="w"> </span><span class="k">End</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">brCancelOffer</span><span class="ss">()</span><span class="w"></span>
 </code></pre></div>
 <h2 id="get-account">Get Account<a aria-hidden="true" class="hover_anchor" href="#get-account"><i class="fa fa-link"></i></a></h2>
 <p>To accommodate the broker account, override the <code>getAccount(type)</code> function to watch for the <em>broker</em> type. </p>
@@ -533,34 +521,34 @@
 <span class="w">  </span><span class="n">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Connecting to '</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">net</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">'....'</span><span class="w"></span>
 </code></pre></div>
 <p>Get the correct network host.</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-22" id="codeblock-22button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-22">  <span class="nv">let</span> <span class="nv">faucetHost</span> <span class="o">=</span> <span class="nv">null</span>
-  <span class="k">if</span><span class="ss">(</span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s2">"</span><span class="s">xls</span><span class="s2">"</span><span class="ss">)</span>.<span class="nv">checked</span><span class="ss">)</span> {
-    <span class="nv">faucetHost</span> <span class="o">=</span> <span class="s2">"</span><span class="s">faucet-nft.ripple.com</span><span class="s2">"</span>
-  } 
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-22" id="codeblock-22button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-22"><span class="w">  </span><span class="nv">let</span><span class="w"> </span><span class="nv">faucetHost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">null</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="ss">(</span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s2">"xls"</span><span class="ss">)</span>.<span class="nv">checked</span><span class="ss">)</span><span class="w"> </span>{<span class="w"></span>
+<span class="w">    </span><span class="nv">faucetHost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"faucet-nft.ripple.com"</span><span class="w"></span>
+<span class="w">  </span>}<span class="w"> </span>
 
-  <span class="k">if</span> <span class="ss">(</span><span class="nv">type</span> <span class="o">==</span> <span class="s1">'</span><span class="s">standby</span><span class="s1">'</span><span class="ss">)</span> {
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">standbyResultField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> <span class="nv">results</span>
-  } 
-  <span class="k">if</span> <span class="ss">(</span><span class="nv">type</span> <span class="o">==</span> <span class="s1">'</span><span class="s">operational</span><span class="s1">'</span><span class="ss">)</span> {
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">operationalResultField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> <span class="nv">results</span>
-  }
-  <span class="k">if</span> <span class="ss">(</span><span class="nv">type</span> <span class="o">==</span> <span class="s1">'</span><span class="s">broker</span><span class="s1">'</span><span class="ss">)</span> {
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">brokerResultField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> <span class="nv">results</span>
-  }
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="ss">(</span><span class="nv">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'standby'</span><span class="ss">)</span><span class="w"> </span>{<span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'standbyResultField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">results</span><span class="w"></span>
+<span class="w">  </span>}<span class="w"> </span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="ss">(</span><span class="nv">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'operational'</span><span class="ss">)</span><span class="w"> </span>{<span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'operationalResultField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">results</span><span class="w"></span>
+<span class="w">  </span>}<span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="ss">(</span><span class="nv">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'broker'</span><span class="ss">)</span><span class="w"> </span>{<span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'brokerResultField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">results</span><span class="w"></span>
+<span class="w">  </span>}<span class="w"></span>
 </code></pre></div>
 <p>Connect to the ledger.</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-23" id="codeblock-23button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-23">  <span class="nv">await</span> <span class="nv">client</span>.<span class="k">connect</span><span class="ss">()</span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-23" id="codeblock-23button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-23"><span class="w">  </span><span class="nv">await</span><span class="w"> </span><span class="nv">client</span>.<span class="k">connect</span><span class="ss">()</span><span class="w"></span>
 
-  <span class="nv">results</span> <span class="o">+=</span> <span class="s1">'</span><span class="se">\n</span><span class="s">Connected, funding wallet.</span><span class="s1">'</span>
-  <span class="k">if</span> <span class="ss">(</span><span class="nv">type</span> <span class="o">==</span> <span class="s1">'</span><span class="s">standby</span><span class="s1">'</span><span class="ss">)</span> {
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">standbyResultField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> <span class="nv">results</span>
-  } 
-  <span class="k">if</span> <span class="ss">(</span><span class="nv">type</span> <span class="o">==</span> <span class="s1">'</span><span class="s">operational</span><span class="s1">'</span><span class="ss">)</span> {
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">operationalResultField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> <span class="nv">results</span>
-  }
-  <span class="k">if</span> <span class="ss">(</span><span class="nv">type</span> <span class="o">==</span> <span class="s1">'</span><span class="s">broker</span><span class="s1">'</span><span class="ss">)</span> {
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">brokerResultField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> <span class="nv">results</span>
-  }
+<span class="w">  </span><span class="nv">results</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s1">'\nConnected, funding wallet.'</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="ss">(</span><span class="nv">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'standby'</span><span class="ss">)</span><span class="w"> </span>{<span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'standbyResultField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">results</span><span class="w"></span>
+<span class="w">  </span>}<span class="w"> </span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="ss">(</span><span class="nv">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'operational'</span><span class="ss">)</span><span class="w"> </span>{<span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'operationalResultField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">results</span><span class="w"></span>
+<span class="w">  </span>}<span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="ss">(</span><span class="nv">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'broker'</span><span class="ss">)</span><span class="w"> </span>{<span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'brokerResultField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">results</span><span class="w"></span>
+<span class="w">  </span>}<span class="w"></span>
 </code></pre></div>
 <p>Create and fund a test wallet and report progress.</p>
 <div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-24" id="codeblock-24button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-24"><span class="k">const</span><span class="w"> </span><span class="n">my_wallet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">await</span><span class="w"> </span><span class="n">client</span><span class="o">.</span><span class="n">fundWallet</span><span class="p">(</span><span class="nb nb-Type">null</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">faucetHost</span><span class="w"> </span><span class="p">}))</span><span class="o">.</span><span class="n">wallet</span><span class="w"></span>
@@ -580,43 +568,43 @@
 <div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-25" id="codeblock-25button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-25"><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">my_balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">await</span><span class="w"> </span><span class="n">client</span><span class="o">.</span><span class="n">getXrpBalance</span><span class="p">(</span><span class="n">my_wallet</span><span class="o">.</span><span class="n">address</span><span class="p">))</span><span class="w"></span>
 </code></pre></div>
 <p>Populate the form fields for the appropriate account with the new account information.</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-26" id="codeblock-26button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-26">  <span class="k">if</span> <span class="ss">(</span><span class="nv">type</span> <span class="o">==</span> <span class="s1">'</span><span class="s">standby</span><span class="s1">'</span><span class="ss">)</span> {
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">standbyAccountField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> <span class="nv">my_wallet</span>.<span class="nv">address</span>
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">standbyPubKeyField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> <span class="nv">my_wallet</span>.<span class="nv">publicKey</span>
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">standbyPrivKeyField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> <span class="nv">my_wallet</span>.<span class="nv">privateKey</span>
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">standbyBalanceField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> 
-      <span class="ss">(</span><span class="nv">await</span> <span class="nv">client</span>.<span class="nv">getXrpBalance</span><span class="ss">(</span><span class="nv">my_wallet</span>.<span class="nv">address</span><span class="ss">))</span>
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">standbySeedField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> <span class="nv">my_wallet</span>.<span class="nv">seed</span>
-    <span class="nv">results</span> <span class="o">+=</span> <span class="s1">'</span><span class="se">\n</span><span class="s">Standby account created.</span><span class="s1">'</span>
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">standbyResultField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> <span class="nv">results</span>
-  }
-  <span class="k">if</span> <span class="ss">(</span><span class="nv">type</span> <span class="o">==</span> <span class="s1">'</span><span class="s">operational</span><span class="s1">'</span><span class="ss">)</span> {
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">operationalAccountField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> <span class="nv">my_wallet</span>.<span class="nv">address</span>
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">operationalPubKeyField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> <span class="nv">my_wallet</span>.<span class="nv">publicKey</span>
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">operationalPrivKeyField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> <span class="nv">my_wallet</span>.<span class="nv">privateKey</span>
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">operationalSeedField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> <span class="nv">my_wallet</span>.<span class="nv">seed</span>
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">operationalBalanceField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> 
-      <span class="ss">(</span><span class="nv">await</span> <span class="nv">client</span>.<span class="nv">getXrpBalance</span><span class="ss">(</span><span class="nv">my_wallet</span>.<span class="nv">address</span><span class="ss">))</span>
-    <span class="nv">results</span> <span class="o">+=</span> <span class="s1">'</span><span class="se">\n</span><span class="s">Operational account created.</span><span class="s1">'</span>
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">operationalResultField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> <span class="nv">results</span>
-  }
-  <span class="k">if</span> <span class="ss">(</span><span class="nv">type</span> <span class="o">==</span> <span class="s1">'</span><span class="s">broker</span><span class="s1">'</span><span class="ss">)</span> {
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">brokerAccountField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> <span class="nv">my_wallet</span>.<span class="nv">address</span>
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">brokerPubKeyField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> <span class="nv">my_wallet</span>.<span class="nv">publicKey</span>
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">brokerPrivKeyField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> <span class="nv">my_wallet</span>.<span class="nv">privateKey</span>
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">brokerSeedField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> <span class="nv">my_wallet</span>.<span class="nv">seed</span>
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">brokerBalanceField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> 
-      <span class="ss">(</span><span class="nv">await</span> <span class="nv">client</span>.<span class="nv">getXrpBalance</span><span class="ss">(</span><span class="nv">my_wallet</span>.<span class="nv">address</span><span class="ss">))</span>
-    <span class="nv">results</span> <span class="o">+=</span> <span class="s1">'</span><span class="se">\n</span><span class="s">Broker account created.</span><span class="s1">'</span>
-    <span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'</span><span class="s">brokerResultField</span><span class="s1">'</span><span class="ss">)</span>.<span class="nv">value</span> <span class="o">=</span> <span class="nv">results</span>
-  }
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-26" id="codeblock-26button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-26"><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="ss">(</span><span class="nv">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'standby'</span><span class="ss">)</span><span class="w"> </span>{<span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'standbyAccountField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">my_wallet</span>.<span class="nv">address</span><span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'standbyPubKeyField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">my_wallet</span>.<span class="nv">publicKey</span><span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'standbyPrivKeyField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">my_wallet</span>.<span class="nv">privateKey</span><span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'standbyBalanceField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
+<span class="w">      </span><span class="ss">(</span><span class="nv">await</span><span class="w"> </span><span class="nv">client</span>.<span class="nv">getXrpBalance</span><span class="ss">(</span><span class="nv">my_wallet</span>.<span class="nv">address</span><span class="ss">))</span><span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'standbySeedField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">my_wallet</span>.<span class="nv">seed</span><span class="w"></span>
+<span class="w">    </span><span class="nv">results</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s1">'\nStandby account created.'</span><span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'standbyResultField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">results</span><span class="w"></span>
+<span class="w">  </span>}<span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="ss">(</span><span class="nv">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'operational'</span><span class="ss">)</span><span class="w"> </span>{<span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'operationalAccountField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">my_wallet</span>.<span class="nv">address</span><span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'operationalPubKeyField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">my_wallet</span>.<span class="nv">publicKey</span><span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'operationalPrivKeyField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">my_wallet</span>.<span class="nv">privateKey</span><span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'operationalSeedField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">my_wallet</span>.<span class="nv">seed</span><span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'operationalBalanceField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
+<span class="w">      </span><span class="ss">(</span><span class="nv">await</span><span class="w"> </span><span class="nv">client</span>.<span class="nv">getXrpBalance</span><span class="ss">(</span><span class="nv">my_wallet</span>.<span class="nv">address</span><span class="ss">))</span><span class="w"></span>
+<span class="w">    </span><span class="nv">results</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s1">'\nOperational account created.'</span><span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'operationalResultField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">results</span><span class="w"></span>
+<span class="w">  </span>}<span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="ss">(</span><span class="nv">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'broker'</span><span class="ss">)</span><span class="w"> </span>{<span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'brokerAccountField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">my_wallet</span>.<span class="nv">address</span><span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'brokerPubKeyField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">my_wallet</span>.<span class="nv">publicKey</span><span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'brokerPrivKeyField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">my_wallet</span>.<span class="nv">privateKey</span><span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'brokerSeedField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">my_wallet</span>.<span class="nv">seed</span><span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'brokerBalanceField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
+<span class="w">      </span><span class="ss">(</span><span class="nv">await</span><span class="w"> </span><span class="nv">client</span>.<span class="nv">getXrpBalance</span><span class="ss">(</span><span class="nv">my_wallet</span>.<span class="nv">address</span><span class="ss">))</span><span class="w"></span>
+<span class="w">    </span><span class="nv">results</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s1">'\nBroker account created.'</span><span class="w"></span>
+<span class="w">    </span><span class="nv">document</span>.<span class="nv">getElementById</span><span class="ss">(</span><span class="s1">'brokerResultField'</span><span class="ss">)</span>.<span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">results</span><span class="w"></span>
+<span class="w">  </span>}<span class="w"></span>
 </code></pre></div>
 <p>Add the new account seed to corresponding line in the <strong>Account Seeds</strong> field.</p>
 <div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-27" id="codeblock-27button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-27">document.getElementById('seeds').value = standbySeedField.value + '\n' + operationalSeedField.value + "\n" + brokerSeedField.value
 </code></pre></div>
 <p>Disconnect from the ledger.</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-28" id="codeblock-28button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-28">  <span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span>
-} <span class="o">//</span> <span class="k">End</span> <span class="nv">of</span> <span class="nv">getAccount</span><span class="ss">()</span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-28" id="codeblock-28button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-28"><span class="w">  </span><span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span><span class="w"></span>
+}<span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="k">End</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">getAccount</span><span class="ss">()</span><span class="w"></span>
 </code></pre></div>
 <h2 id="get-accounts-from-seeds">Get Accounts from Seeds<a aria-hidden="true" class="hover_anchor" href="#get-accounts-from-seeds"><i class="fa fa-link"></i></a></h2>
 <p>Override the <code>getAccountsFromSeeds()</code> function to include the broker account fields.</p>
@@ -667,12 +655,12 @@
     (await client.getXrpBalance(broker_wallet.address))
 </code></pre></div>
 <p>Disconnect from the ledger.</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-35" id="codeblock-35button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-35">  <span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-35" id="codeblock-35button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-35"><span class="w">  </span><span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span><span class="w"></span>
 </code></pre></div>
 <p>Use the <code>getBalances()</code> function to get the current balances of fiat currency.</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-36" id="codeblock-36button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-36">  <span class="nv">getBalances</span><span class="ss">()</span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-36" id="codeblock-36button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-36"><span class="w">  </span><span class="nv">getBalances</span><span class="ss">()</span><span class="w"></span>
 
-} <span class="o">//</span> <span class="k">End</span> <span class="nv">of</span> <span class="nv">getAccountsFromSeeds</span><span class="ss">()</span>
+}<span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="k">End</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">getAccountsFromSeeds</span><span class="ss">()</span><span class="w"></span>
 </code></pre></div>
 <h2 id="get-balances">Get Balances<a aria-hidden="true" class="hover_anchor" href="#get-balances"><i class="fa fa-link"></i></a></h2>
 <p>Override the <code>getBalances()</code> function to include the broker balance.</p>
@@ -734,8 +722,8 @@
     (await client.getXrpBalance(broker_wallet.address))
 </code></pre></div>
 <p>Disconnect from the ledger.</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-44" id="codeblock-44button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-44">  <span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span>
-} <span class="o">//</span> <span class="k">end</span> <span class="nv">of</span> <span class="nv">getBalances</span><span class="ss">()</span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-44" id="codeblock-44button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-44"><span class="w">  </span><span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span><span class="w"></span>
+}<span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">getBalances</span><span class="ss">()</span><span class="w"></span>
 </code></pre></div>
 <h2 id="5broker-nftshtml">5.broker-nfts.html<a aria-hidden="true" class="hover_anchor" href="#5broker-nftshtml"><i class="fa fa-link"></i></a></h2>
 <p>Revise the HTML form to add a new Broker section at the top.</p>
@@ -1180,20 +1168,19 @@
 <span class="w">      </span><span class="o">&lt;/</span><span class="n">table</span><span class="o">&gt;</span><span class="w"></span>
 <span class="w">    </span><span class="o">&lt;/</span><span class="n">form</span><span class="o">&gt;</span><span class="w"></span>
 <span class="w">  </span><span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span><span class="w"></span>
+<span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span><span class="w"> </span>
 </code></pre></div>
-<hr/>
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left">Previous</th>
-<th align="right">Next</th>
+<th style="text-align: left;">Previous</th>
+<th style="text-align: right;">Next</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><a class="btn btn-primary" href="transfer-nftokens.html">← 4. Transfer NFTokens</a></td>
-<td align="right"></td>
+<td style="text-align: left;"><a class="btn btn-primary" href="transfer-nftokens.html">← 4. Transfer NFTokens</a></td>
+<td style="text-align: right;"><a class="btn btn-primary" href="authorize-minter.html">Authorize Minter →</a></td>
 </tr>
 </tbody>
 </table>
@@ -1688,6 +1675,16 @@
       
   <div class="nav-item active">
     <a class="nav-link nav-leaf" href="broker-sale.html">Broker a NFToken Sale</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="authorize-minter.html">Assign an Authorized Minter</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="batch-minting.html">Batch Mint NFTokens</a>
   </div>
 
     </nav>
@@ -3041,11 +3038,6 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info (Clio)</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="server_state.html">server_state</a>
   </div>
 
@@ -3058,9 +3050,36 @@
 
       <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_8" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_8"></a>
 
-        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+        <a class="nav-link" href="clio-methods.html">Clio Server Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_8">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ledger-clio.html">ledger</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="nft_info.html">nft_info</a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_9" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_9"></a>
+
+        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_9">
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="json.html">json</a>

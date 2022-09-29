@@ -55,7 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v6a.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -88,20 +88,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<div class="top-banner fixed-top">
-  <!-- mobile -->
-  <div class="justify-content-center d-md-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
-    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
-  </div>
-  <!-- tablet and up -->
-  <div class="d-md-flex justify-content-center d-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
-    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
-  </div>
-  
-
-</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,6 +142,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
+          </div><!--./col-->
+          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
@@ -249,13 +237,13 @@
     </div>
     <ul class="page-toc nav flex-column" role="directory">
         <li class="nav-item level-1"><a class="nav-link" href="#nftoken">NFToken</a></li>
-        <li class="nav-item level-2"><a class="nav-link" href="#tokenid">TokenID</a></li>
+        <li class="nav-item level-2"><a class="nav-link" href="#nftokenid">NFTokenID</a></li>
         <li class="nav-item level-2"><a class="nav-link" href="#nftoken-flags">NFToken Flags</a></li>
         <li class="nav-item level-3"><a class="nav-link" href="#example">Example</a></li>
         <li class="nav-item level-3"><a class="nav-link" href="#transferfee">TransferFee</a></li>
         <li class="nav-item level-3"><a class="nav-link" href="#example-1">Example</a></li>
         <li class="nav-item level-3"><a class="nav-link" href="#issuer-identification">Issuer Identification</a></li>
-        <li class="nav-item level-3"><a class="nav-link" href="#taxon">Taxon</a></li>
+        <li class="nav-item level-3"><a class="nav-link" href="#nftokentaxon">NFTokenTaxon</a></li>
         <li class="nav-item level-3"><a class="nav-link" href="#token-sequence">Token Sequence</a></li>
         <li class="nav-item level-2"><a class="nav-link" href="#uri">URI</a></li>
         <li class="nav-item level-1"><a class="nav-link" href="#retrieving-nftoken-data-and-metadata">Retrieving NFToken Data and Metadata</a></li>
@@ -281,96 +269,82 @@
     <div class="content">
         <h1 id="nftoken">NFToken<a aria-hidden="true" class="hover_anchor" href="#nftoken"><i class="fa fa-link"></i></a></h1>
 <p><em>Non-fungible token functionality is part of the <a href="known-amendments.html#nonfungibletokensv1">NonFungibleTokensV1 amendment</a> <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span> to the XRP Ledger protocol. You can use these functions on the <a href="parallel-networks.html">NFT-Devnet</a> now, but they are not yet available on the production Mainnet.</em></p>
-<p>The <code>NFToken</code> object represents a single non-fungible token (NFT). It is not stored on its own, but is contained in a <a href="nftokenpage.html">NFTokenPage object</a> alongside other NFTs.</p>
+<p>The <code>NFToken</code> object represents a single non-fungible token (NFT). It is not stored on its own, but is contained in a <a href="nftokenpage.html">NFTokenPage object</a> alongside other <code>NFToken</code> objects.</p>
 <p>Example NFToken JSON</p>
 <div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-0" id="codeblock-0button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-0"><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"TokenID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"000B013A95F14B0044F78A264E41713C64B5F89242540EE208C3098E00000D65"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"NFTokenID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"000B013A95F14B0044F78A264E41713C64B5F89242540EE208C3098E00000D65"</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ipfs://bafybeigdyrzt5sfp7udm7hu76uh7y26nf4dfuylqabf3oclgtqy55fbzdi"</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Unlike other objects, <code>NFToken</code> has no field to identify the object type or current owner of the object. <code>NFToken</code>objects are grouped into <code>NFTokenPages</code> that implicitly define the object type and identify the owner.</p>
-<h2 id="tokenid">TokenID<a aria-hidden="true" class="hover_anchor" href="#tokenid"><i class="fa fa-link"></i></a></h2>
-<p>TokenID, optional, string, Hash256</p>
+<h2 id="nftokenid">NFTokenID<a aria-hidden="true" class="hover_anchor" href="#nftokenid"><i class="fa fa-link"></i></a></h2>
+<p><code>NFTokenID</code>, optional, string, Hash256</p>
 <p>This composite field uniquely identifies a token, and consists of the following sections.</p>
 <ol>
-<li>16 bits that identify flags or settings specific to the NFT</li>
-<li>16 bits that encode the transfer fee associated with this token, if any</li>
+<li>16 bits that identify flags or settings specific to the NFToken</li>
+<li>16 bits that encode the transfer fee associated with this NFToken, if any</li>
 <li>A 160-bit account identifier of the issuer</li>
-<li>A 32-bit issuer-specified <a class="external-link" href="https://www.merriam-webster.com/dictionary/taxon" target="_blank">taxon <i aria-hidden="true" class="fa fa-external-link"></i></a></li>
+<li>A 32-bit issuer-specified <a class="external-link" href="https://www.merriam-webster.com/dictionary/taxon" target="_blank">NFTokenTaxon <i aria-hidden="true" class="fa fa-external-link"></i></a></li>
 <li>An (automatically generated) monotonically increasing 32-bit sequence number.</li>
 </ol>
 <p><img alt="Token ID Breakdown" src="img/nftoken1.png" title="Token ID Breakdown"/></p>
-<p>The 16-bit flags, transfer fee fields, the 32-bit taxon, and the sequence number fields are stored in big-endian format.</p>
+<p>The 16-bit flags, transfer fee fields, the 32-bit <code>NFTokenTaxon</code>, and the sequence number fields are stored in big-endian format.</p>
 <h2 id="nftoken-flags">NFToken Flags<a aria-hidden="true" class="hover_anchor" href="#nftoken-flags"><i class="fa fa-link"></i></a></h2>
 <p>Flags are properties or other options associated with the <code>NFToken</code> object.</p>
 <table class="table-responsive">
+<thead>
 <tr>
-<td><strong>Flag Name</strong>
-</td>
-<td><strong>Flag Value</strong>
-</td>
-<td><strong>Description</strong>
-</td>
+<th style="text-align: left;">Flag Name</th>
+<th style="text-align: left;">Flag Value</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>lsfBurnable</code></td>
+<td style="text-align: left;"><code>0x0001</code></td>
+<td style="text-align: left;">If enabled, the issuer (or an entity authorized by the issuer) can destroy this <code>NFToken</code>. The object's owner can always do so.</td>
 </tr>
 <tr>
-<td><code>lsfBurnable</code>
-</td>
-<td><code>0x0001</code>
-</td>
-<td>If set, indicates that the issuer (or an entity authorized by the issuer) can destroy the object. The object's owner can <em>always</em> do so.
-   </td>
+<td style="text-align: left;"><code>lsfOnlyXRP</code></td>
+<td style="text-align: left;"><code>0x0002</code></td>
+<td style="text-align: left;">If enabled, this <code>NFToken</code> can only be offered or sold for XRP.</td>
 </tr>
 <tr>
-<td><code>lsfOnlyXRP</code>
-</td>
-<td><code>0x0002</code>
-</td>
-<td>If set, indicates that the tokens can only be offered or sold for XRP.
-   </td>
+<td style="text-align: left;"><code>lsfTrustLine</code></td>
+<td style="text-align: left;"><code>0x0004</code></td>
+<td style="text-align: left;"><strong>DEPRECATED</strong> If enabled, automatically create <a href="trust-lines-and-issuing.html">trust lines</a> to hold transfer fees. Otherwise, buying or selling this <code>NFToken</code> for a fungible token amount fails if the issuer does not have a trust line for that token. The <a href="known-amendments.html#fixremovenftokenautotrustline">fixRemoveNFTokenAutoTrustLine amendment</a> makes it invalid to enable this flag.</td>
 </tr>
 <tr>
-<td><code>lsfTrustLine</code>
-</td>
-<td><code>0x0004</code>
-</td>
-<td>If set, indicates that the issuer wants a trustline to be automatically created. The <code>lsfTrustLine</code> field is useful when the token can be offered for sale for assets other than XRP and the issuer charges a <code>TransferFee</code>. If this flag is set, a trust line is automatically created as needed to allow the issuer to receive the appropriate transfer fee. If this flag is not set, an attempt to transfer the NFToken for an asset for which the issuer does not have a trustline fails.
-   </td>
+<td style="text-align: left;"><code>lsfTransferable</code></td>
+<td style="text-align: left;"><code>0x0008</code></td>
+<td style="text-align: left;">If enabled, this <code>NFToken</code> can be transferred from one holder to another. Otherwise, it can only be transferred to or from the issuer.</td>
 </tr>
 <tr>
-<td><code>lsfTransferable</code>
-</td>
-<td><code>0x0008</code>
-</td>
-<td>If set, indicates that this NFT can be transferred. This flag has no effect if the token is being transferred <em>from</em> the issuer or <em>to</em> the issuer.
-   </td>
+<td style="text-align: left;"><code>lsfReservedFlag</code></td>
+<td style="text-align: left;"><code>0x8000</code></td>
+<td style="text-align: left;">This flag is reserved for future use. Attempts to set this flag fail.</td>
 </tr>
-<tr>
-<td><code>lsfReservedFlag</code>
-</td>
-<td><code>0x8000</code>
-</td>
-<td>This proposal reserves this flag for future use. Attempts to set this flag fail.
-   </td>
-</tr>
+</tbody>
 </table>
-<p><code>NFToken</code>flags are immutable: they can only be set during the <code>NFTokenMint</code> transaction and cannot be changed later.</p>
+<p><code>NFToken</code> flags are immutable: they can only be set during the <a href="nftokenmint.html">NFTokenMint transaction</a> and cannot be changed later.</p>
 <h3 id="example">Example<a aria-hidden="true" class="hover_anchor" href="#example"><i class="fa fa-link"></i></a></h3>
-<p>The example sets three flags: lsfBurnable (0x0001), lsfOnlyXRP (0x0002), lsfTransferable (0x0008). 1+2+8 = 11, or 0x000B in big endian format.</p>
+<p>The example sets three flags: <code>lsfBurnable</code> (<code>0x0001</code>), <code>lsfOnlyXRP</code> (<code>0x0002</code>), <code>lsfTransferable</code> (<code>0x0008</code>). 1+2+8 = 11, or 0x000B in big endian format.</p>
 <p><img alt="Flags" src="img/nftokena.png" title="Flags"/></p>
 <h3 id="transferfee">TransferFee<a aria-hidden="true" class="hover_anchor" href="#transferfee"><i class="fa fa-link"></i></a></h3>
-<p>The TransferFee value specifies the percentage fee, in units of 1/10,000, charged by the issuer for secondary sales of the token. Valid values for this field are between 0 and 50,000, inclusive. A value of 1 is equivalent to 1bps or 0.01%, allowing transfer rates between 0% and 50%.</p>
+<p>The <code>TransferFee</code> value specifies the percentage fee, in units of 1/10,000, charged by the issuer for secondary sales of the token. Valid values for this field are between 0 and 50,000, inclusive. A value of 1 is equivalent to 1bps or 0.00001%, allowing transfer rates between 0% and 50%.</p>
 <h3 id="example-1">Example<a aria-hidden="true" class="hover_anchor" href="#example-1"><i class="fa fa-link"></i></a></h3>
-<p>This value sets the transfer fee to 314 bps, or 3.14%.</p>
-<p><img alt="Txr Fee" src="img/nftokenb.png" title="Txr Fee"/></p>
+<p>This value sets the transfer fee to 314, or .00314%.</p>
+<p><img alt="Transfer Fee" src="img/nftokenb.png" title="Transfer Fee"/></p>
 <h3 id="issuer-identification">Issuer Identification<a aria-hidden="true" class="hover_anchor" href="#issuer-identification"><i class="fa fa-link"></i></a></h3>
-<p>The third section of the TokenID is a big endian representation of the issuer’s public address.</p>
+<p>The third section of the <code>NFTokenID</code> is a big endian representation of the issuer’s public address.</p>
 <p><img alt="Issuer Address" src="img/nftokenc.png" title="Issuer Address"/></p>
-<h3 id="taxon">Taxon<a aria-hidden="true" class="hover_anchor" href="#taxon"><i class="fa fa-link"></i></a></h3>
-<p>The fourth section is a taxon created by the issuer.</p>
-<p><img alt="Taxon" src="img/nftokend.png" title="Taxon"/></p>
-<p>An issuer might issue several NFTs with the same taxon; to ensure that NFTs are spread across multiple pages, the taxon is scrambled using the fifth section, a dumb sequential number, as the seed for a random number generator. The scrambled value is stored with the <code>NFToken</code>, but the unscrambled value is the actual taxon.</p>
+<h3 id="nftokentaxon">NFTokenTaxon<a aria-hidden="true" class="hover_anchor" href="#nftokentaxon"><i class="fa fa-link"></i></a></h3>
+<p>The fourth section is a <code>NFTokenTaxon</code> created by the issuer.</p>
+<p><img alt="NFTokenTaxon" src="img/nftokend.png" title="NFTokenTaxon"/></p>
+<p>An issuer might issue several <code>NFToken</code> objects with the same <code>NFTokenTaxon</code>; to ensure that <code>NFToken</code> objects are spread across multiple pages, the <code>NFTokenTaxon</code> is scrambled using the fifth section, a sequential number, as the seed for a random number generator. The scrambled value is stored with the <code>NFToken</code>, but the unscrambled value is the actual NFTokenTaxon.</p>
 <p><img alt="Dumb Sequential" src="img/nftokene.png" title="Dumb Sequential"/></p>
-<p>Notice that the scrambled version of the taxon is <code>0xBC8B858E</code>: the scrambled version of the taxon specified by the issuer. But the <em>actual</em> value of the taxon is the unscrambled value.</p>
+<p>Notice that the scrambled version of the <code>NFTokenTaxon</code> is <code>0xBC8B858E</code>: the scrambled version of the <code>NFTokenTaxon</code> specified by the issuer. But the <em>actual</em> value of the <code>NFTokenTaxon</code> is the unscrambled value.</p>
 <h3 id="token-sequence">Token Sequence<a aria-hidden="true" class="hover_anchor" href="#token-sequence"><i class="fa fa-link"></i></a></h3>
 <p>The fifth section is a sequence number that increases with each <code>NFToken</code> the issuer creates. The <a href="nftokenmint.html">NFTokenMint transaction</a> sets this part of the <code>NFTokenID</code> automatically based on the <code>MintedTokens</code> field of the <code>Issuer</code> account. If the issuer's <a href="accountroot.html">AccountRoot object</a> does not have a <code>MintedTokens</code> field, the field is assumed to have the value 0; the value of the field is then incremented by exactly 1.</p>
 <h2 id="uri">URI<a aria-hidden="true" class="hover_anchor" href="#uri"><i class="fa fa-link"></i></a></h2>
@@ -383,13 +357,13 @@
 <p>Your implementation should first attempt to check for the presence of the <code>URI</code> field to retrieve the associated data and/or metadata. If the <code>URI</code> field does not exist, the implementation should check for the presence of <code>Domain</code> field. If neither field exists, nothing happens. Implementations must be prepared to handle HTTP redirections (for example, using HTTP responses 301, 302, 307 and 308) from the URI.</p>
 <h2 id="txt-record-format">TXT Record Format<a aria-hidden="true" class="hover_anchor" href="#txt-record-format"><i class="fa fa-link"></i></a></h2>
 <p>The format for a text record is as follows.</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-1" id="codeblock-1button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-1">xrpl-nft-data-token-info-v1 IN TXT "https://host.example.com/api/token-info/{tokenid}"
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-1" id="codeblock-1button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-1">xrpl-nft-data-token-info-v1 IN TXT "https://host.example.com/api/token-info/{nftokenid}"
 </code></pre></div>
-<p>Replace the string <code>{tokenid}</code> with the requested token’s <code>NFTokenID</code> as a 64-byte hex string when you attempt to query information.</p>
+<p>Replace the string <code>{nftokenid}</code> with the requested <code>NFTokenID</code> as a 64-byte hex string when you attempt to query information.</p>
 <p>Your implementation should check for the presence of <code>TXT</code> records and use those query strings if present. If no string is present, implementations should attempt to use a default URL. Assuming the domain is <em>example.com</em>, the default URL would be:</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-2" id="codeblock-2button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-2">https://example.com/.well-known/xrpl-nft/{tokenid}
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-2" id="codeblock-2button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-2">https://example.com/.well-known/xrpl-nft/{nftokenid}
 </code></pre></div>
-<p>You create NFTs using the <code>NFTokenMint</code> transaction. You can optionally destroy NFTokens using the <code>NFTokenBurn</code> transaction.</p>
+<p>You create <code>NFToken</code> objects using the <code>NFTokenMint</code> transaction. You can optionally destroy <code>NFToken</code> objects using the <code>NFTokenBurn</code> transaction.</p>
 <!-- -->
 <!-- -->
 <!-- API object types -->
@@ -888,6 +862,16 @@
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="broker-sale.html">Broker a NFToken Sale</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="authorize-minter.html">Assign an Authorized Minter</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="batch-minting.html">Batch Mint NFTokens</a>
   </div>
 
     </nav>
@@ -2241,11 +2225,6 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info (Clio)</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="server_state.html">server_state</a>
   </div>
 
@@ -2258,9 +2237,36 @@
 
       <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_8" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_8"></a>
 
-        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+        <a class="nav-link" href="clio-methods.html">Clio Server Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_8">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ledger-clio.html">ledger</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="nft_info.html">nft_info</a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_9" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_9"></a>
+
+        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_9">
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="json.html">json</a>

@@ -55,7 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v6a.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -88,20 +88,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<div class="top-banner fixed-top">
-  <!-- mobile -->
-  <div class="justify-content-center d-md-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
-    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
-  </div>
-  <!-- tablet and up -->
-  <div class="d-md-flex justify-content-center d-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
-    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
-  </div>
-  
-
-</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,6 +142,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
+          </div><!--./col-->
+          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
@@ -291,42 +279,42 @@
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left">Field</th>
-<th align="left">JSON Type</th>
-<th align="left"><a href="serialization.html">Internal Type</a></th>
-<th align="left">Description</th>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">JSON Type</th>
+<th style="text-align: left;"><a href="serialization.html">Internal Type</a></th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>Owner</code></td>
-<td align="left">String</td>
-<td align="left">AccountID</td>
-<td align="left"><em>(Optional)</em> Who owns the corresponding <code>NFToken</code>. If the offer is to buy a token, this field must be present and it must be different than the <code>Account</code> field (since an offer to buy a token one already holds is meaningless). If the offer is to sell a token, this field must not be present, as the owner is, implicitly, the same as the <code>Account</code> (since an offer to sell a token one doesn't already hold is meaningless).</td>
+<td style="text-align: left;"><code>Owner</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">AccountID</td>
+<td style="text-align: left;"><em>(Optional)</em> Who owns the corresponding <code>NFToken</code>. If the offer is to buy a token, this field must be present and it must be different than the <code>Account</code> field (since an offer to buy a token one already holds is meaningless). If the offer is to sell a token, this field must not be present, as the owner is, implicitly, the same as the <code>Account</code> (since an offer to sell a token one doesn't already hold is meaningless).</td>
 </tr>
 <tr>
-<td align="left"><code>NFTokenID</code></td>
-<td align="left">String</td>
-<td align="left">Hash256</td>
-<td align="left">Identifies the <code>NFToken</code> object that the offer references.</td>
+<td style="text-align: left;"><code>NFTokenID</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">Hash256</td>
+<td style="text-align: left;">Identifies the <code>NFToken</code> object that the offer references.</td>
 </tr>
 <tr>
-<td align="left"><code>Amount</code></td>
-<td align="left"><a href="basic-data-types.html#specifying-currency-amounts">Currency Amount</a></td>
-<td align="left">Amount</td>
-<td align="left">Indicates the amount expected or offered for the corresponding <code>NFToken</code>. The amount must be non-zero, except where this is an offer to sell and the asset is XRP; then, it is legal to specify an amount of zero, which means that the current owner of the token is giving it away, gratis, either to anyone at all, or to the account identified by the <code>Destination</code> field.</td>
+<td style="text-align: left;"><code>Amount</code></td>
+<td style="text-align: left;"><a href="basic-data-types.html#specifying-currency-amounts">Currency Amount</a></td>
+<td style="text-align: left;">Amount</td>
+<td style="text-align: left;">Indicates the amount expected or offered for the corresponding <code>NFToken</code>. The amount must be non-zero, except where this is an offer to sell and the asset is XRP; then, it is legal to specify an amount of zero, which means that the current owner of the token is giving it away, gratis, either to anyone at all, or to the account identified by the <code>Destination</code> field.</td>
 </tr>
 <tr>
-<td align="left"><code>Expiration</code></td>
-<td align="left">Number</td>
-<td align="left">UInt32</td>
-<td align="left"><em>(Optional)</em> Indicates the time after which the offer will no longer be valid. The value is the number of <a href="basic-data-types.html#specifying-time">seconds since the Ripple Epoch</a>.</td>
+<td style="text-align: left;"><code>Expiration</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">UInt32</td>
+<td style="text-align: left;"><em>(Optional)</em> Indicates the time after which the offer will no longer be valid. The value is the number of <a href="basic-data-types.html#specifying-time">seconds since the Ripple Epoch</a>.</td>
 </tr>
 <tr>
-<td align="left"><code>Destination</code></td>
-<td align="left">String</td>
-<td align="left">AccountID</td>
-<td align="left"><em>(Optional)</em> If present, indicates that this offer may only be accepted by the specified account. Attempts by other accounts to accept this offer MUST fail.</td>
+<td style="text-align: left;"><code>Destination</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">AccountID</td>
+<td style="text-align: left;"><em>(Optional)</em> If present, indicates that this offer may only be accepted by the specified account. Attempts by other accounts to accept this offer MUST fail.</td>
 </tr>
 </tbody>
 </table>
@@ -335,18 +323,18 @@
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left">Flag Name</th>
-<th align="left">Hex Value</th>
-<th align="left">Decimal Value</th>
-<th align="left">Description</th>
+<th style="text-align: left;">Flag Name</th>
+<th style="text-align: left;">Hex Value</th>
+<th style="text-align: left;">Decimal Value</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>tfSellToken</code></td>
-<td align="left"><code>0x00000001</code></td>
-<td align="left"><code>1</code></td>
-<td align="left">If enabled, indicates that the offer is a sell offer. Otherwise, it is a buy offer.</td>
+<td style="text-align: left;"><code>tfSellNFToken</code></td>
+<td style="text-align: left;"><code>0x00000001</code></td>
+<td style="text-align: left;"><code>1</code></td>
+<td style="text-align: left;">If enabled, indicates that the offer is a sell offer. Otherwise, it is a buy offer.</td>
 </tr>
 </tbody>
 </table>
@@ -355,62 +343,62 @@
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left">Error Code</th>
-<th align="left">Description</th>
+<th style="text-align: left;">Error Code</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>temDISABLED</code></td>
-<td align="left">The <a href="known-amendments.html#nonfungibletokensv1">NonFungibleTokensV1 amendment</a> is not enabled.</td>
+<td style="text-align: left;"><code>temDISABLED</code></td>
+<td style="text-align: left;">The <a href="known-amendments.html#nonfungibletokensv1">NonFungibleTokensV1 amendment</a> is not enabled.</td>
 </tr>
 <tr>
-<td align="left"><code>temBAD_AMOUNT</code></td>
-<td align="left">The <code>Amount</code> field is not valid. For example, the amount was zero for a buy offer, or the amount is denominated in fungible tokens but the <code>NFToken</code> has the <a href="nftoken.html#nftoken-flags"><code>lsfOnlyXRP</code> flag</a> enabled.</td>
+<td style="text-align: left;"><code>temBAD_AMOUNT</code></td>
+<td style="text-align: left;">The <code>Amount</code> field is not valid. For example, the amount was zero for a buy offer, or the amount is denominated in fungible tokens but the <code>NFToken</code> has the <a href="nftoken.html#nftoken-flags"><code>lsfOnlyXRP</code> flag</a> enabled.</td>
 </tr>
 <tr>
-<td align="left"><code>temBAD_EXPIRATION</code></td>
-<td align="left">The specified <code>Expiration</code> time is invalid (for example, <code>0</code>).</td>
+<td style="text-align: left;"><code>temBAD_EXPIRATION</code></td>
+<td style="text-align: left;">The specified <code>Expiration</code> time is invalid (for example, <code>0</code>).</td>
 </tr>
 <tr>
-<td align="left"><code>tecDIR_FULL</code></td>
-<td align="left">The sender already owns too many objects in the ledger, or there are already too many offers to buy or sell this token.</td>
+<td style="text-align: left;"><code>tecDIR_FULL</code></td>
+<td style="text-align: left;">The sender already owns too many objects in the ledger, or there are already too many offers to buy or sell this token.</td>
 </tr>
 <tr>
-<td align="left"><code>tecEXPIRED</code></td>
-<td align="left">The specified <code>Expiration</code> time has already passed.</td>
+<td style="text-align: left;"><code>tecEXPIRED</code></td>
+<td style="text-align: left;">The specified <code>Expiration</code> time has already passed.</td>
 </tr>
 <tr>
-<td align="left"><code>tecFROZEN</code></td>
-<td align="left">The <code>Amount</code> is denominated in fungible tokens, but one of the trust lines that would receive tokens from this offer is <a href="freezes.html">frozen</a>. This could be the seller's trust line or the <code>NFToken</code>'s issuer's trust line (if the <code>NFToken</code> has a transfer fee).</td>
+<td style="text-align: left;"><code>tecFROZEN</code></td>
+<td style="text-align: left;">The <code>Amount</code> is denominated in fungible tokens, but one of the trust lines that would receive tokens from this offer is <a href="freezes.html">frozen</a>. This could be the seller's trust line or the <code>NFToken</code>'s issuer's trust line (if the <code>NFToken</code> has a transfer fee).</td>
 </tr>
 <tr>
-<td align="left"><code>tecINSUFFICIENT_RESERVE</code></td>
-<td align="left">The sender does not have enough XRP to meet the <a href="reserves.html">reserve requirement</a> after placing this offer.</td>
+<td style="text-align: left;"><code>tecINSUFFICIENT_RESERVE</code></td>
+<td style="text-align: left;">The sender does not have enough XRP to meet the <a href="reserves.html">reserve requirement</a> after placing this offer.</td>
 </tr>
 <tr>
-<td align="left"><code>tecNO_DST</code></td>
-<td align="left">The account specified in the <code>Destination</code> field does not exist in the ledger.</td>
+<td style="text-align: left;"><code>tecNO_DST</code></td>
+<td style="text-align: left;">The account specified in the <code>Destination</code> field does not exist in the ledger.</td>
 </tr>
 <tr>
-<td align="left"><code>tecNO_ENTRY</code></td>
-<td align="left">The <code>NFToken</code> is not owned by the expected account.</td>
+<td style="text-align: left;"><code>tecNO_ENTRY</code></td>
+<td style="text-align: left;">The <code>NFToken</code> is not owned by the expected account.</td>
 </tr>
 <tr>
-<td align="left"><code>tecNO_ISSUER</code></td>
-<td align="left">The issuer specified in the <code>Amount</code> field does not exist.</td>
+<td style="text-align: left;"><code>tecNO_ISSUER</code></td>
+<td style="text-align: left;">The issuer specified in the <code>Amount</code> field does not exist.</td>
 </tr>
 <tr>
-<td align="left"><code>tecNO_LINE</code></td>
-<td align="left">The <code>Amount</code> field is denominated in fungible tokens, but the <code>NFToken</code>'s issuer does not have a trust line for those tokens and the <code>NFToken</code> does not have the <a href="nftoken.html#nftoken-flags"><code>lsfTrustLine</code> flag</a> enabled.</td>
+<td style="text-align: left;"><code>tecNO_LINE</code></td>
+<td style="text-align: left;">The <code>Amount</code> field is denominated in fungible tokens, but the <code>NFToken</code>'s issuer does not have a trust line for those tokens and the <code>NFToken</code> does not have the <a href="nftoken.html#nftoken-flags"><code>lsfTrustLine</code> flag</a> enabled.</td>
 </tr>
 <tr>
-<td align="left"><code>tecUNFUNDED_OFFER</code></td>
-<td align="left">For a buy offer, the sender does have the funds specified in the <code>Amount</code> field available. If the <code>Amount</code> is XRP, this could be due to the reserve requirement; if the <code>Amount</code> is denominated in fungible tokens, this could be because they are <a href="freezes.html">frozen</a>.</td>
+<td style="text-align: left;"><code>tecUNFUNDED_OFFER</code></td>
+<td style="text-align: left;">For a buy offer, the sender does have the funds specified in the <code>Amount</code> field available. If the <code>Amount</code> is XRP, this could be due to the reserve requirement; if the <code>Amount</code> is denominated in fungible tokens, this could be because they are <a href="freezes.html">frozen</a>.</td>
 </tr>
 <tr>
-<td align="left"><code>tefNFTOKEN_IS_NOT_TRANSFERABLE</code></td>
-<td align="left">The <code>NFToken</code> has the <a href="nftoken.html#nftoken-flags"><code>lsfTransferable</code> flag</a> disabled and this transaction would not transfer the <code>NFToken</code> to or from the issuer.</td>
+<td style="text-align: left;"><code>tefNFTOKEN_IS_NOT_TRANSFERABLE</code></td>
+<td style="text-align: left;">The <code>NFToken</code> has the <a href="nftoken.html#nftoken-flags"><code>lsfTransferable</code> flag</a> disabled and this transaction would not transfer the <code>NFToken</code> to or from the issuer.</td>
 </tr>
 </tbody>
 </table>
@@ -912,6 +900,16 @@
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="broker-sale.html">Broker a NFToken Sale</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="authorize-minter.html">Assign an Authorized Minter</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="batch-minting.html">Batch Mint NFTokens</a>
   </div>
 
     </nav>
@@ -2265,11 +2263,6 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info (Clio)</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="server_state.html">server_state</a>
   </div>
 
@@ -2282,9 +2275,36 @@
 
       <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_8" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_8"></a>
 
-        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+        <a class="nav-link" href="clio-methods.html">Clio Server Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_8">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ledger-clio.html">ledger</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="nft_info.html">nft_info</a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_9" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_9"></a>
+
+        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_9">
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="json.html">json</a>

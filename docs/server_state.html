@@ -55,7 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v6a.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -88,20 +88,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<div class="top-banner fixed-top">
-  <!-- mobile -->
-  <div class="justify-content-center d-md-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
-    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
-  </div>
-  <!-- tablet and up -->
-  <div class="d-md-flex justify-content-center d-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
-    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
-  </div>
-  
-
-</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,6 +142,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
+          </div><!--./col-->
+          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
@@ -505,196 +493,196 @@ rippled server_state
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left"><code>Field</code></th>
-<th align="left">Type</th>
-<th align="left">Description</th>
+<th style="text-align: left;"><code>Field</code></th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>amendment_blocked</code></td>
-<td align="left">Boolean</td>
-<td align="left"><em>(May be omitted)</em> If <code>true</code>, this server is <a href="amendments.html#amendment-blocked">amendment blocked</a>. If the server is not amendment blocked, the response omits this field. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.80.0" target="_blank" title="New in: rippled 0.80.0"><img alt="New in: rippled 0.80.0" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.80.0-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;"><code>amendment_blocked</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;"><em>(May be omitted)</em> If <code>true</code>, this server is <a href="amendments.html#amendment-blocked">amendment blocked</a>. If the server is not amendment blocked, the response omits this field. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.80.0" target="_blank" title="New in: rippled 0.80.0"><img alt="New in: rippled 0.80.0" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.80.0-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
 </tr>
 <tr>
-<td align="left"><code>build_version</code></td>
-<td align="left">String</td>
-<td align="left">The version number of the running <code>rippled</code> version.</td>
+<td style="text-align: left;"><code>build_version</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">The version number of the running <code>rippled</code> version.</td>
 </tr>
 <tr>
-<td align="left"><code>complete_ledgers</code></td>
-<td align="left">String</td>
-<td align="left">Range expression indicating the sequence numbers of the ledger versions the local <code>rippled</code> has in its database. It is possible to be a disjoint sequence, e.g. "2500-5000,32570-7695432". If the server does not have any complete ledgers (for example, it recently started syncing with the network), this is the string <code>empty</code>.</td>
+<td style="text-align: left;"><code>complete_ledgers</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">Range expression indicating the sequence numbers of the ledger versions the local <code>rippled</code> has in its database. It is possible to be a disjoint sequence, e.g. "2500-5000,32570-7695432". If the server does not have any complete ledgers (for example, it recently started syncing with the network), this is the string <code>empty</code>.</td>
 </tr>
 <tr>
-<td align="left"><code>closed_ledger</code></td>
-<td align="left">Object</td>
-<td align="left"><em>(May be omitted)</em> Information on the most recently closed ledger that has not been validated by consensus. If the most recently validated ledger is available, the response omits this field and includes <code>validated_ledger</code> instead. The member fields are the same as the <code>validated_ledger</code> field.</td>
+<td style="text-align: left;"><code>closed_ledger</code></td>
+<td style="text-align: left;">Object</td>
+<td style="text-align: left;"><em>(May be omitted)</em> Information on the most recently closed ledger that has not been validated by consensus. If the most recently validated ledger is available, the response omits this field and includes <code>validated_ledger</code> instead. The member fields are the same as the <code>validated_ledger</code> field.</td>
 </tr>
 <tr>
-<td align="left"><code>io_latency_ms</code></td>
-<td align="left">Number</td>
-<td align="left">Amount of time spent waiting for I/O operations, in milliseconds. If this number is not very, very low, then the <code>rippled</code> server is probably having serious load issues.</td>
+<td style="text-align: left;"><code>io_latency_ms</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">Amount of time spent waiting for I/O operations, in milliseconds. If this number is not very, very low, then the <code>rippled</code> server is probably having serious load issues.</td>
 </tr>
 <tr>
-<td align="left"><code>jq_trans_overflow</code></td>
-<td align="left">String - Number</td>
-<td align="left">The number of times this server has had over 250 transactions waiting to be processed at once. A large number here may mean that your server is unable to handle the transaction load of the XRP Ledger network. For detailed recommendations of future-proof server specifications, see <a href="capacity-planning.html">Capacity Planning</a>. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.90.0" target="_blank" title="New in: rippled 0.90.0"><img alt="New in: rippled 0.90.0" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.90.0-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;"><code>jq_trans_overflow</code></td>
+<td style="text-align: left;">String - Number</td>
+<td style="text-align: left;">The number of times this server has had over 250 transactions waiting to be processed at once. A large number here may mean that your server is unable to handle the transaction load of the XRP Ledger network. For detailed recommendations of future-proof server specifications, see <a href="capacity-planning.html">Capacity Planning</a>. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.90.0" target="_blank" title="New in: rippled 0.90.0"><img alt="New in: rippled 0.90.0" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.90.0-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
 </tr>
 <tr>
-<td align="left"><code>last_close</code></td>
-<td align="left">Object</td>
-<td align="left">Information about the last time the server closed a ledger, including the amount of time it took to reach a consensus and the number of trusted validators participating.</td>
+<td style="text-align: left;"><code>last_close</code></td>
+<td style="text-align: left;">Object</td>
+<td style="text-align: left;">Information about the last time the server closed a ledger, including the amount of time it took to reach a consensus and the number of trusted validators participating.</td>
 </tr>
 <tr>
-<td align="left"><code>last_close.converge_time</code></td>
-<td align="left">Number</td>
-<td align="left">The amount of time it took to reach a consensus on the most recently validated ledger version, in milliseconds.</td>
+<td style="text-align: left;"><code>last_close.converge_time</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">The amount of time it took to reach a consensus on the most recently validated ledger version, in milliseconds.</td>
 </tr>
 <tr>
-<td align="left"><code>last_close.proposers</code></td>
-<td align="left">Number</td>
-<td align="left">How many trusted validators the server considered (including itself, if configured as a validator) in the consensus process for the most recently validated ledger version.</td>
+<td style="text-align: left;"><code>last_close.proposers</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">How many trusted validators the server considered (including itself, if configured as a validator) in the consensus process for the most recently validated ledger version.</td>
 </tr>
 <tr>
-<td align="left"><code>load</code></td>
-<td align="left">Object</td>
-<td align="left"><em>(Admin only)</em> Detailed information about the current load state of the server.</td>
+<td style="text-align: left;"><code>load</code></td>
+<td style="text-align: left;">Object</td>
+<td style="text-align: left;"><em>(Admin only)</em> Detailed information about the current load state of the server.</td>
 </tr>
 <tr>
-<td align="left"><code>load.job_types</code></td>
-<td align="left">Array</td>
-<td align="left"><em>(Admin only)</em> Information about the rate of different types of jobs the server is doing and how much time it spends on each.</td>
+<td style="text-align: left;"><code>load.job_types</code></td>
+<td style="text-align: left;">Array</td>
+<td style="text-align: left;"><em>(Admin only)</em> Information about the rate of different types of jobs the server is doing and how much time it spends on each.</td>
 </tr>
 <tr>
-<td align="left"><code>load.threads</code></td>
-<td align="left">Number</td>
-<td align="left"><em>(Admin only)</em> The number of threads in the server's main job pool.</td>
+<td style="text-align: left;"><code>load.threads</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;"><em>(Admin only)</em> The number of threads in the server's main job pool.</td>
 </tr>
 <tr>
-<td align="left"><code>load_base</code></td>
-<td align="left">Integer</td>
-<td align="left">This is the baseline amount of server load used in <a href="transaction-cost.html">transaction cost</a> calculations. If the <code>load_factor</code> is equal to the <code>load_base</code> then only the base transaction cost is enforced. If the <code>load_factor</code> is higher than the <code>load_base</code>, then transaction costs are multiplied by the ratio between them. For example, if the <code>load_factor</code> is double the <code>load_base</code>, then transaction costs are doubled.</td>
+<td style="text-align: left;"><code>load_base</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">This is the baseline amount of server load used in <a href="transaction-cost.html">transaction cost</a> calculations. If the <code>load_factor</code> is equal to the <code>load_base</code> then only the base transaction cost is enforced. If the <code>load_factor</code> is higher than the <code>load_base</code>, then transaction costs are multiplied by the ratio between them. For example, if the <code>load_factor</code> is double the <code>load_base</code>, then transaction costs are doubled.</td>
 </tr>
 <tr>
-<td align="left"><code>load_factor</code></td>
-<td align="left">Number</td>
-<td align="left">The load factor the server is currently enforcing. The ratio between this value and the <code>load_base</code> determines the multiplier for transaction costs. The load factor is determined by the highest of the individual server's load factor, cluster's load factor, the <a href="transaction-cost.html#open-ledger-cost">open ledger cost</a>, and the overall network's load factor. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.33.0" target="_blank" title="Updated in: rippled 0.33.0"><img alt="Updated in: rippled 0.33.0" class="dactyl_badge" src="https://img.shields.io/badge/Updated%20in-rippled%200.33.0-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;"><code>load_factor</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">The load factor the server is currently enforcing. The ratio between this value and the <code>load_base</code> determines the multiplier for transaction costs. The load factor is determined by the highest of the individual server's load factor, cluster's load factor, the <a href="transaction-cost.html#open-ledger-cost">open ledger cost</a>, and the overall network's load factor. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.33.0" target="_blank" title="Updated in: rippled 0.33.0"><img alt="Updated in: rippled 0.33.0" class="dactyl_badge" src="https://img.shields.io/badge/Updated%20in-rippled%200.33.0-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
 </tr>
 <tr>
-<td align="left"><code>load_factor_fee_escalation</code></td>
-<td align="left">Number</td>
-<td align="left"><em>(May be omitted)</em> The current multiplier to the <a href="transaction-cost.html">transaction cost</a> to get into the open ledger, in <a href="transaction-cost.html#fee-levels">fee levels</a>. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.32.0" target="_blank" title="New in: rippled 0.32.0"><img alt="New in: rippled 0.32.0" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.32.0-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;"><code>load_factor_fee_escalation</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;"><em>(May be omitted)</em> The current multiplier to the <a href="transaction-cost.html">transaction cost</a> to get into the open ledger, in <a href="transaction-cost.html#fee-levels">fee levels</a>. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.32.0" target="_blank" title="New in: rippled 0.32.0"><img alt="New in: rippled 0.32.0" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.32.0-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
 </tr>
 <tr>
-<td align="left"><code>load_factor_fee_queue</code></td>
-<td align="left">Number</td>
-<td align="left"><em>(May be omitted)</em> The current multiplier to the <a href="transaction-cost.html">transaction cost</a> to get into the queue, if the queue is full, in <a href="transaction-cost.html#fee-levels">fee levels</a>. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.32.0" target="_blank" title="New in: rippled 0.32.0"><img alt="New in: rippled 0.32.0" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.32.0-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;"><code>load_factor_fee_queue</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;"><em>(May be omitted)</em> The current multiplier to the <a href="transaction-cost.html">transaction cost</a> to get into the queue, if the queue is full, in <a href="transaction-cost.html#fee-levels">fee levels</a>. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.32.0" target="_blank" title="New in: rippled 0.32.0"><img alt="New in: rippled 0.32.0" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.32.0-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
 </tr>
 <tr>
-<td align="left"><code>load_factor_fee_reference</code></td>
-<td align="left">Number</td>
-<td align="left"><em>(May be omitted)</em> The <a href="transaction-cost.html">transaction cost</a> with no load scaling, in <a href="transaction-cost.html#fee-levels">fee levels</a>. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.32.0" target="_blank" title="New in: rippled 0.32.0"><img alt="New in: rippled 0.32.0" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.32.0-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;"><code>load_factor_fee_reference</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;"><em>(May be omitted)</em> The <a href="transaction-cost.html">transaction cost</a> with no load scaling, in <a href="transaction-cost.html#fee-levels">fee levels</a>. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.32.0" target="_blank" title="New in: rippled 0.32.0"><img alt="New in: rippled 0.32.0" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.32.0-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
 </tr>
 <tr>
-<td align="left"><code>load_factor_server</code></td>
-<td align="left">Number</td>
-<td align="left"><em>(May be omitted)</em> The load factor the server is enforcing, not including the <a href="transaction-cost.html#open-ledger-cost">open ledger cost</a>. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.33.0" target="_blank" title="New in: rippled 0.33.0"><img alt="New in: rippled 0.33.0" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.33.0-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;"><code>load_factor_server</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;"><em>(May be omitted)</em> The load factor the server is enforcing, not including the <a href="transaction-cost.html#open-ledger-cost">open ledger cost</a>. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.33.0" target="_blank" title="New in: rippled 0.33.0"><img alt="New in: rippled 0.33.0" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.33.0-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
 </tr>
 <tr>
-<td align="left"><code>peers</code></td>
-<td align="left">Number</td>
-<td align="left">How many other <code>rippled</code> servers this one is currently connected to.</td>
+<td style="text-align: left;"><code>peers</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">How many other <code>rippled</code> servers this one is currently connected to.</td>
 </tr>
 <tr>
-<td align="left"><code>pubkey_node</code></td>
-<td align="left">String</td>
-<td align="left">Public key used to verify this server for peer-to-peer communications. This <em>node key pair</em> is automatically generated by the server the first time it starts up. (If deleted, the server can create a new pair of keys.) You can set a persistent value in the config file using the <code>[node_seed]</code> config option, which is useful for <a href="clustering.html">clustering</a>.</td>
+<td style="text-align: left;"><code>pubkey_node</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">Public key used to verify this server for peer-to-peer communications. This <em>node key pair</em> is automatically generated by the server the first time it starts up. (If deleted, the server can create a new pair of keys.) You can set a persistent value in the config file using the <code>[node_seed]</code> config option, which is useful for <a href="clustering.html">clustering</a>.</td>
 </tr>
 <tr>
-<td align="left"><code>pubkey_validator</code></td>
-<td align="left">String</td>
-<td align="left"><em>(Admin only)</em> Public key used by this node to sign ledger validations. This <em>validation key pair</em> is derived from the <code>[validator_token]</code> or <code>[validation_seed]</code> config field.</td>
+<td style="text-align: left;"><code>pubkey_validator</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><em>(Admin only)</em> Public key used by this node to sign ledger validations. This <em>validation key pair</em> is derived from the <code>[validator_token]</code> or <code>[validation_seed]</code> config field.</td>
 </tr>
 <tr>
-<td align="left"><code>server_state</code></td>
-<td align="left">String</td>
-<td align="left">A string indicating to what extent the server is participating in the network. See <a href="rippled-server-states.html">Possible Server States</a> for more details.</td>
+<td style="text-align: left;"><code>server_state</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">A string indicating to what extent the server is participating in the network. See <a href="rippled-server-states.html">Possible Server States</a> for more details.</td>
 </tr>
 <tr>
-<td align="left"><code>server_state_duration_us</code></td>
-<td align="left">Number</td>
-<td align="left">The number of consecutive microseconds the server has been in the current state. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/1.2.0" target="_blank" title="New in: rippled 1.2.0"><img alt="New in: rippled 1.2.0" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%201.2.0-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;"><code>server_state_duration_us</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">The number of consecutive microseconds the server has been in the current state. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/1.2.0" target="_blank" title="New in: rippled 1.2.0"><img alt="New in: rippled 1.2.0" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%201.2.0-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
 </tr>
 <tr>
-<td align="left"><code>state_accounting</code></td>
-<td align="left">Object</td>
-<td align="left">A map of various <a href="rippled-server-states.html">server states</a> with information about the time the server spends in each. This can be useful for tracking the long-term health of your server's connectivity to the network. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.30.1" target="_blank" title="New in: rippled 0.30.1"><img alt="New in: rippled 0.30.1" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.30.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;"><code>state_accounting</code></td>
+<td style="text-align: left;">Object</td>
+<td style="text-align: left;">A map of various <a href="rippled-server-states.html">server states</a> with information about the time the server spends in each. This can be useful for tracking the long-term health of your server's connectivity to the network. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.30.1" target="_blank" title="New in: rippled 0.30.1"><img alt="New in: rippled 0.30.1" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.30.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
 </tr>
 <tr>
-<td align="left"><code>state_accounting.*.duration_us</code></td>
-<td align="left">String</td>
-<td align="left">The number of microseconds the server has spent in this state. (This is updated whenever the server transitions into another state.) <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.30.1" target="_blank" title="New in: rippled 0.30.1"><img alt="New in: rippled 0.30.1" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.30.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;"><code>state_accounting.*.duration_us</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">The number of microseconds the server has spent in this state. (This is updated whenever the server transitions into another state.) <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.30.1" target="_blank" title="New in: rippled 0.30.1"><img alt="New in: rippled 0.30.1" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.30.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
 </tr>
 <tr>
-<td align="left"><code>state_accounting.*.transitions</code></td>
-<td align="left">Number</td>
-<td align="left">The number of times the server has changed into this state. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.30.1" target="_blank" title="New in: rippled 0.30.1"><img alt="New in: rippled 0.30.1" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.30.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;"><code>state_accounting.*.transitions</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">The number of times the server has changed into this state. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.30.1" target="_blank" title="New in: rippled 0.30.1"><img alt="New in: rippled 0.30.1" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.30.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
 </tr>
 <tr>
-<td align="left"><code>time</code></td>
-<td align="left">String</td>
-<td align="left">The current time in UTC, according to the server's clock. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/1.5.0" target="_blank" title="Updated in: rippled 1.5.0"><img alt="Updated in: rippled 1.5.0" class="dactyl_badge" src="https://img.shields.io/badge/Updated%20in-rippled%201.5.0-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;"><code>time</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">The current time in UTC, according to the server's clock. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/1.5.0" target="_blank" title="Updated in: rippled 1.5.0"><img alt="Updated in: rippled 1.5.0" class="dactyl_badge" src="https://img.shields.io/badge/Updated%20in-rippled%201.5.0-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
 </tr>
 <tr>
-<td align="left"><code>uptime</code></td>
-<td align="left">Number</td>
-<td align="left">Number of consecutive seconds that the server has been operational. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.30.1" target="_blank" title="New in: rippled 0.30.1"><img alt="New in: rippled 0.30.1" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.30.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;"><code>uptime</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">Number of consecutive seconds that the server has been operational. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.30.1" target="_blank" title="New in: rippled 0.30.1"><img alt="New in: rippled 0.30.1" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.30.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
 </tr>
 <tr>
-<td align="left"><code>validated_ledger</code></td>
-<td align="left">Object</td>
-<td align="left"><em>(May be omitted)</em> Information about the most recent fully-validated ledger. If the most recent validated ledger is not available, the response omits this field and includes <code>closed_ledger</code> instead.</td>
+<td style="text-align: left;"><code>validated_ledger</code></td>
+<td style="text-align: left;">Object</td>
+<td style="text-align: left;"><em>(May be omitted)</em> Information about the most recent fully-validated ledger. If the most recent validated ledger is not available, the response omits this field and includes <code>closed_ledger</code> instead.</td>
 </tr>
 <tr>
-<td align="left"><code>validated_ledger.base_fee</code></td>
-<td align="left">Number</td>
-<td align="left">Base fee, in drops of XRP, for propagating a transaction to the network.</td>
+<td style="text-align: left;"><code>validated_ledger.base_fee</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">Base fee, in drops of XRP, for propagating a transaction to the network.</td>
 </tr>
 <tr>
-<td align="left"><code>validated_ledger.close_time</code></td>
-<td align="left">Number</td>
-<td align="left">Time this ledger was closed, in <a href="basic-data-types.html#specifying-time">seconds since the Ripple Epoch</a>.</td>
+<td style="text-align: left;"><code>validated_ledger.close_time</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">Time this ledger was closed, in <a href="basic-data-types.html#specifying-time">seconds since the Ripple Epoch</a>.</td>
 </tr>
 <tr>
-<td align="left"><code>validated_ledger.hash</code></td>
-<td align="left">String</td>
-<td align="left">Unique hash of this ledger version, as hexadecimal.</td>
+<td style="text-align: left;"><code>validated_ledger.hash</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">Unique hash of this ledger version, as hexadecimal.</td>
 </tr>
 <tr>
-<td align="left"><code>validated_ledger.reserve_base</code></td>
-<td align="left">Number</td>
-<td align="left">The minimum <a href="reserves.html">account reserve</a>, as of the most recent validated ledger version.</td>
+<td style="text-align: left;"><code>validated_ledger.reserve_base</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">The minimum <a href="reserves.html">account reserve</a>, as of the most recent validated ledger version.</td>
 </tr>
 <tr>
-<td align="left"><code>validated_ledger.reserve_inc</code></td>
-<td align="left">Number</td>
-<td align="left">The <a href="reserves.html">owner reserve</a> for each item an account owns, as of the most recent validated ledger version.</td>
+<td style="text-align: left;"><code>validated_ledger.reserve_inc</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">The <a href="reserves.html">owner reserve</a> for each item an account owns, as of the most recent validated ledger version.</td>
 </tr>
 <tr>
-<td align="left"><code>validated_ledger.seq</code></td>
-<td align="left">Number</td>
-<td align="left">The <a href="basic-data-types.html#ledger-index">ledger index</a> of the most recently validated ledger version.</td>
+<td style="text-align: left;"><code>validated_ledger.seq</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">The <a href="basic-data-types.html#ledger-index">ledger index</a> of the most recently validated ledger version.</td>
 </tr>
 <tr>
-<td align="left"><code>validation_quorum</code></td>
-<td align="left">Number</td>
-<td align="left">Minimum number of trusted validations required to validate a ledger version. Some circumstances may cause the server to require more validations.</td>
+<td style="text-align: left;"><code>validation_quorum</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">Minimum number of trusted validations required to validate a ledger version. Some circumstances may cause the server to require more validations.</td>
 </tr>
 <tr>
-<td align="left"><code>validator_list_expires</code></td>
-<td align="left">Number</td>
-<td align="left"><em>(Admin only)</em> When the current validator list will expire, in <a href="basic-data-types.html#specifying-time">seconds since the Ripple Epoch</a>, or 0 if the server has yet to load a published validator list. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.80.1" target="_blank" title="New in: rippled 0.80.1"><img alt="New in: rippled 0.80.1" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.80.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
+<td style="text-align: left;"><code>validator_list_expires</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;"><em>(Admin only)</em> When the current validator list will expire, in <a href="basic-data-types.html#specifying-time">seconds since the Ripple Epoch</a>, or 0 if the server has yet to load a published validator list. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.80.1" target="_blank" title="New in: rippled 0.80.1"><img alt="New in: rippled 0.80.1" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.80.1-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></td>
 </tr>
 </tbody>
 </table>
@@ -1200,6 +1188,16 @@ rippled server_state
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="broker-sale.html">Broker a NFToken Sale</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="authorize-minter.html">Assign an Authorized Minter</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="batch-minting.html">Batch Mint NFTokens</a>
   </div>
 
     </nav>
@@ -2552,11 +2550,6 @@ rippled server_state
   </div>
 
       
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info (Clio)</a>
-  </div>
-
-      
   <div class="nav-item active">
     <a class="nav-link nav-leaf" href="server_state.html">server_state</a>
   </div>
@@ -2570,9 +2563,36 @@ rippled server_state
 
       <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_8" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_8"></a>
 
-        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+        <a class="nav-link" href="clio-methods.html">Clio Server Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_8">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ledger-clio.html">ledger</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="nft_info.html">nft_info</a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_9" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_9"></a>
+
+        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_9">
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="json.html">json</a>

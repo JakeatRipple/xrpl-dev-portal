@@ -55,7 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v6a.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -88,20 +88,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<div class="top-banner fixed-top">
-  <!-- mobile -->
-  <div class="justify-content-center d-md-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
-    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
-  </div>
-  <!-- tablet and up -->
-  <div class="d-md-flex justify-content-center d-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
-    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
-  </div>
-  
-
-</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,6 +142,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
+          </div><!--./col-->
+          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
@@ -279,50 +267,50 @@
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left">XRP</th>
-<th align="left">Tokens</th>
+<th style="text-align: left;">XRP</th>
+<th style="text-align: left;">Tokens</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Has no issuer.</td>
-<td align="left">Always issued by an XRP Ledger account.</td>
+<td style="text-align: left;">Has no issuer.</td>
+<td style="text-align: left;">Always issued by an XRP Ledger account.</td>
 </tr>
 <tr>
-<td align="left">Specified as a string.</td>
-<td align="left">Specified as an object.</td>
+<td style="text-align: left;">Specified as a string.</td>
+<td style="text-align: left;">Specified as an object.</td>
 </tr>
 <tr>
-<td align="left">Tracked in <a href="accountroot.html">accounts</a>.</td>
-<td align="left">Tracked in <a href="ripplestate.html">trust lines</a>.</td>
+<td style="text-align: left;">Tracked in <a href="accountroot.html">accounts</a>.</td>
+<td style="text-align: left;">Tracked in <a href="ripplestate.html">trust lines</a>.</td>
 </tr>
 <tr>
-<td align="left">Can never be created; can only be destroyed.</td>
-<td align="left">Can be issued or redeemed freely.</td>
+<td style="text-align: left;">Can never be created; can only be destroyed.</td>
+<td style="text-align: left;">Can be issued or redeemed freely.</td>
 </tr>
 <tr>
-<td align="left">Minimum value: <code>0</code>. (Cannot be negative.)</td>
-<td align="left">Minimum value: <code>-9999999999999999e80</code>. Minimum nonzero absolute value: <code>1000000000000000e-96</code>.</td>
+<td style="text-align: left;">Minimum value: <code>0</code>. (Cannot be negative.)</td>
+<td style="text-align: left;">Minimum value: <code>-9999999999999999e80</code>. Minimum nonzero absolute value: <code>1000000000000000e-96</code>.</td>
 </tr>
 <tr>
-<td align="left">Maximum value <code>100000000000</code> (10<sup>11</sup>) XRP. That's <code>100000000000000000</code> (10<sup>17</sup>) "drops".</td>
-<td align="left">Maximum value <code>9999999999999999e80</code>.</td>
+<td style="text-align: left;">Maximum value <code>100000000000</code> (10<sup>11</sup>) XRP. That's <code>100000000000000000</code> (10<sup>17</sup>) "drops".</td>
+<td style="text-align: left;">Maximum value <code>9999999999999999e80</code>.</td>
 </tr>
 <tr>
-<td align="left">Precise to the nearest "drop" (0.000001 XRP)</td>
-<td align="left">15 decimal digits of precision.</td>
+<td style="text-align: left;">Precise to the nearest "drop" (0.000001 XRP)</td>
+<td style="text-align: left;">15 decimal digits of precision.</td>
 </tr>
 <tr>
-<td align="left">Can't be <a href="freezes.html">frozen</a>.</td>
-<td align="left">The issuer can <a href="freezes.html">freeze</a> balances.</td>
+<td style="text-align: left;">Can't be <a href="freezes.html">frozen</a>.</td>
+<td style="text-align: left;">The issuer can <a href="freezes.html">freeze</a> balances.</td>
 </tr>
 <tr>
-<td align="left">No transfer fees; XRP-to-XRP payments are always direct.</td>
-<td align="left">Can take indirect <a href="paths.html">paths</a> with each issuer charging a percentage <a href="transfer-fees.html">transfer fee</a>.</td>
+<td style="text-align: left;">No transfer fees; XRP-to-XRP payments are always direct.</td>
+<td style="text-align: left;">Can take indirect <a href="paths.html">paths</a> with each issuer charging a percentage <a href="transfer-fees.html">transfer fee</a>.</td>
 </tr>
 <tr>
-<td align="left">Can be used in <a href="payment-channels.html">Payment Channels</a> and <a href="escrow.html">Escrow</a>.</td>
-<td align="left">Not compatible with Payment Channels or Escrow.</td>
+<td style="text-align: left;">Can be used in <a href="payment-channels.html">Payment Channels</a> and <a href="escrow.html">Escrow</a>.</td>
+<td style="text-align: left;">Not compatible with Payment Channels or Escrow.</td>
 </tr>
 </tbody>
 </table>
@@ -344,26 +332,26 @@
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left"><code>Field</code></th>
-<th align="left">Type</th>
-<th align="left">Description</th>
+<th style="text-align: left;"><code>Field</code></th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>currency</code></td>
-<td align="left">String - <a href="#currency-codes">Currency Code</a></td>
-<td align="left">Arbitrary currency code for the token. Cannot be <code>XRP</code>.</td>
+<td style="text-align: left;"><code>currency</code></td>
+<td style="text-align: left;">String - <a href="#currency-codes">Currency Code</a></td>
+<td style="text-align: left;">Arbitrary currency code for the token. Cannot be <code>XRP</code>.</td>
 </tr>
 <tr>
-<td align="left"><code>value</code></td>
-<td align="left"><a href="#string-numbers">String Number</a></td>
-<td align="left">Quoted decimal representation of the amount of the token. This can include scientific notation, such as <code>1.23e11</code> meaning 123,000,000,000. Both <code>e</code> and <code>E</code> may be used. This can be negative when displaying balances, but negative values are disallowed in other contexts such as specifying how much to send.</td>
+<td style="text-align: left;"><code>value</code></td>
+<td style="text-align: left;"><a href="#string-numbers">String Number</a></td>
+<td style="text-align: left;">Quoted decimal representation of the amount of the token. This can include scientific notation, such as <code>1.23e11</code> meaning 123,000,000,000. Both <code>e</code> and <code>E</code> may be used. This can be negative when displaying balances, but negative values are disallowed in other contexts such as specifying how much to send.</td>
 </tr>
 <tr>
-<td align="left"><code>issuer</code></td>
-<td align="left">String</td>
-<td align="left">Generally, the <a href="accounts.html">account</a> that issues this token. In special cases, this can refer to the account that holds the token instead.</td>
+<td style="text-align: left;"><code>issuer</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">Generally, the <a href="accounts.html">account</a> that issues this token. In special cases, this can refer to the account that holds the token instead.</td>
 </tr>
 </tbody>
 </table>
@@ -905,6 +893,16 @@
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="broker-sale.html">Broker a NFToken Sale</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="authorize-minter.html">Assign an Authorized Minter</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="batch-minting.html">Batch Mint NFTokens</a>
   </div>
 
     </nav>
@@ -2258,11 +2256,6 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info (Clio)</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="server_state.html">server_state</a>
   </div>
 
@@ -2275,9 +2268,36 @@
 
       <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_8" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_8"></a>
 
-        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+        <a class="nav-link" href="clio-methods.html">Clio Server Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_8">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ledger-clio.html">ledger</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="nft_info.html">nft_info</a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_9" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_9"></a>
+
+        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_9">
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="json.html">json</a>

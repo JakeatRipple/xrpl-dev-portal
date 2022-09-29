@@ -55,7 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v6a.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -88,20 +88,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<div class="top-banner fixed-top">
-  <!-- mobile -->
-  <div class="justify-content-center d-md-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
-    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
-  </div>
-  <!-- tablet and up -->
-  <div class="d-md-flex justify-content-center d-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
-    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
-  </div>
-  
-
-</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,6 +142,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
+          </div><!--./col-->
+          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
@@ -412,14 +400,14 @@
   }
 </code></pre></div>
 <p>If the Expiration Date is present, append it to the transaction.</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-4" id="codeblock-4button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-4">  <span class="k">if</span> <span class="ss">(</span><span class="nv">expirationDate</span> <span class="o">!=</span> <span class="nv">null</span><span class="ss">)</span> {
-    <span class="nv">transactionBlob</span>.<span class="nv">Expiration</span> <span class="o">=</span> <span class="nv">expirationDate</span>
-  }
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-4" id="codeblock-4button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-4"><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="ss">(</span><span class="nv">expirationDate</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nv">null</span><span class="ss">)</span><span class="w"> </span>{<span class="w"></span>
+<span class="w">    </span><span class="nv">transactionBlob</span>.<span class="nv">Expiration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">expirationDate</span><span class="w"></span>
+<span class="w">  </span>}<span class="w"></span>
 </code></pre></div>
 <p>If the Destination field is not empty, append it to the transaction. When the destination is set, only the destination account can purchase the NFToken.</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-5" id="codeblock-5button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-5">  <span class="k">if</span><span class="ss">(</span><span class="nv">standbyDestinationField</span>.<span class="nv">value</span> <span class="o">!==</span> <span class="s1">''</span><span class="ss">)</span> {
-    <span class="nv">transactionBlob</span>.<span class="nv">Destination</span> <span class="o">=</span> <span class="nv">standbyDestinationField</span>.<span class="nv">value</span>
-  }
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-5" id="codeblock-5button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-5"><span class="w">  </span><span class="k">if</span><span class="ss">(</span><span class="nv">standbyDestinationField</span>.<span class="nv">value</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s1">''</span><span class="ss">)</span><span class="w"> </span>{<span class="w"></span>
+<span class="w">    </span><span class="nv">transactionBlob</span>.<span class="nv">Destination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">standbyDestinationField</span>.<span class="nv">value</span><span class="w"></span>
+<span class="w">  </span>}<span class="w"></span>
 </code></pre></div>
 <p>Submit the transaction and wait for the results.</p>
 <div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-6" id="codeblock-6button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-6"><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">tx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">await</span><span class="w"> </span><span class="n">client</span><span class="o">.</span><span class="n">submitAndWait</span><span class="p">(</span><span class="n">transactionBlob</span><span class="p">,{</span><span class="n">wallet</span><span class="p">:</span><span class="w"> </span><span class="n">standby_wallet</span><span class="p">})</span><span class="w"></span>
@@ -463,8 +451,8 @@
   document.getElementById('standbyResultField').value = results
 </code></pre></div>
 <p>Disconnect from the ledger.</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-12" id="codeblock-12button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-12">  <span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span>
-}<span class="o">//</span> <span class="k">End</span> <span class="nv">of</span> <span class="nv">createSellOffer</span><span class="ss">()</span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-12" id="codeblock-12button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-12"><span class="w">  </span><span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span><span class="w"></span>
+}<span class="o">//</span><span class="w"> </span><span class="k">End</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">createSellOffer</span><span class="ss">()</span><span class="w"></span>
 </code></pre></div>
 <h2 id="create-buy-offer">Create Buy Offer<a aria-hidden="true" class="hover_anchor" href="#create-buy-offer"><i class="fa fa-link"></i></a></h2>
 <div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-13" id="codeblock-13button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-13">// *******************************************************
@@ -506,9 +494,9 @@ async function createBuyOffer() {
 <span class="w">  </span><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>If the expiration date is present, append that to the transaction.</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-17" id="codeblock-17button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-17">  <span class="k">if</span> <span class="ss">(</span><span class="nv">expirationDate</span> <span class="o">!=</span> <span class="nv">null</span><span class="ss">)</span> {
-    <span class="nv">transactionBlob</span>.<span class="nv">Expiration</span> <span class="o">=</span> <span class="nv">expirationDate</span>
-  }
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-17" id="codeblock-17button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-17"><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="ss">(</span><span class="nv">expirationDate</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nv">null</span><span class="ss">)</span><span class="w"> </span>{<span class="w"></span>
+<span class="w">    </span><span class="nv">transactionBlob</span>.<span class="nv">Expiration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">expirationDate</span><span class="w"></span>
+<span class="w">  </span>}<span class="w"></span>
 </code></pre></div>
 <p>Submit the transaction and wait for the results.</p>
 <div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-18" id="codeblock-18button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-18"><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">tx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">await</span><span class="w"> </span><span class="n">client</span><span class="o">.</span><span class="n">submitAndWait</span><span class="p">(</span><span class="n">transactionBlob</span><span class="p">,{</span><span class="n">wallet</span><span class="p">:</span><span class="w"> </span><span class="n">standby_wallet</span><span class="p">})</span><span class="w"></span>
@@ -545,8 +533,8 @@ async function createBuyOffer() {
   document.getElementById('standbyResultField').value = results
 </code></pre></div>
 <p>Disconnect from the ledger.</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-22" id="codeblock-22button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-22">  <span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span>
-}<span class="o">//</span> <span class="k">End</span> <span class="nv">of</span> <span class="nv">createBuyOffer</span><span class="ss">()</span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-22" id="codeblock-22button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-22"><span class="w">  </span><span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span><span class="w"></span>
+}<span class="o">//</span><span class="w"> </span><span class="k">End</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">createBuyOffer</span><span class="ss">()</span><span class="w"></span>
 </code></pre></div>
 <h2 id="cancel-offer-1">Cancel Offer<a aria-hidden="true" class="hover_anchor" href="#cancel-offer-1"><i class="fa fa-link"></i></a></h2>
 <div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-23" id="codeblock-23button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-23">// *******************************************************
@@ -610,8 +598,8 @@ async function cancelOffer() {
   document.getElementById('standbyResultField').value = results
 </code></pre></div>
 <p>Disconnect from the ledger.</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-31" id="codeblock-31button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-31">  <span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span> <span class="o">//</span> <span class="k">End</span> <span class="nv">of</span> <span class="nv">cancelOffer</span><span class="ss">()</span>
-}
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-31" id="codeblock-31button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-31"><span class="w">  </span><span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="k">End</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">cancelOffer</span><span class="ss">()</span><span class="w"></span>
+}<span class="w"></span>
 </code></pre></div>
 <h2 id="get-offers-1">Get Offers<a aria-hidden="true" class="hover_anchor" href="#get-offers-1"><i class="fa fa-link"></i></a></h2>
 <div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-32" id="codeblock-32button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-32">// *******************************************************
@@ -657,8 +645,8 @@ async function getOffers() {
   document.getElementById('standbyResultField').value = results
 </code></pre></div>
 <p>Disconnect from the ledger.</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-36" id="codeblock-36button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-36">  <span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span>
-}<span class="o">//</span> <span class="k">End</span> <span class="nv">of</span> <span class="nv">getOffers</span><span class="ss">()</span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-36" id="codeblock-36button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-36"><span class="w">  </span><span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span><span class="w"></span>
+}<span class="o">//</span><span class="w"> </span><span class="k">End</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">getOffers</span><span class="ss">()</span><span class="w"></span>
 </code></pre></div>
 <h2 id="accept-sell-offer-1">Accept Sell Offer<a aria-hidden="true" class="hover_anchor" href="#accept-sell-offer-1"><i class="fa fa-link"></i></a></h2>
 <div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-37" id="codeblock-37button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-37">// *******************************************************
@@ -709,8 +697,8 @@ async function acceptSellOffer() {
   document.getElementById('standbyResultField').value = results
 </code></pre></div>
 <p>Disconnect from the ledger.</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-44" id="codeblock-44button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-44">  <span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span>
-}<span class="o">//</span> <span class="k">End</span> <span class="nv">of</span> <span class="nv">acceptSellOffer</span><span class="ss">()</span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-44" id="codeblock-44button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-44"><span class="w">  </span><span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span><span class="w"></span>
+}<span class="o">//</span><span class="w"> </span><span class="k">End</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">acceptSellOffer</span><span class="ss">()</span><span class="w"></span>
 </code></pre></div>
 <h2 id="accept-buy-offer">Accept Buy Offer<a aria-hidden="true" class="hover_anchor" href="#accept-buy-offer"><i class="fa fa-link"></i></a></h2>
 <div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-45" id="codeblock-45button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-45">// *******************************************************
@@ -762,8 +750,8 @@ async function acceptBuyOffer() {
   document.getElementById('standbyResultField').value = results
 </code></pre></div>
 <p>Disconnect from the ledger.</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-52" id="codeblock-52button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-52">  <span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span>
-}<span class="o">//</span> <span class="k">End</span> <span class="nv">of</span> <span class="nv">acceptBuyOffer</span><span class="ss">()</span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-52" id="codeblock-52button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-52"><span class="w">  </span><span class="nv">client</span>.<span class="k">disconnect</span><span class="ss">()</span><span class="w"></span>
+}<span class="o">//</span><span class="w"> </span><span class="k">End</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">acceptBuyOffer</span><span class="ss">()</span><span class="w"></span>
 </code></pre></div>
 <h2 id="reciprocal-transactions">Reciprocal Transactions<a aria-hidden="true" class="hover_anchor" href="#reciprocal-transactions"><i class="fa fa-link"></i></a></h2>
 <p>These functions duplicate the functions of the standby account for the operational account. See the corresponding standby account function for walkthrough information.</p>
@@ -1476,14 +1464,14 @@ async function acceptBuyOffer() {
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left">Previous</th>
-<th align="right">Next</th>
+<th style="text-align: left;">Previous</th>
+<th style="text-align: right;">Next</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><a class="btn btn-primary" href="mint-and-burn-nftokens.html">← 3. Mint and Burn NFTokens</a></td>
-<td align="right"><a class="btn btn-primary" href="broker-sale.html">Broker a NFToken Sale →</a></td>
+<td style="text-align: left;"><a class="btn btn-primary" href="mint-and-burn-nftokens.html">← 3. Mint and Burn NFTokens</a></td>
+<td style="text-align: right;"><a class="btn btn-primary" href="broker-sale.html">Broker a NFToken Sale →</a></td>
 </tr>
 </tbody>
 </table>
@@ -1985,6 +1973,16 @@ async function acceptBuyOffer() {
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="broker-sale.html">Broker a NFToken Sale</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="authorize-minter.html">Assign an Authorized Minter</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="batch-minting.html">Batch Mint NFTokens</a>
   </div>
 
     </nav>
@@ -3338,11 +3336,6 @@ async function acceptBuyOffer() {
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info (Clio)</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="server_state.html">server_state</a>
   </div>
 
@@ -3355,9 +3348,36 @@ async function acceptBuyOffer() {
 
       <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_8" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_8"></a>
 
-        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+        <a class="nav-link" href="clio-methods.html">Clio Server Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_8">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ledger-clio.html">ledger</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="nft_info.html">nft_info</a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_9" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_9"></a>
+
+        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_9">
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="json.html">json</a>

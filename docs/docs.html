@@ -53,7 +53,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v6a.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -71,20 +71,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<div class="top-banner fixed-top">
-  <!-- mobile -->
-  <div class="justify-content-center d-md-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
-    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
-  </div>
-  <!-- tablet and up -->
-  <div class="d-md-flex justify-content-center d-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
-    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
-  </div>
-  
-
-</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -139,6 +125,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
+          </div><!--./col-->
+          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
@@ -255,13 +243,13 @@
       <li class="list-inline-item d-block d-lg-inline-block">
         <a class="label label-accounts" href="label-accounts.html" title="Pages relating to accounts in the XRP Ledger.">
         Accounts
-          <span class="badge badge-pill">24</span>
+          <span class="badge badge-pill">26</span>
         </a>
       </li>
       <li class="list-inline-item d-block d-lg-inline-block">
         <a class="label label-blockchain" href="label-blockchain.html" title="Pages about how the XRP Ledger functions as a blockchain.">
         Blockchain
-          <span class="badge badge-pill">45</span>
+          <span class="badge badge-pill">46</span>
         </a>
       </li>
       <li class="list-inline-item d-block d-lg-inline-block">
@@ -315,7 +303,7 @@
       <li class="list-inline-item d-block d-lg-inline-block">
         <a class="label label-non-fungible-tokens-nfts" href="label-nfts.html" title="Pages about non-fungible tokens.">
         Non-fungible Tokens, NFTs
-          <span class="badge badge-pill">12</span>
+          <span class="badge badge-pill">13</span>
         </a>
       </li>
       <li class="list-inline-item d-block d-lg-inline-block">
@@ -357,7 +345,7 @@
       <li class="list-inline-item d-block d-lg-inline-block">
         <a class="label label-xrp" href="label-xrp.html" title="Pages about XRP, the native digital asset built into the XRP Ledger.">
         XRP
-          <span class="badge badge-pill">12</span>
+          <span class="badge badge-pill">14</span>
         </a>
       </li>
 </ul>      </div><!--/#browse-by-label-->
@@ -440,7 +428,7 @@
   <a class="card" href="dev-tools.html">
     <div class="card-body">
       <h4 class="card-title h5">Dev Tools</h4>
-      <p class="card-text">Use these web-based tools to interact with the ledger and test your software.</p>
+      <p class="card-text">XRPL.org is a community-driven site for the XRP Ledger (XRPL), an open-source, public blockchain. Get technical documentation, reference materials, and tools.</p>
     </div>
     <div class="card-footer">&nbsp;</div>
   </a>
@@ -664,6 +652,10 @@
       <li class="level-2"><a href="transfer-nftokens.html">4. Transfer NFTokens</a></li>
         
       <li class="level-2"><a href="broker-sale.html">Broker a NFToken Sale</a></li>
+        
+      <li class="level-2"><a href="authorize-minter.html">Assign an Authorized Minter</a></li>
+        
+      <li class="level-2"><a href="batch-minting.html">Batch Mint NFTokens</a></li>
         
 
       <li class="level-1"><a href="get-started.html">Get Started</a></li>
@@ -1107,9 +1099,15 @@
         
       <li class="level-4"><a href="server_info.html">server_info (rippled)</a></li>
         
-      <li class="level-4"><a href="server_info-clio.html">server_info (Clio)</a></li>
-        
       <li class="level-4"><a href="server_state.html">server_state</a></li>
+        
+
+      <li class="level-3"><a href="clio-methods.html">Clio Server Methods</a></li>
+              <li class="level-4"><a href="server_info-clio.html">server_info</a></li>
+        
+      <li class="level-4"><a href="ledger-clio.html">ledger</a></li>
+        
+      <li class="level-4"><a href="nft_info.html">nft_info</a></li>
         
 
       <li class="level-3"><a href="utility-methods.html">Utility Methods</a></li>

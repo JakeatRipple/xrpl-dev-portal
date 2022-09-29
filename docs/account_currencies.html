@@ -55,7 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v6a.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -88,20 +88,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<div class="top-banner fixed-top">
-  <!-- mobile -->
-  <div class="justify-content-center d-md-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
-    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
-  </div>
-  <!-- tablet and up -->
-  <div class="d-md-flex justify-content-center d-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
-    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
-  </div>
-  
-
-</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,6 +142,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
+          </div><!--./col-->
+          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
@@ -309,31 +297,31 @@ rippled account_currencies rG1QQv2nh2gr7RCZ1P8YYcBUKCCN633jCn validated strict
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left"><code>Field</code></th>
-<th align="left">Type</th>
-<th align="left">Description</th>
+<th style="text-align: left;"><code>Field</code></th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>account</code></td>
-<td align="left">String</td>
-<td align="left">A unique identifier for the account, most commonly the account's <a href="basic-data-types.html#addresses">Address</a>.</td>
+<td style="text-align: left;"><code>account</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">A unique identifier for the account, most commonly the account's <a href="basic-data-types.html#addresses">Address</a>.</td>
 </tr>
 <tr>
-<td align="left"><code>ledger_hash</code></td>
-<td align="left">String</td>
-<td align="left"><em>(Optional)</em> A 20-byte hex string for the ledger version to use. (See <a href="basic-data-types.html#specifying-ledgers">Specifying Ledgers</a>)</td>
+<td style="text-align: left;"><code>ledger_hash</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><em>(Optional)</em> A 20-byte hex string for the ledger version to use. (See <a href="basic-data-types.html#specifying-ledgers">Specifying Ledgers</a>)</td>
 </tr>
 <tr>
-<td align="left"><code>ledger_index</code></td>
-<td align="left">String or Unsigned Integer</td>
-<td align="left"><em>(Optional)</em> The <a href="basic-data-types.html#ledger-index">ledger index</a> of the ledger to use, or a shortcut string to choose a ledger automatically. (See <a href="basic-data-types.html#specifying-ledgers">Specifying Ledgers</a>)</td>
+<td style="text-align: left;"><code>ledger_index</code></td>
+<td style="text-align: left;">String or Unsigned Integer</td>
+<td style="text-align: left;"><em>(Optional)</em> The <a href="basic-data-types.html#ledger-index">ledger index</a> of the ledger to use, or a shortcut string to choose a ledger automatically. (See <a href="basic-data-types.html#specifying-ledgers">Specifying Ledgers</a>)</td>
 </tr>
 <tr>
-<td align="left"><code>strict</code></td>
-<td align="left">Boolean</td>
-<td align="left"><em>(Optional)</em> If <code>true</code>, then the <code>account</code> field only accepts a public key or XRP Ledger address. Otherwise, <code>account</code> can be a secret or passphrase (not recommended). The default is <code>false</code>.</td>
+<td style="text-align: left;"><code>strict</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;"><em>(Optional)</em> If <code>true</code>, then the <code>account</code> field only accepts a public key or XRP Ledger address. Otherwise, <code>account</code> can be a secret or passphrase (not recommended). The default is <code>false</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -422,36 +410,36 @@ rippled account_currencies rG1QQv2nh2gr7RCZ1P8YYcBUKCCN633jCn validated strict
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left"><code>Field</code></th>
-<th align="left">Type</th>
-<th align="left">Description</th>
+<th style="text-align: left;"><code>Field</code></th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>ledger_hash</code></td>
-<td align="left">String - <a href="basic-data-types.html#hashes">Hash</a></td>
-<td align="left">(May be omitted) The identifying hash of the ledger version used to retrieve this data, as hex.</td>
+<td style="text-align: left;"><code>ledger_hash</code></td>
+<td style="text-align: left;">String - <a href="basic-data-types.html#hashes">Hash</a></td>
+<td style="text-align: left;">(May be omitted) The identifying hash of the ledger version used to retrieve this data, as hex.</td>
 </tr>
 <tr>
-<td align="left"><code>ledger_index</code></td>
-<td align="left">Integer - <a href="basic-data-types.html#ledger-index">Ledger Index</a></td>
-<td align="left">The ledger index of the ledger version used to retrieve this data.</td>
+<td style="text-align: left;"><code>ledger_index</code></td>
+<td style="text-align: left;">Integer - <a href="basic-data-types.html#ledger-index">Ledger Index</a></td>
+<td style="text-align: left;">The ledger index of the ledger version used to retrieve this data.</td>
 </tr>
 <tr>
-<td align="left"><code>receive_currencies</code></td>
-<td align="left">Array of Strings</td>
-<td align="left">Array of <a href="currency-formats.html#currency-codes">Currency Code</a>s for currencies that this account can receive.</td>
+<td style="text-align: left;"><code>receive_currencies</code></td>
+<td style="text-align: left;">Array of Strings</td>
+<td style="text-align: left;">Array of <a href="currency-formats.html#currency-codes">Currency Code</a>s for currencies that this account can receive.</td>
 </tr>
 <tr>
-<td align="left"><code>send_currencies</code></td>
-<td align="left">Array of Strings</td>
-<td align="left">Array of <a href="currency-formats.html#currency-codes">Currency Code</a>s for currencies that this account can send.</td>
+<td style="text-align: left;"><code>send_currencies</code></td>
+<td style="text-align: left;">Array of Strings</td>
+<td style="text-align: left;">Array of <a href="currency-formats.html#currency-codes">Currency Code</a>s for currencies that this account can send.</td>
 </tr>
 <tr>
-<td align="left"><code>validated</code></td>
-<td align="left">Boolean</td>
-<td align="left">If <code>true</code>, this data comes from a validated ledger.</td>
+<td style="text-align: left;"><code>validated</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">If <code>true</code>, this data comes from a validated ledger.</td>
 </tr>
 </tbody>
 </table>
@@ -959,6 +947,16 @@ rippled account_currencies rG1QQv2nh2gr7RCZ1P8YYcBUKCCN633jCn validated strict
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="broker-sale.html">Broker a NFToken Sale</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="authorize-minter.html">Assign an Authorized Minter</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="batch-minting.html">Batch Mint NFTokens</a>
   </div>
 
     </nav>
@@ -2312,11 +2310,6 @@ rippled account_currencies rG1QQv2nh2gr7RCZ1P8YYcBUKCCN633jCn validated strict
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info (Clio)</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="server_state.html">server_state</a>
   </div>
 
@@ -2329,9 +2322,36 @@ rippled account_currencies rG1QQv2nh2gr7RCZ1P8YYcBUKCCN633jCn validated strict
 
       <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_8" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_8"></a>
 
-        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+        <a class="nav-link" href="clio-methods.html">Clio Server Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_8">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ledger-clio.html">ledger</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="nft_info.html">nft_info</a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_9" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_9"></a>
+
+        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_9">
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="json.html">json</a>

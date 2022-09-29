@@ -55,7 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v6a.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -88,20 +88,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<div class="top-banner fixed-top">
-  <!-- mobile -->
-  <div class="justify-content-center d-md-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL</p></span>
-    <span><p class="mb-0"> Developer Summit <a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></p></span>
-  </div>
-  <!-- tablet and up -->
-  <div class="d-md-flex justify-content-center d-none">
-    <span><p class="mb-0">Registration is live for Apex: The XRPL Developer Summit</p></span>
-    <span><a href="https://www.apexdevsummit.com/" target="_blank" class="btn btn-outline-secondary">Register Now</a></span>
-  </div>
-  
-
-</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,6 +142,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
+          </div><!--./col-->
+          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
@@ -341,7 +329,7 @@
 <p>The following example shows creation of a payment channel by <a href="submit.html#sign-and-submit-mode">submitting</a> to a local <code>rippled</code> server with the JSON-RPC API. The payment channel allocates 100 XRP from the <a href="#example-values">example payer</a> (<code>rN7n7...</code>) to the <a href="#example-values">example payee</a> (<code>rf1Bi...</code>) with a settlement delay of 1 day. The public key is the example payer's master public key, in hexadecimal.</p>
 <p class="devportal-callout note"><strong>Note:</strong> A payment channel counts as one object toward the payer's <a href="reserves.html#owner-reserves">owner reserve</a>. The owner must keep at least enough XRP to satisfy the reserve after subtracting the XRP allocated to the payment channel.</p>
 <p>Request:</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-0" id="codeblock-0button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-0"><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="err">//localhos</span><span class="kc">t</span><span class="p">:</span><span class="mi">5005</span><span class="err">/</span><span class="w"></span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-0" id="codeblock-0button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-0"><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="c1">//localhost:5005/</span><span class="w"></span>
 <span class="err">Co</span><span class="kc">ntent</span><span class="mi">-</span><span class="err">Type</span><span class="p">:</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">/jso</span><span class="kc">n</span><span class="w"></span>
 
 <span class="p">{</span><span class="w"></span>
@@ -383,7 +371,7 @@
 </code></pre></div>
 <p>The immediate response to the <code>submit</code> request contains a <em>provisional</em> result with the transaction's identifying <code>hash</code> value. The payer should check the transaction's <em>final</em> result in a validated ledger and get the Channel ID from the metadata. This can be done with the <code>tx</code> command:</p>
 <p>Request:</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-1" id="codeblock-1button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-1"><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="err">//localhos</span><span class="kc">t</span><span class="p">:</span><span class="mi">5005</span><span class="err">/</span><span class="w"></span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-1" id="codeblock-1button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-1"><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="c1">//localhost:5005/</span><span class="w"></span>
 <span class="err">Co</span><span class="kc">ntent</span><span class="mi">-</span><span class="err">Type</span><span class="p">:</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">/jso</span><span class="kc">n</span><span class="w"></span>
 
 <span class="p">{</span><span class="w"></span>
@@ -444,7 +432,7 @@
 <h2 id="2-the-payee-checks-specifics-of-the-payment-channel">2. The payee checks specifics of the payment channel.<a aria-hidden="true" class="hover_anchor" href="#2-the-payee-checks-specifics-of-the-payment-channel"><i class="fa fa-link"></i></a></h2>
 <p>You can look up payment channels with the <a href="account_channels.html">account_channels method</a>, using the payer of the channel, as in the following example (using the JSON-RPC API):</p>
 <p>Request:</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-3" id="codeblock-3button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-3"><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="err">//localhos</span><span class="kc">t</span><span class="p">:</span><span class="mi">5005</span><span class="err">/</span><span class="w"></span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-3" id="codeblock-3button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-3"><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="c1">//localhost:5005/</span><span class="w"></span>
 <span class="err">Co</span><span class="kc">ntent</span><span class="mi">-</span><span class="err">Type</span><span class="p">:</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">/jso</span><span class="kc">n</span><span class="w"></span>
 
 <span class="p">{</span><span class="w"></span>
@@ -491,7 +479,7 @@
 <p>Each claim must be for a cumulative amount. In other words, to buy two items at 10 XRP each, the first claim should have an amount of 10 XRP and the second claim should have an amount of 20 XRP. The claim can never be more than the total amount of XRP allocated to the channel. (A <a href="paymentchannelfund.html">PaymentChannelFund</a> transaction can increase the total amount of XRP allocated to the channel.)</p>
 <p>You can create claims with the <a href="channel_authorize.html">channel_authorize method</a>. The following example authorizes 1 XRP from the channel:</p>
 <p>Request:</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-5" id="codeblock-5button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-5"><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="err">//localhos</span><span class="kc">t</span><span class="p">:</span><span class="mi">5005</span><span class="err">/</span><span class="w"></span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-5" id="codeblock-5button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-5"><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="c1">//localhost:5005/</span><span class="w"></span>
 <span class="err">Co</span><span class="kc">ntent</span><span class="mi">-</span><span class="err">Type</span><span class="p">:</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">/jso</span><span class="kc">n</span><span class="w"></span>
 
 <span class="p">{</span><span class="w"></span>
@@ -517,22 +505,22 @@
 <table class="table-responsive">
 <thead>
 <tr>
-<th align="left">Field</th>
-<th align="left">Example</th>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Channel ID</td>
-<td align="left"><code>5DB01B7FFED6B67E6B0414DED11E051D2EE2B7619CE0EAA6286D67A3A4D5BDB3</code></td>
+<td style="text-align: left;">Channel ID</td>
+<td style="text-align: left;"><code>5DB01B7FFED6B67E6B0414DED11E051D2EE2B7619CE0EAA6286D67A3A4D5BDB3</code></td>
 </tr>
 <tr>
-<td align="left">Amount of XRP, in drops</td>
-<td align="left"><code>1000000</code></td>
+<td style="text-align: left;">Amount of XRP, in drops</td>
+<td style="text-align: left;"><code>1000000</code></td>
 </tr>
 <tr>
-<td align="left">Signature</td>
-<td align="left"><code>304402204EF0AFB78AC23ED1C472E74F4299C0C21F1B21D07EFC0A3838A420F76D783A</code> <br/> <code>400220154FB11B6F54320666E4C36CA7F686C16A3A0456800BBC43746F34AF50290064</code> <em>(Note: this long string has been broken to fit on one line.)</em></td>
+<td style="text-align: left;">Signature</td>
+<td style="text-align: left;"><code>304402204EF0AFB78AC23ED1C472E74F4299C0C21F1B21D07EFC0A3838A420F76D783A</code> <br/> <code>400220154FB11B6F54320666E4C36CA7F686C16A3A0456800BBC43746F34AF50290064</code> <em>(Note: this long string has been broken to fit on one line.)</em></td>
 </tr>
 </tbody>
 </table>
@@ -541,7 +529,7 @@
 <p>You can verify claims using the <a href="channel_verify.html">channel_verify method</a>. The payee should confirm that the amount of the claim is equal to or greater than the total price of goods and services provided. (Since the amount is cumulative, this is the total price of all goods and services bought so far.)</p>
 <p>Example of using <code>channel_verify</code> with the JSON-RPC API:</p>
 <p>Request:</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-7" id="codeblock-7button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-7"><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="err">//localhos</span><span class="kc">t</span><span class="p">:</span><span class="mi">5005</span><span class="err">/</span><span class="w"></span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-7" id="codeblock-7button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-7"><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="c1">//localhost:5005/</span><span class="w"></span>
 <span class="err">Co</span><span class="kc">ntent</span><span class="mi">-</span><span class="err">Type</span><span class="p">:</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">/jso</span><span class="kc">n</span><span class="w"></span>
 
 <span class="p">{</span><span class="w"></span>
@@ -566,7 +554,7 @@
 </code></pre></div>
 <p>If the response shows <code>"signature_verified": true</code> then the claim's signature is genuine. The payee must <strong>also</strong> confirm that the channel has enough XRP available to honor the claim. To do this, the payee uses the <a href="account_channels.html">account_channels method</a> to confirm the most recent validated state of the payment channel.</p>
 <p>Request:</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-9" id="codeblock-9button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-9"><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="err">//localhos</span><span class="kc">t</span><span class="p">:</span><span class="mi">5005</span><span class="err">/</span><span class="w"></span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-9" id="codeblock-9button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-9"><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="c1">//localhost:5005/</span><span class="w"></span>
 <span class="err">Co</span><span class="kc">ntent</span><span class="mi">-</span><span class="err">Type</span><span class="p">:</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">/jso</span><span class="kc">n</span><span class="w"></span>
 
 <span class="p">{</span><span class="w"></span>
@@ -634,7 +622,7 @@
 <p>The payee can do this multiple times, to settle partially while still doing business, if desired.</p>
 <p>Example of claiming XRP from a channel:</p>
 <p>Request:</p>
-<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-11" id="codeblock-11button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-11"><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="err">//localhos</span><span class="kc">t</span><span class="p">:</span><span class="mi">5005</span><span class="err">/</span><span class="w"></span>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-11" id="codeblock-11button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-11"><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="c1">//localhost:5005/</span><span class="w"></span>
 <span class="err">Co</span><span class="kc">ntent</span><span class="mi">-</span><span class="err">Type</span><span class="p">:</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">/jso</span><span class="kc">n</span><span class="w"></span>
 
 <span class="p">{</span><span class="w"></span>
@@ -1366,6 +1354,16 @@
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="broker-sale.html">Broker a NFToken Sale</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="authorize-minter.html">Assign an Authorized Minter</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="batch-minting.html">Batch Mint NFTokens</a>
   </div>
 
     </nav>
@@ -2719,11 +2717,6 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info (Clio)</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="server_state.html">server_state</a>
   </div>
 
@@ -2736,9 +2729,36 @@
 
       <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_8" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_8"></a>
 
-        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+        <a class="nav-link" href="clio-methods.html">Clio Server Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_8">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="server_info-clio.html">server_info</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ledger-clio.html">ledger</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="nft_info.html">nft_info</a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_3_3_2_9" aria-expanded="false" aria-controls="tree_nav_group_3_3_2_9"></a>
+
+        <a class="nav-link" href="utility-methods.html">Utility Methods</a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_9">
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="json.html">json</a>
