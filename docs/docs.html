@@ -53,7 +53,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v11.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -71,6 +71,16 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
+<div class="top-banner fixed-top"> 
+  <div class="d-none d-md-flex justify-content-center">
+    <span><p class="mb-0">Native NFT support is now available on the XRP Ledger</p></span>
+    <span><a href="/mint-and-burn-nftokens.html?utm_source=web&utm_medium=web&utm_campaign=xls-20_launch&utm_content=pencil_banner" class="btn btn-outline-secondary">Learn More</a></span>
+  </div>
+  <div class="d-md-none d-block justify-content-center">
+    <span><p class="mb-0">Native NFT support is now available</p></span>
+    <span><p class="mb-0">on the XRP Ledger<a href="/mint-and-burn-nftokens.html?utm_source=web&utm_medium=web&utm_campaign=xls-20_launch&utm_content=pencil_banner" class="btn btn-outline-secondary">Learn More</a></p></span>
+  </div>
+</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -125,9 +135,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
-          </div><!--./col-->
-          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
+            <a class="dropdown-item external-link" href="https://learn.xrpl.org/" target="_blank">XRPL Education Portal</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
             <h5 class="dropdown-item">Get Started</h5>
@@ -303,7 +312,7 @@
       <li class="list-inline-item d-block d-lg-inline-block">
         <a class="label label-non-fungible-tokens-nfts" href="label-nfts.html" title="Pages about non-fungible tokens.">
         Non-fungible Tokens, NFTs
-          <span class="badge badge-pill">13</span>
+          <span class="badge badge-pill">14</span>
         </a>
       </li>
       <li class="list-inline-item d-block d-lg-inline-block">
@@ -428,6 +437,13 @@
   <a class="card" href="dev-tools.html">
     <div class="card-body">
       <h4 class="card-title h5">Dev Tools</h4>
+      <p class="card-text">XRPL.org is a community-driven site for the XRP Ledger (XRPL), an open-source, public blockchain. Get technical documentation, reference materials, and tools.</p>
+    </div>
+    <div class="card-footer">&nbsp;</div>
+  </a>
+  <a class="card" href="https://learn.xrpl.org/">
+    <div class="card-body">
+      <h4 class="card-title h5">XRPL Education Portal</h4>
       <p class="card-text">XRPL.org is a community-driven site for the XRP Ledger (XRPL), an open-source, public blockchain. Get technical documentation, reference materials, and tools.</p>
     </div>
     <div class="card-footer">&nbsp;</div>
@@ -560,6 +576,8 @@
       <li class="level-2"><a href="non-fungible-tokens.html">NFT Conceptual Overview</a></li>
               <li class="level-3"><a href="non-fungible-token-transfers.html">Trading NFTokens on the XRP Ledger</a></li>
         
+      <li class="level-3"><a href="nftoken-batch-minting.html">Batch minting</a></li>
+        
 
       <li class="level-2"><a href="freezes.html">Freezing Tokens</a></li>
               <li class="level-3"><a href="common-misconceptions-about-freezes.html">Common Misunderstandings about Freezes</a></li>
@@ -630,6 +648,12 @@
       <li class="level-2"><a href="transaction-censorship-detection.html">Transaction Censorship Detection</a></li>
         
       <li class="level-2"><a href="the-clio-server.html">The Clio Server</a></li>
+        
+
+      <li class="level-1"><a href="xrpl-interoperability.html">Interoperability</a></li>
+              <li class="level-2"><a href="intro-to-evm-sidechain.html">Introduction to EVM Compatible XRP Ledger Sidechain</a></li>
+        
+      <li class="level-2"><a href="https://xrpl-hooks.readme.io/">Hooks</a></li>
         
 
 
@@ -850,6 +874,18 @@
 
       <li class="level-1"><a href="manage-the-clio-server.html">Manage the Clio Server</a></li>
               <li class="level-2"><a href="install-clio-on-ubuntu.html">Install Clio on Ubuntu Linux</a></li>
+        
+
+      <li class="level-1"><a href="evm-sidechains.html">Interoperability - EVM Sidechain</a></li>
+              <li class="level-2"><a href="get-started-evm-sidechain.html">Get Started with the EVM Sidechain</a></li>
+              <li class="level-3"><a href="connect-metamask-to-xrpl-evm-sidechain.html">Connect MetaMask to XRP Ledger Sidechain</a></li>
+        
+
+      <li class="level-2"><a href="join-evm-sidechain-devnet.html">Join the XRP Ledger EVM Sidechain Devnet</a></li>
+              <li class="level-3"><a href="evm-sidechain-validator-security.html">EVM Sidechain Validator Security</a></li>
+        
+
+      <li class="level-2"><a href="evm-sidechain-run-a-validator-node.html">Run a Validator Node on an EVM Sidechain</a></li>
         
 
 
@@ -1237,6 +1273,16 @@
 
   </ul>
 </div>    </div>
+    <div class="col-md-6 mt-20">
+      <a href="https://learn.xrpl.org/"><h5 class="mb-3">XRPL Education Portal</h5></a>
+
+
+
+<div class="children-display">
+  <ul>
+    
+  </ul>
+</div>    </div>
   </div>
 </section><!--/.doc-index-->
       </main>
@@ -1271,6 +1317,7 @@
             <li class="nav-item"><a href="by-label.html" class="nav-link">Browse By Label</a></li>
             <li class="nav-item"><a href="code-samples.html" class="nav-link">Code Samples</a></li>
             <li class="nav-item"><a href="dev-tools.html" class="nav-link">Dev Tools</a></li>
+            <li class="nav-item"><a href="https://learn.xrpl.org/" class="nav-link external-link">XRPL Education Portal</a></li>
           </ul>
         </div><!--/.col -->
 

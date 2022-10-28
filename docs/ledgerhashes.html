@@ -55,7 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v9.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v11.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -88,6 +88,16 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
+<div class="top-banner fixed-top"> 
+  <div class="d-none d-md-flex justify-content-center">
+    <span><p class="mb-0">Native NFT support is now available on the XRP Ledger</p></span>
+    <span><a href="/mint-and-burn-nftokens.html?utm_source=web&utm_medium=web&utm_campaign=xls-20_launch&utm_content=pencil_banner" class="btn btn-outline-secondary">Learn More</a></span>
+  </div>
+  <div class="d-md-none d-block justify-content-center">
+    <span><p class="mb-0">Native NFT support is now available</p></span>
+    <span><p class="mb-0">on the XRP Ledger<a href="/mint-and-burn-nftokens.html?utm_source=web&utm_medium=web&utm_campaign=xls-20_launch&utm_content=pencil_banner" class="btn btn-outline-secondary">Learn More</a></p></span>
+  </div>
+</div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
   <a href="/" class="navbar-brand"><img class="logo"  height="40" alt="XRPL.org" /></a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-main-nav" aria-controls="navbarHolder" aria-expanded="false" aria-label="Toggle navigation">
@@ -142,9 +152,8 @@
           <div class="navcol col-for-online-tools">
             <h5 class="dropdown-item">Online Tools</h5>
             <a class="dropdown-item" href="code-samples.html">Code Samples</a>
-          </div><!--./col-->
-          <div class="navcol col-for-ungrouped">
             <a class="dropdown-item" href="dev-tools.html">Dev Tools</a>
+            <a class="dropdown-item external-link" href="https://learn.xrpl.org/" target="_blank">XRPL Education Portal</a>
           </div><!--./col-->
           <div class="navcol col-for-get-started">
             <h5 class="dropdown-item">Get Started</h5>
@@ -291,42 +300,48 @@
 <table class="table-responsive">
 <thead>
 <tr>
-<th>Name</th>
-<th>JSON Type</th>
-<th><a href="serialization.html">Internal Type</a></th>
-<th>Description</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">JSON Type</th>
+<th style="text-align: left;"><a href="serialization.html">Internal Type</a></th>
+<th style="text-align: left;">Required?</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>LedgerEntryType</code></td>
-<td>String</td>
-<td>UInt16</td>
-<td>The value <code>0x0068</code>, mapped to the string <code>LedgerHashes</code>, indicates that this object is a list of ledger hashes.</td>
+<td style="text-align: left;"><code>FirstLedgerSequence</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">UInt32</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;"><strong>DEPRECATED</strong> Do not use. (The "recent hashes" object of the production XRP Ledger has the value <code>2</code> in this field as a result of a previous <code>rippled</code> software. That value gets carried forward as the "recent hashes" object is updated. New "previous history" objects do not have this field, nor do "recent hashes" objects in <a href="parallel-networks.html">parallel networks</a> started with more recent versions of <code>rippled</code>.)</td>
 </tr>
 <tr>
-<td><code>FirstLedgerSequence</code></td>
-<td>Number</td>
-<td>UInt32</td>
-<td><strong>DEPRECATED</strong> Do not use. (The "recent hashes" object of the production XRP Ledger has the value <code>2</code> in this field as a result of a previous <code>rippled</code> software. That value gets carried forward as the "recent hashes" object is updated. New "previous history" objects do not have this field, nor do "recent hashes" objects in <a href="parallel-networks.html">parallel networks</a> started with more recent versions of <code>rippled</code>.)</td>
+<td style="text-align: left;"><code>Flags</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">UInt32</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">A bit-map of boolean flags enabled for this object. Currently, the protocol defines no flags for <code>LedgerHashes</code> objects. The value is always <code>0</code>.</td>
 </tr>
 <tr>
-<td><code>LastLedgerSequence</code></td>
-<td>Number</td>
-<td>UInt32</td>
-<td>The <a href="basic-data-types.html#ledger-index">Ledger Index</a> of the last entry in this object's <code>Hashes</code> array.</td>
+<td style="text-align: left;"><code>Hashes</code></td>
+<td style="text-align: left;">Array of Strings</td>
+<td style="text-align: left;">Vector256</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">An array of up to 256 ledger hashes. The contents depend on which sub-type of <code>LedgerHashes</code> object this is.</td>
 </tr>
 <tr>
-<td><code>Hashes</code></td>
-<td>Array of Strings</td>
-<td>Vector256</td>
-<td>An array of up to 256 ledger hashes. The contents depend on which sub-type of <code>LedgerHashes</code> object this is.</td>
+<td style="text-align: left;"><code>LastLedgerSequence</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">UInt32</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">The <a href="basic-data-types.html#ledger-index">Ledger Index</a> of the last entry in this object's <code>Hashes</code> array.</td>
 </tr>
 <tr>
-<td><code>Flags</code></td>
-<td>Number</td>
-<td>UInt32</td>
-<td>A bit-map of boolean flags for this object. No flags are defined for this type.</td>
+<td style="text-align: left;"><code>LedgerEntryType</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">UInt16</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">The value <code>0x0068</code>, mapped to the string <code>LedgerHashes</code>, indicates that this object is a list of ledger hashes.</td>
 </tr>
 </tbody>
 </table>
@@ -579,6 +594,11 @@
     <a class="nav-link nav-leaf" href="non-fungible-token-transfers.html">Trading NFTokens on the XRP Ledger <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
   </div>
 
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="nftoken-batch-minting.html">Batch minting <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+  </div>
+
     </nav>
 
   </div>
@@ -798,6 +818,28 @@
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="the-clio-server.html">The Clio Server</a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_1_8" aria-expanded="false" aria-controls="tree_nav_group_1_8"></a>
+
+        <a class="nav-link" href="xrpl-interoperability.html">Interoperability <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_1_8">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="intro-to-evm-sidechain.html">Introduction to EVM Compatible XRP Ledger Sidechain <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf external-link" target="_blank" href="https://xrpl-hooks.readme.io/">Hooks <i aria-hidden="true" class="fa fa-external-link"></i></a>
   </div>
 
     </nav>
@@ -1462,6 +1504,57 @@
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="install-clio-on-ubuntu.html">Install Clio on Ubuntu Linux</a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_2_11" aria-expanded="false" aria-controls="tree_nav_group_2_11"></a>
+
+        <a class="nav-link" href="evm-sidechains.html">Interoperability - EVM Sidechain</a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_2_11">
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_2_11_1" aria-expanded="false" aria-controls="tree_nav_group_2_11_1"></a>
+
+        <a class="nav-link" href="get-started-evm-sidechain.html">Get Started with the EVM Sidechain <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_2_11_1">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="connect-metamask-to-xrpl-evm-sidechain.html">Connect MetaMask to XRP Ledger Sidechain <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+
+      <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_2_11_2" aria-expanded="false" aria-controls="tree_nav_group_2_11_2"></a>
+
+        <a class="nav-link" href="join-evm-sidechain-devnet.html">Join the XRP Ledger EVM Sidechain Devnet <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+
+    <nav class="nav flex-column collapse" id="tree_nav_group_2_11_2">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="evm-sidechain-validator-security.html">EVM Sidechain Validator Security <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+  </div>
+
+    </nav>
+
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="evm-sidechain-run-a-validator-node.html">Run a Validator Node on an EVM Sidechain <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
   </div>
 
     </nav>
@@ -2691,6 +2784,11 @@
 
   </div>
 
+    
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf external-link" target="_blank" href="https://learn.xrpl.org/">XRPL Education Portal <i aria-hidden="true" class="fa fa-external-link"></i></a>
+  </div>
+
 </nav>      </aside>
     </div><!--/.row (main layout)-->
   </div>
@@ -2723,6 +2821,7 @@
             <li class="nav-item"><a href="by-label.html" class="nav-link">Browse By Label</a></li>
             <li class="nav-item"><a href="code-samples.html" class="nav-link">Code Samples</a></li>
             <li class="nav-item"><a href="dev-tools.html" class="nav-link">Dev Tools</a></li>
+            <li class="nav-item"><a href="https://learn.xrpl.org/" class="nav-link external-link">XRPL Education Portal</a></li>
           </ul>
         </div><!--/.col -->
 
