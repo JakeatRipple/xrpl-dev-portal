@@ -247,6 +247,7 @@
     </div>
     <ul class="page-toc nav flex-column" role="directory">
         <li class="nav-item level-1"><a class="nav-link" href="#nftokenacceptoffer">NFTokenAcceptOffer</a></li>
+        <li class="nav-item level-2"><a class="nav-link" href="#example-nftokenacceptoffer-json">Example NFTokenAcceptOffer JSON</a></li>
         <li class="nav-item level-2"><a class="nav-link" href="#brokered-vs-direct-mode">Brokered vs. Direct Mode</a></li>
         <li class="nav-item level-2"><a class="nav-link" href="#execution-details">Execution Details</a></li>
         <li class="nav-item level-3"><a class="nav-link" href="#direct-mode">Direct Mode</a></li>
@@ -275,12 +276,30 @@
 </nav><!--/.breadcrumbs-wrap-->  <article class="pt-3 p-md-3">
     <div class="content">
         <h1 id="nftokenacceptoffer">NFTokenAcceptOffer<a aria-hidden="true" class="hover_anchor" href="#nftokenacceptoffer"><i class="fa fa-link"></i></a></h1>
-<p><em>Non-fungible token functionality is part of the <a href="known-amendments.html#nonfungibletokensv1">NonFungibleTokensV1 amendment</a> <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span> to the XRP Ledger protocol. You can use these functions on the <a href="parallel-networks.html">NFT-Devnet</a> now, but they are not yet available on the production Mainnet.</em></p>
+<p><a class="external-link" href="https://github.com/XRPLF/rippled/blob/master/src/ripple/app/tx/impl/NFTokenAcceptOffer.cpp" target="_blank" title="Source">[Source] <i aria-hidden="true" class="fa fa-external-link"></i></a></p>
 <p>The <code>NFTokenAcceptOffer</code> transaction is used to accept offers to <code>buy</code> or <code>sell</code> an <code>NFToken</code>. It can either:</p>
 <ul>
 <li>Allow one offer to be accepted. This is called <em>direct</em> mode.</li>
 <li>Allow two distinct offers, one offering to buy a given <code>NFToken</code> and the other offering to sell the same <code>NFToken</code>, to be accepted in an atomic fashion. This is called <em>brokered</em> mode.</li>
 </ul>
+<p><em>(Added by the <a href="known-amendments.html#nonfungibletokensv1_1">NonFungibleTokensV1_1 amendment</a>.)</em></p>
+<h2 id="example-nftokenacceptoffer-json">Example NFTokenAcceptOffer JSON<a aria-hidden="true" class="hover_anchor" href="#example-nftokenacceptoffer-json"><i class="fa fa-link"></i></a></h2>
+<div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-0" id="codeblock-0button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-0"><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"Account"</span><span class="p">:</span><span class="w"> </span><span class="s2">"r9spUPhPBfB6kQeF6vPhwmtFwRhBh2JUCG"</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"Fee"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12"</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"LastLedgerSequence"</span><span class="p">:</span><span class="w"> </span><span class="mi">75447550</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"Memos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"Memo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"MemoData"</span><span class="p">:</span><span class="w"> </span><span class="s2">"61356534373538372D633134322D346663382D616466362D393666383562356435386437"</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"NFTokenSellOffer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"68CD1F6F906494EA08C9CB5CAFA64DFA90D4E834B7151899B73231DE5A0C3B77"</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"Sequence"</span><span class="p">:</span><span class="w"> </span><span class="mi">68549302</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"TransactionType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NFTokenAcceptOffer"</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
 <h2 id="brokered-vs-direct-mode">Brokered vs. Direct Mode<a aria-hidden="true" class="hover_anchor" href="#brokered-vs-direct-mode"><i class="fa fa-link"></i></a></h2>
 <p>The mode in which the transaction operates depends on the presence of the <code>NFTokenSellOffer</code> and <code>NFTokenBuyOffer</code> fields of the transaction:</p>
 <table class="table-responsive">
@@ -646,17 +665,17 @@
 
       <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_1_4_3" aria-expanded="false" aria-controls="tree_nav_group_1_4_3"></a>
 
-        <a class="nav-link" href="non-fungible-tokens.html">NFT Conceptual Overview <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+        <a class="nav-link" href="non-fungible-tokens.html">Non-Fungible Tokens Overview</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_1_4_3">
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="non-fungible-token-transfers.html">Trading NFTokens on the XRP Ledger <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="non-fungible-token-transfers.html">Trading NFTokens on the XRP Ledger</a>
   </div>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftoken-batch-minting.html">Batch minting <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftoken-batch-minting.html">Batch minting</a>
   </div>
 
     </nav>
@@ -1236,7 +1255,7 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftoken-tester-tutorial.html">NFToken Tester Tutorial <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftoken-tester-tutorial.html">NFToken Tester Tutorial</a>
   </div>
 
       
@@ -1661,7 +1680,7 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftoken.html">NFToken <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftoken.html">NFToken</a>
   </div>
 
     </nav>
@@ -1741,12 +1760,12 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftokenoffer.html">NFTokenOffer <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftokenoffer.html">NFTokenOffer</a>
   </div>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftokenpage.html">NFTokenPage <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftokenpage.html">NFTokenPage</a>
   </div>
 
       
@@ -1850,27 +1869,27 @@
 
       
   <div class="nav-item active">
-    <a class="nav-link nav-leaf" href="nftokenacceptoffer.html">NFTokenAcceptOffer <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftokenacceptoffer.html">NFTokenAcceptOffer</a>
   </div>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftokenburn.html">NFTokenBurn <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftokenburn.html">NFTokenBurn</a>
   </div>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftokencanceloffer.html">NFTokenCancelOffer <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftokencanceloffer.html">NFTokenCancelOffer</a>
   </div>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftokencreateoffer.html">NFTokenCreateOffer <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftokencreateoffer.html">NFTokenCreateOffer</a>
   </div>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftokenmint.html">NFTokenMint <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftokenmint.html">NFTokenMint</a>
   </div>
 
       
@@ -2146,7 +2165,7 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="account_nfts.html">account_nfts <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="account_nfts.html">account_nfts</a>
   </div>
 
       
@@ -2272,12 +2291,12 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nft_buy_offers.html">nft_buy_offers <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nft_buy_offers.html">nft_buy_offers</a>
   </div>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nft_sell_offers.html">nft_sell_offers <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nft_sell_offers.html">nft_sell_offers</a>
   </div>
 
       

@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>NFT Conceptual Overview - XRPL.org</title>
+    <title>Non-Fungible Tokens Overview - XRPL.org</title>
 
     <meta name="viewport" content="width=device-width">
-    <meta property="og:title" content="NFT Conceptual Overview | XRPL.org">
+    <meta property="og:title" content="Non-Fungible Tokens Overview | XRPL.org">
     <meta property="og:url" content="https://xrpl.org/non-fungible-tokens.html" />
     <meta property="og:description" content="Introduction to XRPL NFTs." />
     <meta name="description" content="Introduction to XRPL NFTs." />
@@ -245,7 +245,8 @@
       <h4>In this document</h4>
     </div>
     <ul class="page-toc nav flex-column" role="directory">
-        <li class="nav-item level-1"><a class="nav-link" href="#nft-conceptual-overview">NFT Conceptual Overview</a></li>
+        <li class="nav-item level-1"><a class="nav-link" href="#non-fungible-tokens-overview">Non-Fungible Tokens Overview</a></li>
+        <li class="nav-item level-2"><a class="nav-link" href="#background">Background</a></li>
         <li class="nav-item level-2"><a class="nav-link" href="#nfts-on-the-xrp-ledger">NFTs on the XRP Ledger</a></li>
         <li class="nav-item level-2"><a class="nav-link" href="#nftoken-lifecycle">NFToken Lifecycle</a></li>
         <li class="nav-item level-2"><a class="nav-link" href="#reference">Reference</a></li>
@@ -263,12 +264,14 @@
     <li class="active breadcrumb-item"><a href="docs.html">Documentation</a></li>
     <li class="active breadcrumb-item"><a href="concepts.html">Concepts</a></li>
     <li class="active breadcrumb-item"><a href="tokens.html">Tokens</a></li>
-    <li class="active breadcrumb-item">NFT Conceptual Overview</li>
+    <li class="active breadcrumb-item">Non-Fungible Tokens Overview</li>
   </ul>
 </nav><!--/.breadcrumbs-wrap-->  <article class="pt-3 p-md-3">
     <div class="content">
-        <h1 id="nft-conceptual-overview">NFT Conceptual Overview<a aria-hidden="true" class="hover_anchor" href="#nft-conceptual-overview"><i class="fa fa-link"></i></a></h1>
-<p><em>Non-fungible token functionality is part of the <a href="known-amendments.html#nonfungibletokensv1">NonFungibleTokensV1 amendment</a> <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span> to the XRP Ledger protocol. You can use these functions on the <a href="parallel-networks.html">NFT-Devnet</a> now, but they are not yet available on the production Mainnet.</em></p>
+        <h1 id="non-fungible-tokens-overview">Non-Fungible Tokens Overview<a aria-hidden="true" class="hover_anchor" href="#non-fungible-tokens-overview"><i class="fa fa-link"></i></a></h1>
+<p>The XRP Ledger supports non-fungible tokens (NFTs, or “nifties” in the vernacular) natively.  Non-fungible tokens serve to encode ownership of unique physical, non-physical, or purely digital goods, such as works of art or in-game items.</p>
+<p><em>(Added by the <a href="known-amendments.html#nonfungibletokensv1_1">NonFungibleTokensV1_1 amendment</a>.)</em></p>
+<h2 id="background">Background<a aria-hidden="true" class="hover_anchor" href="#background"><i class="fa fa-link"></i></a></h2>
 <p>The XRP Ledger offers support for <a href="tokens.html">tokens</a>, also known as <em>IOUs</em>. Such assets are, primarily, fungible.</p>
 <blockquote>
 <p>Fun·gi·ble /ˈfənjəbəl/ (adj)</p>
@@ -282,7 +285,7 @@
 <p>But since you are standing around in 1919, you might be offered 24-cent airmail stamps where the aeroplane on the stamp is accidentally printed upside down. These are the world famous “Inverted Jenny” stamps. Only 100 were circulated on a single sheet of stamps, making them extremely rare and sought after. The current value of each mint condition stamp is appraised at over $1.5 million dollars.</p>
 <p><img alt="Jenny Stamps" src="img/nft-concepts2.png" title="Jenny Stamps"/></p>
 <p>Those stamps cannot be replaced by just another other 24-cent stamp. They have become <em>non-fungible</em>.</p>
-<p>The <a href="known-amendments.html#nonfungibletokensv1">NonFungibleTokensV1 amendment</a> <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span> adds support for non-fungible tokens (NFTs, or “nifties” in the vernacular) natively on the XRP Ledger.  Non-fungible tokens serve to encode ownership of unique physical, non-physical, or purely digital goods, such as works of art or in-game items.</p>
+<p>To represent digital assets similar to these, use the XRP Ledger's Non-Fungible Tokens feature (sometimes referred to by its standards draft number, <a class="external-link" href="https://github.com/XRPLF/XRPL-Standards/discussions/46" target="_blank">XLS-20 <i aria-hidden="true" class="fa fa-external-link"></i></a>).</p>
 <h2 id="nfts-on-the-xrp-ledger">NFTs on the XRP Ledger<a aria-hidden="true" class="hover_anchor" href="#nfts-on-the-xrp-ledger"><i class="fa fa-link"></i></a></h2>
 <p>On the XRP Ledger, a non-fungible token is represented as a <a href="nftoken.html">NFToken</a> object. A <code>NFToken</code> is a unique, indivisible unit that is not used for payments. Users can mint (create), hold, buy, sell, and burn (destroy) such tokens.</p>
 <p>The ledger stores up to 32 <code>NFToken</code> objects owned by the same account in a single <a href="nftokenpage.html">NFTokenPage object</a> to save space. As a result, the owner's <a href="reserves.html">reserve requirement</a> for <code>NFToken</code> objects only increases when the ledger needs to make a new page to store additional tokens.</p>
@@ -548,17 +551,17 @@
 
       <a class="nav-toggler " role="button" data-toggle="collapse" href="#tree_nav_group_1_4_3" aria-expanded="true" aria-controls="tree_nav_group_1_4_3"></a>
 
-        <a class="nav-link" href="non-fungible-tokens.html">NFT Conceptual Overview <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+        <a class="nav-link" href="non-fungible-tokens.html">Non-Fungible Tokens Overview</a>
 
     <nav class="nav flex-column show " id="tree_nav_group_1_4_3">
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="non-fungible-token-transfers.html">Trading NFTokens on the XRP Ledger <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="non-fungible-token-transfers.html">Trading NFTokens on the XRP Ledger</a>
   </div>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftoken-batch-minting.html">Batch minting <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftoken-batch-minting.html">Batch minting</a>
   </div>
 
     </nav>
@@ -1138,7 +1141,7 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftoken-tester-tutorial.html">NFToken Tester Tutorial <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftoken-tester-tutorial.html">NFToken Tester Tutorial</a>
   </div>
 
       
@@ -1563,7 +1566,7 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftoken.html">NFToken <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftoken.html">NFToken</a>
   </div>
 
     </nav>
@@ -1643,12 +1646,12 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftokenoffer.html">NFTokenOffer <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftokenoffer.html">NFTokenOffer</a>
   </div>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftokenpage.html">NFTokenPage <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftokenpage.html">NFTokenPage</a>
   </div>
 
       
@@ -1752,27 +1755,27 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftokenacceptoffer.html">NFTokenAcceptOffer <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftokenacceptoffer.html">NFTokenAcceptOffer</a>
   </div>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftokenburn.html">NFTokenBurn <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftokenburn.html">NFTokenBurn</a>
   </div>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftokencanceloffer.html">NFTokenCancelOffer <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftokencanceloffer.html">NFTokenCancelOffer</a>
   </div>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftokencreateoffer.html">NFTokenCreateOffer <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftokencreateoffer.html">NFTokenCreateOffer</a>
   </div>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftokenmint.html">NFTokenMint <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftokenmint.html">NFTokenMint</a>
   </div>
 
       
@@ -2048,7 +2051,7 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="account_nfts.html">account_nfts <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="account_nfts.html">account_nfts</a>
   </div>
 
       
@@ -2174,12 +2177,12 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nft_buy_offers.html">nft_buy_offers <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nft_buy_offers.html">nft_buy_offers</a>
   </div>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nft_sell_offers.html">nft_sell_offers <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nft_sell_offers.html">nft_sell_offers</a>
   </div>
 
       

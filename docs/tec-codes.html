@@ -282,7 +282,7 @@
 <tr>
 <td style="text-align: left;"><code>tecCANT_ACCEPT_OWN_NFTOKEN_OFFER</code></td>
 <td style="text-align: left;">157</td>
-<td style="text-align: left;">The transaction tried to accept an offer that was placed by the same account to buy or sell a <a href="non-fungible-tokens.html">non-fungible token</a>. <em>(Added by the <a href="known-amendments.html#nonfungibletokensv1">NonFungibleTokensV1 amendment</a>. <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span>)</em></td>
+<td style="text-align: left;">The transaction tried to accept an offer that was placed by the same account to buy or sell a <a href="non-fungible-tokens.html">non-fungible token</a>. <em>(Added by the <a href="known-amendments.html#nonfungibletokensv1_1">NonFungibleTokensV1_1 amendment</a>.)</em></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>tecCLAIM</code></td>
@@ -347,12 +347,12 @@
 <tr>
 <td style="text-align: left;"><code>tecINSUFFICIENT_FUNDS</code></td>
 <td style="text-align: left;">158</td>
-<td style="text-align: left;">One of the accounts involved does not hold enough of a necessary asset. <em>(Added by the <a href="known-amendments.html#nonfungibletokensv1">NonFungibleTokensV1 amendment</a>. <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span>)</em></td>
+<td style="text-align: left;">One of the accounts involved does not hold enough of a necessary asset. <em>(Added by the <a href="known-amendments.html#nonfungibletokensv1_1">NonFungibleTokensV1_1 amendment</a>.)</em></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>tecINSUFFICIENT_PAYMENT</code></td>
 <td style="text-align: left;">161</td>
-<td style="text-align: left;">The amount specified is not enough to pay all fees involved in the transaction. For example, when trading a non-fungible token, the buy amount may not be enough to pay both the broker fee and the sell amount. <em>(Added by the <a href="known-amendments.html#nonfungibletokensv1">NonFungibleTokensV1 amendment</a>. <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span>)</em></td>
+<td style="text-align: left;">The amount specified is not enough to pay all fees involved in the transaction. For example, when trading a non-fungible token, the buy amount may not be enough to pay both the broker fee and the sell amount. <em>(Added by the <a href="known-amendments.html#nonfungibletokensv1_1">NonFungibleTokensV1_1 amendment</a>.)</em></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>tecINSUFFICIENT_RESERVE</code></td>
@@ -377,7 +377,7 @@
 <tr>
 <td style="text-align: left;"><code>tecMAX_SEQUENCE_REACHED</code></td>
 <td style="text-align: left;">153</td>
-<td style="text-align: left;">A sequence number field is already at its maximum. This includes the <code>MintedNFTokens</code> field. <em>(Added by the <a href="known-amendments.html#nonfungibletokensv1">NonFungibleTokensV1 amendment</a>. <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span>)</em></td>
+<td style="text-align: left;">A sequence number field is already at its maximum. This includes the <code>MintedNFTokens</code> field. <em>(Added by the <a href="known-amendments.html#nonfungibletokensv1_1">NonFungibleTokensV1_1 amendment</a>.)</em></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>tecNEED_MASTER_KEY</code></td>
@@ -387,12 +387,12 @@
 <tr>
 <td style="text-align: left;"><code>tecNFTOKEN_BUY_SELL_MISMATCH</code></td>
 <td style="text-align: left;">155</td>
-<td style="text-align: left;">The <a href="nftokenacceptoffer.html">NFTokenAcceptOffer transaction</a> <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span> attempted to match incompatible offers to buy and sell a non-fungible token. <em>(Added by the <a href="known-amendments.html#nonfungibletokensv1">NonFungibleTokensV1 amendment</a>. <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span>)</em></td>
+<td style="text-align: left;">The <a href="nftokenacceptoffer.html">NFTokenAcceptOffer transaction</a> attempted to match incompatible offers to buy and sell a non-fungible token. <em>(Added by the <a href="known-amendments.html#nonfungibletokensv1_1">NonFungibleTokensV1_1 amendment</a>.)</em></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>tecNFTOKEN_OFFER_TYPE_MISMATCH</code></td>
 <td style="text-align: left;">156</td>
-<td style="text-align: left;">One or more of the offers specified in the transaction was not the right type of offer. (For example, a buy offer was specified in the <code>NFTokenSellOffer</code> field.) <em>(Added by the <a href="known-amendments.html#nonfungibletokensv1">NonFungibleTokensV1 amendment</a>. <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span>)</em></td>
+<td style="text-align: left;">One or more of the offers specified in the transaction was not the right type of offer. (For example, a buy offer was specified in the <code>NFTokenSellOffer</code> field.) <em>(Added by the <a href="known-amendments.html#nonfungibletokensv1_1">NonFungibleTokensV1_1 amendment</a>.)</em></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>tecNO_ALTERNATIVE_KEY</code></td>
@@ -452,7 +452,7 @@
 <tr>
 <td style="text-align: left;"><code>tecNO_SUITABLE_NFTOKEN_PAGE</code></td>
 <td style="text-align: left;">154</td>
-<td style="text-align: left;">The transaction tried to mint or acquire a non-fungible token but the account receiving the <code>NFToken</code> does not have a directory page that can hold it. This situation is rare. <em>(Added by the <a href="known-amendments.html#nonfungibletokensv1">NonFungibleTokensV1 amendment</a>. <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span>)</em></td>
+<td style="text-align: left;">The transaction tried to mint or acquire a non-fungible token but the account receiving the <code>NFToken</code> does not have a directory page that can hold it. This situation is rare. <em>(Added by the <a href="known-amendments.html#nonfungibletokensv1_1">NonFungibleTokensV1_1 amendment</a>.)</em></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>tecNO_TARGET</code></td>
@@ -462,7 +462,7 @@
 <tr>
 <td style="text-align: left;"><code>tecOBJECT_NOT_FOUND</code></td>
 <td style="text-align: left;">160</td>
-<td style="text-align: left;">One of the objects specified by this transaction did not exist in the ledger. <em>(Added by the <a href="known-amendments.html#nonfungibletokensv1">NonFungibleTokensV1 amendment</a>. <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span>)</em></td>
+<td style="text-align: left;">One of the objects specified by this transaction did not exist in the ledger. <em>(Added by the <a href="known-amendments.html#nonfungibletokensv1_1">NonFungibleTokensV1_1 amendment</a>.)</em></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>tecOVERSIZE</code></td>
@@ -733,17 +733,17 @@
 
       <a class="nav-toggler collapsed" role="button" data-toggle="collapse" href="#tree_nav_group_1_4_3" aria-expanded="false" aria-controls="tree_nav_group_1_4_3"></a>
 
-        <a class="nav-link" href="non-fungible-tokens.html">NFT Conceptual Overview <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+        <a class="nav-link" href="non-fungible-tokens.html">Non-Fungible Tokens Overview</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_1_4_3">
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="non-fungible-token-transfers.html">Trading NFTokens on the XRP Ledger <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="non-fungible-token-transfers.html">Trading NFTokens on the XRP Ledger</a>
   </div>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftoken-batch-minting.html">Batch minting <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftoken-batch-minting.html">Batch minting</a>
   </div>
 
     </nav>
@@ -1323,7 +1323,7 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftoken-tester-tutorial.html">NFToken Tester Tutorial <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftoken-tester-tutorial.html">NFToken Tester Tutorial</a>
   </div>
 
       
@@ -1748,7 +1748,7 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftoken.html">NFToken <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftoken.html">NFToken</a>
   </div>
 
     </nav>
@@ -1828,12 +1828,12 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftokenoffer.html">NFTokenOffer <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftokenoffer.html">NFTokenOffer</a>
   </div>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftokenpage.html">NFTokenPage <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftokenpage.html">NFTokenPage</a>
   </div>
 
       
@@ -1937,27 +1937,27 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftokenacceptoffer.html">NFTokenAcceptOffer <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftokenacceptoffer.html">NFTokenAcceptOffer</a>
   </div>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftokenburn.html">NFTokenBurn <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftokenburn.html">NFTokenBurn</a>
   </div>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftokencanceloffer.html">NFTokenCancelOffer <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftokencanceloffer.html">NFTokenCancelOffer</a>
   </div>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftokencreateoffer.html">NFTokenCreateOffer <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftokencreateoffer.html">NFTokenCreateOffer</a>
   </div>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nftokenmint.html">NFTokenMint <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nftokenmint.html">NFTokenMint</a>
   </div>
 
       
@@ -2233,7 +2233,7 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="account_nfts.html">account_nfts <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="account_nfts.html">account_nfts</a>
   </div>
 
       
@@ -2359,12 +2359,12 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nft_buy_offers.html">nft_buy_offers <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nft_buy_offers.html">nft_buy_offers</a>
   </div>
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="nft_sell_offers.html">nft_sell_offers <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+    <a class="nav-link nav-leaf" href="nft_sell_offers.html">nft_sell_offers</a>
   </div>
 
       
