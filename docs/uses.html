@@ -233,12 +233,149 @@
       padding-right: 64px;
     }
   }
+
+  /* Cleanup bootstrap modal */
+  .modal {
+    padding: 0; 
+  }
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #000;
+
+    background-clip: padding-box; 
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+
+    background: #111112;
+  }
+
+  .modal-header {
+    border: none;
+    background: #111112;
+    box-shadow: 0px 1px 2px #000000;
+  }
+
+  .modal-footer {
+    border: none;
+    background: #111112;
+    box-shadow: 0px -1px 2px #000000;
+    
+    align-items: unset; 
+    padding: 0.75rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
 </style>
 
 
+
+
+
+
+<!-- Modal -->
+<div class="modal fade " id="categoryFilterModal" tabindex="-1" aria-labelledby="categoryFilterModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h5 class="modal-title" id="categoryFilterModalLabel"></h5>
+        <button type="button" class="" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">Cancel</span>
+        </button> -->
+      </div>
+      <div class="modal-body">
+  <!--  -->
+          <div class="p-3 page-events">
+            <form >
+              <p class="category-header mb-4">Featured Categories <span id="featured_count_old" class="featured_count category_count">2</span></p>
+                  <div class="cat_checkbox category-checkbox pb-2">
+                      <input class="events-filter input_infrastructure" type="checkbox" name="categories" id="input_infrastructure" value="infrastructure" checked>
+                      <label for="input_infrastructure">Infrastructure</label>
+                  </div>
+                  <div class="cat_checkbox category-checkbox pb-2">
+                      <input class="events-filter input_developer_tooling" type="checkbox" name="categories" id="input_developer_tooling" value="developer_tooling" checked>
+                      <label for="input_developer_tooling">Developer Tooling</label>
+                  </div>
+  
+              <br><br>
+  
+              <p class="category-header pt-lg-4 mt-lg-3 mb-4">Other Categories <span id="other_count_old" class="other_count category_count">0</span></p>    
+                  <div class="cat_checkbox category-checkbox pb-2">
+                      <input class="events-filter input_interoperability" type="checkbox" name="categories" id="input_interoperability" value="interoperability">
+                      <label for="input_interoperability">Interoperability</label>
+                  </div>
+                  <div class="cat_checkbox category-checkbox pb-2">
+                      <input class="events-filter input_wallet" type="checkbox" name="categories" id="input_wallet" value="wallet">
+                      <label for="input_wallet">Wallet</label>
+                  </div>
+                  <div class="cat_checkbox category-checkbox pb-2">
+                      <input class="events-filter input_nfts" type="checkbox" name="categories" id="input_nfts" value="nfts">
+                      <label for="input_nfts">NFTs</label>
+                  </div>
+                  <div class="cat_checkbox category-checkbox pb-2">
+                      <input class="events-filter input_exchanges" type="checkbox" name="categories" id="input_exchanges" value="exchanges">
+                      <label for="input_exchanges">Exchanges</label>
+                  </div>
+                  <div class="cat_checkbox category-checkbox pb-2">
+                      <input class="events-filter input_gaming" type="checkbox" name="categories" id="input_gaming" value="gaming">
+                      <label for="input_gaming">Gaming</label>
+                  </div>
+                  <div class="cat_checkbox category-checkbox pb-2">
+                      <input class="events-filter input_security" type="checkbox" name="categories" id="input_security" value="security">
+                      <label for="input_security">Security</label>
+                  </div>
+                  <div class="cat_checkbox category-checkbox pb-2">
+                      <input class="events-filter input_payments" type="checkbox" name="categories" id="input_payments" value="payments">
+                      <label for="input_payments">Payments</label>
+                  </div>
+                  <div class="cat_checkbox category-checkbox pb-2">
+                      <input class="events-filter input_web_monetization" type="checkbox" name="categories" id="input_web_monetization" value="web_monetization">
+                      <label for="input_web_monetization">Web Monetization</label>
+                  </div>
+                  <div class="cat_checkbox category-checkbox pb-2">
+                      <input class="events-filter input_sustainability" type="checkbox" name="categories" id="input_sustainability" value="sustainability">
+                      <label for="input_sustainability">Sustainability</label>
+                  </div>
+                  <div class="cat_checkbox category-checkbox pb-2">
+                      <input class="events-filter input_cbdcs" type="checkbox" name="categories" id="input_cbdcs" value="cbdcs">
+                      <label for="input_cbdcs">CBDCs</label>
+                  </div>
+                  <div class="cat_checkbox category-checkbox pb-2">
+                      <input class="events-filter input_custody" type="checkbox" name="categories" id="input_custody" value="custody">
+                      <label for="input_custody">Custody</label>
+                  </div>
+                  <div class="cat_checkbox category-checkbox pb-2">
+                      <input class="events-filter input_defi" type="checkbox" name="categories" id="input_defi" value="defi">
+                      <label for="input_defi">DeFi</label>
+                  </div>
+                  <div class="cat_checkbox category-checkbox pb-2">
+                      <input class="events-filter input_other" type="checkbox" name="categories" id="input_other" value="other">
+                      <label for="input_other">Other</label>
+                  </div>
+            </form>
+        </div>
+  <!--  -->
+       </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Apply</button>
+        <a class="btn " data-dismiss="modal">Cancel</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal -->
+
+
 <div class="overflow-hidden">
-   <section class="py-26 text-center">
-    <div class="col-lg-6 mx-auto text-center">
+
+   <section class="container-new py-26 text-lg-center">
+    <div class="p-0 col-lg-6 mx-lg-auto">
       <div class="d-flex flex-column-reverse">
         <h1 class="mb-0">Powering Innovative Technology</h1>
         <h6 class="eyebrow mb-3">XRPL Use Cases</h6>
@@ -253,6 +390,7 @@
         <h6 class="eyebrow mb-3">XRPL Ecosystem</h6>
       </div>
     </div>
+
     <ul class="card-grid card-grid-3xN ls-none mt-4 pt-2" id="use-case-card-grid">
       <li class="col ls-none p-3">
         <img id="infrastructure" alt="Infrastructure icon">
@@ -327,7 +465,6 @@
     </ul>
   </section>
 
-
   <section class="container-new py-26">
     <div class="col-12 col-lg-8 col-xl-6 p-3 mb-5">
       <div class="d-flex flex-column-reverse">
@@ -337,7 +474,10 @@
       <p class="mb-0 longform mt-8-until-sm mt-3 ">There are companies and developer projects around the world that leverage the XRP Ledger to solve interesting problems across a variety of industries and use cases.</p>
     </div>
 
-
+    <a class="btn  d-block d-lg-none" data-toggle="modal" data-target="#categoryFilterModal">
+      <span class="mr-3"><img src="./assets/img/uses/usecase-filter.svg" class=""></span>Filter by Categories <span class="ml-3 total_count category_count">2</span>
+    </a>
+    
 <!-- temp -->
 <style>
   .card-title {
@@ -409,87 +549,88 @@
       padding: 24px;
     }
 
-
   }
 
 </style>
 
 <!-- // TODO:rename events- css  -->
 
+<!-- Start company cards -->
     <div class="row col-12 m-0 p-0 mt-4 pt-2">
-      <div class="col-3 m-0 p-0 mt-2 d-none d-lg-block">
+      <div class="left col-3 m-0 p-0 mt-2 d-none d-lg-block">
 
-
-
+<!-- Side bar Desktop.  -->
         <div class="p-3 page-events">
             <form >
-              <p class="category-header mb-4">Featured Categories <span id="featured_count" class="category_count">2</span></p>
+              <p class="category-header mb-4">Featured Categories <span id="featured_count_old" class="featured_count category_count">2</span></p>
                   <div class="cat_checkbox category-checkbox pb-2">
-                      <input class="events-filter" type="checkbox" name="categories" id="input_Infrastructure" value="Infrastructure" checked>
-                      <label for="input_Infrastructure">Infrastructure</label>
+                      <input class="events-filter input_infrastructure" type="checkbox" name="categories" id="input_infrastructure" value="infrastructure" checked>
+                      <label for="input_infrastructure">Infrastructure</label>
                   </div>
                   <div class="cat_checkbox category-checkbox pb-2">
-                      <input class="events-filter" type="checkbox" name="categories" id="input_Developer Tooling" value="Developer Tooling" checked>
-                      <label for="input_Developer Tooling">Developer Tooling</label>
+                      <input class="events-filter input_developer_tooling" type="checkbox" name="categories" id="input_developer_tooling" value="developer_tooling" checked>
+                      <label for="input_developer_tooling">Developer Tooling</label>
                   </div>
-
+  
               <br><br>
-
-              <p class="category-header pt-4 mt-3 mb-4">Other Categories <span id="other_count" class="category_count">2</span></p>    
+  
+              <p class="category-header pt-4 mt-3 mb-4">Other Categories <span id="other_count_old" class="other_count category_count">0</span></p>    
                   <div class="cat_checkbox category-checkbox pb-2">
-                      <input class="events-filter" type="checkbox" name="categories" id="input_Interoperability" value="Interoperability">
-                      <label for="input_Interoperability">Interoperability</label>
+                      <input class="events-filter input_interoperability" type="checkbox" name="categories" id="input_interoperability" value="interoperability">
+                      <label for="input_interoperability">Interoperability</label>
                   </div>
                   <div class="cat_checkbox category-checkbox pb-2">
-                      <input class="events-filter" type="checkbox" name="categories" id="input_Wallet" value="Wallet">
-                      <label for="input_Wallet">Wallet</label>
+                      <input class="events-filter input_wallet" type="checkbox" name="categories" id="input_wallet" value="wallet">
+                      <label for="input_wallet">Wallet</label>
                   </div>
                   <div class="cat_checkbox category-checkbox pb-2">
-                      <input class="events-filter" type="checkbox" name="categories" id="input_NFTs" value="NFTs">
-                      <label for="input_NFTs">NFTs</label>
+                      <input class="events-filter input_nfts" type="checkbox" name="categories" id="input_nfts" value="nfts">
+                      <label for="input_nfts">NFTs</label>
                   </div>
                   <div class="cat_checkbox category-checkbox pb-2">
-                      <input class="events-filter" type="checkbox" name="categories" id="input_Exchanges" value="Exchanges">
-                      <label for="input_Exchanges">Exchanges</label>
+                      <input class="events-filter input_exchanges" type="checkbox" name="categories" id="input_exchanges" value="exchanges">
+                      <label for="input_exchanges">Exchanges</label>
                   </div>
                   <div class="cat_checkbox category-checkbox pb-2">
-                      <input class="events-filter" type="checkbox" name="categories" id="input_Gaming" value="Gaming">
-                      <label for="input_Gaming">Gaming</label>
+                      <input class="events-filter input_gaming" type="checkbox" name="categories" id="input_gaming" value="gaming">
+                      <label for="input_gaming">Gaming</label>
                   </div>
                   <div class="cat_checkbox category-checkbox pb-2">
-                      <input class="events-filter" type="checkbox" name="categories" id="input_Security" value="Security">
-                      <label for="input_Security">Security</label>
+                      <input class="events-filter input_security" type="checkbox" name="categories" id="input_security" value="security">
+                      <label for="input_security">Security</label>
                   </div>
                   <div class="cat_checkbox category-checkbox pb-2">
-                      <input class="events-filter" type="checkbox" name="categories" id="input_Payments" value="Payments">
-                      <label for="input_Payments">Payments</label>
+                      <input class="events-filter input_payments" type="checkbox" name="categories" id="input_payments" value="payments">
+                      <label for="input_payments">Payments</label>
                   </div>
                   <div class="cat_checkbox category-checkbox pb-2">
-                      <input class="events-filter" type="checkbox" name="categories" id="input_Web Monetization" value="Web Monetization">
-                      <label for="input_Web Monetization">Web Monetization</label>
+                      <input class="events-filter input_web_monetization" type="checkbox" name="categories" id="input_web_monetization" value="web_monetization">
+                      <label for="input_web_monetization">Web Monetization</label>
                   </div>
                   <div class="cat_checkbox category-checkbox pb-2">
-                      <input class="events-filter" type="checkbox" name="categories" id="input_Sustainability" value="Sustainability">
-                      <label for="input_Sustainability">Sustainability</label>
+                      <input class="events-filter input_sustainability" type="checkbox" name="categories" id="input_sustainability" value="sustainability">
+                      <label for="input_sustainability">Sustainability</label>
                   </div>
                   <div class="cat_checkbox category-checkbox pb-2">
-                      <input class="events-filter" type="checkbox" name="categories" id="input_CBDCs" value="CBDCs">
-                      <label for="input_CBDCs">CBDCs</label>
+                      <input class="events-filter input_cbdcs" type="checkbox" name="categories" id="input_cbdcs" value="cbdcs">
+                      <label for="input_cbdcs">CBDCs</label>
                   </div>
                   <div class="cat_checkbox category-checkbox pb-2">
-                      <input class="events-filter" type="checkbox" name="categories" id="input_Custody" value="Custody">
-                      <label for="input_Custody">Custody</label>
+                      <input class="events-filter input_custody" type="checkbox" name="categories" id="input_custody" value="custody">
+                      <label for="input_custody">Custody</label>
                   </div>
                   <div class="cat_checkbox category-checkbox pb-2">
-                      <input class="events-filter" type="checkbox" name="categories" id="input_DeFi" value="DeFi">
-                      <label for="input_DeFi">DeFi</label>
+                      <input class="events-filter input_defi" type="checkbox" name="categories" id="input_defi" value="defi">
+                      <label for="input_defi">DeFi</label>
                   </div>
                   <div class="cat_checkbox category-checkbox pb-2">
-                      <input class="events-filter" type="checkbox" name="categories" id="input_Other" value="Other">
-                      <label for="input_Other">Other</label>
+                      <input class="events-filter input_other" type="checkbox" name="categories" id="input_other" value="other">
+                      <label for="input_other">Other</label>
                   </div>
             </form>
         </div>
+<!-- End sidebar desktop -->
+
       </div>
 
       <!-- cards -->
@@ -825,9 +966,13 @@
         </a>
 
       </div>
-    </div>
+      <!-- end cards -->
+
+    </div> 
+    <!-- end company cards -->
 
   </section>
+
 </div>
 
       </main>
