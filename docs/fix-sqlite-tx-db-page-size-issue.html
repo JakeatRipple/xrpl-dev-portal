@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>Fix SQLite Transaction Database Page Size Issue - XRPL.org</title>
-
     <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="Fix SQLite Transaction Database Page Size Issue | XRPL.org">
     <meta property="og:url" content="https://xrpl.org/fix-sqlite-tx-db-page-size-issue.html" />
@@ -15,7 +14,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" content="https://xrpl.org/assets/img/xrpl-twitter-card.png" />
     <meta name="robots" content="index, follow" />
-
+    <meta name="docsearch:language" content="en" />
     <link rel="alternate" href="https://xrpl.org/fix-sqlite-tx-db-page-size-issue.html" hreflang="en" />
     <link rel="alternate" href="https://xrpl.org/ja/fix-sqlite-tx-db-page-size-issue.html" hreflang="ja" />
     <link rel="alternate" href="https://xrpl.org/fix-sqlite-tx-db-page-size-issue.html" hreflang="x-default" /><!-- Default: US english -->
@@ -55,9 +54,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v11b.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v13.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+
+    <script src="https://cmp.osano.com/AzyjT6TIZMlgyLyy8/f11f7772-8ed5-4b73-bd17-c0814edcc440/osano.js"></script>
 
 
     <!-- Theme switch -->
@@ -82,7 +83,7 @@
 
 </head>
 
-<body class="xrp-ledger-dev-portal sidebar-primary lang-en " data-spy="scroll" data-target=".page-toc" data-offset="0">
+<body class="xrp-ledger-dev-portal sidebar-primary lang-en " data-spy="scroll" data-target=".page-toc" data-offset="0" id="xrp-ledger-dev-portal">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCQZ3L8"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -203,7 +204,7 @@
     <div class="nav-item search" id="topnav-search">
       <form class="navbar-form navbar-right" role="search">
         <div class="form-inline">
-          <div class="input-group">
+          <div class="input-group" id="topsearchboxcontainer">
             <label class="input-group-prepend" for="topsearchbox"><i class="fa fa-search input-group-text"></i><span class="sr-only">Search</span></label>
             <input id="topsearchbox" name="q" type="text" class="form-control searchinput" placeholder="Search site...">
           </div><!--/.input-group-->
@@ -281,11 +282,11 @@
 </nav><!--/.breadcrumbs-wrap-->  <article class="pt-3 p-md-3">
     <div class="content">
         <h1 id="fix-sqlite-transaction-database-page-size-issue">Fix SQLite Transaction Database Page Size Issue<a aria-hidden="true" class="hover_anchor" href="#fix-sqlite-transaction-database-page-size-issue"><i class="fa fa-link"></i></a></h1>
-<p><code>rippled</code> servers with full <a href="ledger-history.html">ledger history</a> (or a very large amount of transaction history) and a database that was initially created with a <code>rippled</code> version earlier than 0.40.0 (released January 2017) may encounter a problem with their SQLite database page size that stops the server from operating properly. Servers that store only recent transaction history (the default configuration) and servers whose database files were created with <code>rippled</code> version 0.40.0 and later are not likely to encounter this problem.</p>
+<p><code>rippled</code> servers with full <a href="ledger-history.html">ledger history</a> (or a very large amount of transaction history) and a database that was initially created with a <code>rippled</code> version earlier than 0.40.0 (released January 2017) may encounter a problem with their SQLite database page size that stops the server from operating properly. Servers that store only recent transaction history (the default configuration) and servers whose database files were created with <code>rippled</code> version 0.40.0 and later are not likely to have this problem. <!-- STYLE_OVERRIDE: encounter --></p>
 <p>This document describes steps to detect and correct this problem if it occurs.</p>
 <h2 id="background">Background<a aria-hidden="true" class="hover_anchor" href="#background"><i class="fa fa-link"></i></a></h2>
 <p><code>rippled</code> servers store a copy of their transaction history in a SQLite database. Before version 0.40.0, <code>rippled</code> configured this database to have a capacity of roughly 2 TB. For most uses, this is plenty. However, full transaction history back to ledger 32570 (the oldest ledger version available in the production XRP Ledger history) is likely to exceed this exceed the SQLite database capacity. <code>rippled</code> servers version 0.40.0 and later create their SQLite database files with a larger capacity, so they are unlikely to encounter this problem.</p>
-<p>The capacity of the SQLite database is a result of the database's <em>page size</em> parameter, which cannot be easily changed after the database is created. (For more information on SQLite's internals, see <a class="external-link" href="https://www.sqlite.org/fileformat.html" target="_blank">the official SQLite documentation <i aria-hidden="true" class="fa fa-external-link"></i></a>.) The database can reach its capacity even if there is still free space on the disk and filesystem where it is stored. As described in the <a href="#fix">Fix</a> below, reconfiguring the page size to avoid this problem requires a somewhat time-consuming migration process.</p>
+<p>The capacity of the SQLite database is a result of the database's <em>page size</em> parameter, which cannot be easily changed after the database is created. (For more information on SQLite's internals, see <a class="external-link" href="https://www.sqlite.org/fileformat.html" target="_blank">the official SQLite documentation <i aria-hidden="true" class="fa fa-external-link"></i></a>.) The database can reach its capacity even if there is still free space on the disk and filesystem where it is stored. As described in the <a href="#fix">Fix</a> below, reconfiguring the page size to avoid this problem requires a somewhat time-consuming migration process. <!-- STYLE_OVERRIDE: easily --></p>
 <p class="devportal-callout tip"><strong>Tip:</strong> Full history is not necessary for most use cases. Servers with full transaction history may be useful for long-term analysis and archive purposes or as a precaution against disasters. For a less resource-intense way to contribute to the storage of transaction history, see <a href="history-sharding.html">History Sharding</a>.</p>
 <h2 id="detection">Detection<a aria-hidden="true" class="hover_anchor" href="#detection"><i class="fa fa-link"></i></a></h2>
 <p>If your server is vulnerable to this problem, you can detect it two ways:</p>
@@ -683,6 +684,11 @@ Filesystem      Size  Used Avail Use% Mounted on
     <a class="nav-link nav-leaf" href="nftoken-batch-minting.html">Batch minting</a>
   </div>
 
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="nftoken-authorized-minting.html">Authorizing Another Account to Mint Your NFTs</a>
+  </div>
+
     </nav>
 
   </div>
@@ -741,6 +747,11 @@ Filesystem      Size  Used Avail Use% Mounted on
         <a class="nav-link" href="decentralized-exchange.html">Decentralized Exchange</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_1_5">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="automated-market-makers.html">Automated Market Makers <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+  </div>
+
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="offers.html">Offers</a>
@@ -1725,6 +1736,11 @@ Filesystem      Size  Used Avail Use% Mounted on
 
       
   <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="amm.html">AMM <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+  </div>
+
+      
+  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="check.html">Check</a>
   </div>
 
@@ -1830,6 +1846,31 @@ Filesystem      Size  Used Avail Use% Mounted on
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="accountdelete.html">AccountDelete</a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ammbid.html">AMMBid <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ammcreate.html">AMMCreate <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ammdeposit.html">AMMDeposit <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ammvote.html">AMMVote <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+  </div>
+
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="ammwithdraw.html">AMMWithdraw <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
   </div>
 
       
@@ -2279,6 +2320,11 @@ Filesystem      Size  Used Avail Use% Mounted on
         <a class="nav-link" href="path-and-order-book-methods.html">Path and Order Book Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_4">
+      
+  <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="amm_info.html">amm_info <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
+  </div>
+
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="book_offers.html">book_offers</a>
@@ -2733,6 +2779,11 @@ Filesystem      Size  Used Avail Use% Mounted on
 
       
   <div class="nav-item ">
+    <a class="nav-link nav-leaf" href="label-amm.html">AMM</a>
+  </div>
+
+      
+  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="label-blockchain.html">Blockchain</a>
   </div>
 
@@ -2945,14 +2996,15 @@ Filesystem      Size  Used Avail Use% Mounted on
 <link rel="stylesheet" href="assets/vendor/fontawesome/css/font-awesome.min.css" />
 
 <!-- Algolia DocSearch -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
 <script type="text/javascript">
 $(document).ready(() => {
   const ds = docsearch({
-  apiKey: '70de5b9b8ef95460f3c6e04054b325b2',
+  apiKey: '3431349deec23b0bc3dcd3424beb9a6e',
   indexName: 'xrpl',
-  inputSelector: '#topsearchbox',
-  algoliaOptions: { 'facetFilters': ["lang:en"] },
+  container: '#topsearchboxcontainer',
+  appId: 'R39QY3MZC7',
+  searchParameters: { 'facetFilters': ["lang:en"] },
   debug: false
   });
   const search_params = new URLSearchParams(window.location.search)
