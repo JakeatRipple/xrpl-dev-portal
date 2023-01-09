@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>Ledger History - XRPL.org</title>
+
     <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="Ledger History | XRPL.org">
     <meta property="og:url" content="https://xrpl.org/ledger-history.html" />
@@ -14,7 +15,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" content="https://xrpl.org/assets/img/xrpl-twitter-card.png" />
     <meta name="robots" content="index, follow" />
-    <meta name="docsearch:language" content="en" />
+
     <link rel="alternate" href="https://xrpl.org/ledger-history.html" hreflang="en" />
     <link rel="alternate" href="https://xrpl.org/ja/ledger-history.html" hreflang="ja" />
     <link rel="alternate" href="https://xrpl.org/ledger-history.html" hreflang="x-default" /><!-- Default: US english -->
@@ -51,12 +52,12 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KCQZ3L8');</script>
-    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v13.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v11b.css" rel="stylesheet" />
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
 
     <!-- Theme switch -->
@@ -81,7 +82,7 @@
 
 </head>
 
-<body class="xrp-ledger-dev-portal sidebar-primary lang-en " data-spy="scroll" data-target=".page-toc" data-offset="0" id="xrp-ledger-dev-portal">
+<body class="xrp-ledger-dev-portal sidebar-primary lang-en " data-spy="scroll" data-target=".page-toc" data-offset="0">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCQZ3L8"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -90,11 +91,11 @@
 <div class="top-banner fixed-top"> 
   <div class="d-none d-md-flex justify-content-center">
     <span><p class="mb-0">Native NFT support is now available on the XRP Ledger</p></span>
-    <span><a href="/mint-and-burn-nftokens.html" class="btn btn-outline-secondary">Learn More</a></span>
+    <span><a href="/mint-and-burn-nftokens.html?utm_source=web&utm_medium=web&utm_campaign=xls-20_launch&utm_content=pencil_banner" class="btn btn-outline-secondary">Learn More</a></span>
   </div>
   <div class="d-md-none d-block justify-content-center">
     <span><p class="mb-0">Native NFT support is now available</p></span>
-    <span><p class="mb-0">on the XRP Ledger<a href="/mint-and-burn-nftokens.html" class="btn btn-outline-secondary">Learn More</a></p></span>
+    <span><p class="mb-0">on the XRP Ledger<a href="/mint-and-burn-nftokens.html?utm_source=web&utm_medium=web&utm_campaign=xls-20_launch&utm_content=pencil_banner" class="btn btn-outline-secondary">Learn More</a></p></span>
   </div>
 </div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
@@ -202,7 +203,7 @@
     <div class="nav-item search" id="topnav-search">
       <form class="navbar-form navbar-right" role="search">
         <div class="form-inline">
-          <div class="input-group" id="topsearchboxcontainer">
+          <div class="input-group">
             <label class="input-group-prepend" for="topsearchbox"><i class="fa fa-search input-group-text"></i><span class="sr-only">Search</span></label>
             <input id="topsearchbox" name="q" type="text" class="form-control searchinput" placeholder="Search site...">
           </div><!--/.input-group-->
@@ -301,7 +302,7 @@
 <p>The <a href="server_info.html">server_info method</a> reports how many ledger versions your server has available in the <code>complete_ledgers</code> field.</p>
 <h2 id="fetching-history">Fetching History<a aria-hidden="true" class="hover_anchor" href="#fetching-history"><i class="fa fa-link"></i></a></h2>
 <p>When an XRP Ledger server starts, its first priority is to get a complete copy of the latest validated ledger. From there, it keeps up with advances in the ledger progress. The server fills in any gaps in its ledger history that occur after syncing, and can backfill history from before it became synced. (Gaps in ledger history can occur if a server temporarily becomes too busy to keep up with the network, loses its network connection, or suffers other temporary issues.) When downloading ledger history, the server requests the missing data from its <a href="peer-protocol.html">peer servers</a>, and verifies the data's integrity using cryptographic <a href="basic-data-types.html#hashes">hashes</a>.</p>
-<p>Backfilling history is one of the server's lowest priorities, so it may take a long time to fill missing history, especially if the server is busy or its hardware and network specs aren't good enough. For recommendations on hardware specs, see <a href="capacity-planning.html">Capacity Planning</a>. Backfilling history also requires that at least one of the server's direct peers has the history in question. For more information on managing your server's peer-to-peer connections, see <a href="configure-peering.html">Configure Peering</a>.</p>
+<p>Backfilling history is one of the server's lowest priorities, so it may take a long time to fill missing history, especially if the server is busy or has less than sufficient hardware and network specs. For recommendations on hardware specs, see <a href="capacity-planning.html">Capacity Planning</a>. Backfilling history also requires that at least one of the server's direct peers has the history in question. For more information on managing your server's peer-to-peer connections, see <a href="configure-peering.html">Configure Peering</a>.</p>
 <p>The XRP Ledger identifies data (on several different levels) by a unique hash of its contents. The XRP Ledger's state data contains a short summary of the ledger's history, in the form of the <a href="ledgerhashes.html">LedgerHashes object type</a>. Servers use the LedgerHashes objects to know which ledger versions to fetch, and to confirm that the ledger data they receive is correct and complete.</p>
 <p><a id="with-advisory-deletion"></a><!-- old anchor to this area --></p>
 <h3 id="backfilling">Backfilling<a aria-hidden="true" class="hover_anchor" href="#backfilling"><i class="fa fa-link"></i></a></h3>
@@ -311,12 +312,12 @@
 <h2 id="full-history">Full History<a aria-hidden="true" class="hover_anchor" href="#full-history"><i class="fa fa-link"></i></a></h2>
 <p>Some servers in the XRP Ledger network are configured as "full-history" servers. These servers, which require significantly more disk space than other tracking servers, collect all available XRP Ledger history and <strong>do not use online deletion</strong>.</p>
 <p>The XRP Ledger Foundation provides access to a set of full history servers operated by community members (see <a class="external-link" href="https://xrplcluster.com" target="_blank">xrplcluster.com <i aria-hidden="true" class="fa fa-external-link"></i></a> for more details).
-Ripple also provides a set of public full-history servers as a public service at <code>s2.ripple.com</code>. <!-- SPELLING_IGNORE: xrplcluster --></p>
+Ripple also provides a set of public full-history servers as a public service at <code>s2.ripple.com</code>.</p>
 <p>Providers of Full History servers reserve the right to block access that is found to abuse resources, or put inordinate load on the systems.</p>
 <p class="devportal-callout tip"><strong>Tip:</strong> Unlike some cryptocurrency networks, servers in the XRP Ledger do not need full history to know the current state and keep up with current transactions.</p>
 <p>For instructions on setting up full history, see <a href="configure-full-history.html">Configure Full History</a>.</p>
 <h2 id="history-sharding">History Sharding<a aria-hidden="true" class="hover_anchor" href="#history-sharding"><i class="fa fa-link"></i></a></h2>
-<p>An alternative to storing the full history of the XRP Ledger on a single expensive machine is to configure many servers to each store a part of all ledger history. The <a href="history-sharding.html">History Sharding</a> feature makes this possible, storing ranges of ledger history in a separate storage area called the <em>shard store</em>. When a peer server asks for specific data (as described in <a href="#fetching-history">fetching history</a> above), a server can answer using data from either its ledger store or shard store.</p>
+<p>An alternative to storing the full history of the XRP Ledger on a single expensive machine is to configure many servers to each store a portion of ledger history. The <a href="history-sharding.html">History Sharding</a> feature makes this possible, storing ranges of ledger history in a separate storage area called the <em>shard store</em>. When a peer server asks for specific data (as described in <a href="#fetching-history">fetching history</a> above), a server can answer using data from either its ledger store or shard store.</p>
 <p>Online deletion <strong>does not</strong> delete from the shard store. However, if you configure online deletion to keep at least 32768 ledger versions in your server's ledger store, your server can copy full shards from the ledger store to the shard store before automatically deleting them from the ledger store.</p>
 <p>For more information, see <a href="configure-history-sharding.html">Configure History Sharding</a>.</p>
 <h2 id="see-also">See Also<a aria-hidden="true" class="hover_anchor" href="#see-also"><i class="fa fa-link"></i></a></h2>
@@ -638,11 +639,6 @@ Ripple also provides a set of public full-history servers as a public service at
         <a class="nav-link" href="decentralized-exchange.html">Decentralized Exchange</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_1_5">
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="automated-market-makers.html">Automated Market Makers <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="offers.html">Offers</a>
@@ -1627,11 +1623,6 @@ Ripple also provides a set of public full-history servers as a public service at
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="amm.html">AMM <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="check.html">Check</a>
   </div>
 
@@ -1737,31 +1728,6 @@ Ripple also provides a set of public full-history servers as a public service at
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="accountdelete.html">AccountDelete</a>
-  </div>
-
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="ammbid.html">AMMBid <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="ammcreate.html">AMMCreate <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="ammdeposit.html">AMMDeposit <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="ammvote.html">AMMVote <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="ammwithdraw.html">AMMWithdraw <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
   </div>
 
       
@@ -2211,11 +2177,6 @@ Ripple also provides a set of public full-history servers as a public service at
         <a class="nav-link" href="path-and-order-book-methods.html">Path and Order Book Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_4">
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="amm_info.html">amm_info <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="book_offers.html">book_offers</a>
@@ -2670,11 +2631,6 @@ Ripple also provides a set of public full-history servers as a public service at
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="label-amm.html">AMM</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="label-blockchain.html">Blockchain</a>
   </div>
 
@@ -2887,15 +2843,14 @@ Ripple also provides a set of public full-history servers as a public service at
 <link rel="stylesheet" href="assets/vendor/fontawesome/css/font-awesome.min.css" />
 
 <!-- Algolia DocSearch -->
-<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script type="text/javascript">
 $(document).ready(() => {
   const ds = docsearch({
-  apiKey: '3431349deec23b0bc3dcd3424beb9a6e',
+  apiKey: '70de5b9b8ef95460f3c6e04054b325b2',
   indexName: 'xrpl',
-  container: '#topsearchboxcontainer',
-  appId: 'R39QY3MZC7',
-  searchParameters: { 'facetFilters': ["lang:en"] },
+  inputSelector: '#topsearchbox',
+  algoliaOptions: { 'facetFilters': ["lang:en"] },
   debug: false
   });
   const search_params = new URLSearchParams(window.location.search)

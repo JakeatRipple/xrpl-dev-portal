@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>Decentralized Exchange - XRPL.org</title>
+
     <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="Decentralized Exchange | XRPL.org">
     <meta property="og:url" content="https://xrpl.org/decentralized-exchange.html" />
@@ -14,7 +15,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" content="https://xrpl.org/assets/img/xrpl-twitter-card.png" />
     <meta name="robots" content="index, follow" />
-    <meta name="docsearch:language" content="en" />
+
     <link rel="alternate" href="https://xrpl.org/decentralized-exchange.html" hreflang="en" />
     <link rel="alternate" href="https://xrpl.org/ja/decentralized-exchange.html" hreflang="ja" />
     <link rel="alternate" href="https://xrpl.org/decentralized-exchange.html" hreflang="x-default" /><!-- Default: US english -->
@@ -51,12 +52,12 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KCQZ3L8');</script>
-    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v13.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v11b.css" rel="stylesheet" />
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
 
     <!-- Theme switch -->
@@ -66,7 +67,7 @@
 
 </head>
 
-<body class="xrp-ledger-dev-portal sidebar-primary lang-en " data-spy="scroll" data-target=".page-toc" data-offset="0" id="xrp-ledger-dev-portal">
+<body class="xrp-ledger-dev-portal sidebar-primary lang-en " data-spy="scroll" data-target=".page-toc" data-offset="0">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCQZ3L8"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -75,11 +76,11 @@
 <div class="top-banner fixed-top"> 
   <div class="d-none d-md-flex justify-content-center">
     <span><p class="mb-0">Native NFT support is now available on the XRP Ledger</p></span>
-    <span><a href="/mint-and-burn-nftokens.html" class="btn btn-outline-secondary">Learn More</a></span>
+    <span><a href="/mint-and-burn-nftokens.html?utm_source=web&utm_medium=web&utm_campaign=xls-20_launch&utm_content=pencil_banner" class="btn btn-outline-secondary">Learn More</a></span>
   </div>
   <div class="d-md-none d-block justify-content-center">
     <span><p class="mb-0">Native NFT support is now available</p></span>
-    <span><p class="mb-0">on the XRP Ledger<a href="/mint-and-burn-nftokens.html" class="btn btn-outline-secondary">Learn More</a></p></span>
+    <span><p class="mb-0">on the XRP Ledger<a href="/mint-and-burn-nftokens.html?utm_source=web&utm_medium=web&utm_campaign=xls-20_launch&utm_content=pencil_banner" class="btn btn-outline-secondary">Learn More</a></p></span>
   </div>
 </div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
@@ -187,7 +188,7 @@
     <div class="nav-item search" id="topnav-search">
       <form class="navbar-form navbar-right" role="search">
         <div class="form-inline">
-          <div class="input-group" id="topsearchboxcontainer">
+          <div class="input-group">
             <label class="input-group-prepend" for="topsearchbox"><i class="fa fa-search input-group-text"></i><span class="sr-only">Search</span></label>
             <input id="topsearchbox" name="q" type="text" class="form-control searchinput" placeholder="Search site...">
           </div><!--/.input-group-->
@@ -245,7 +246,7 @@
 <p>The XRP Ledger has possibly the world's oldest <em>decentralized exchange</em> (sometimes abbreviated "DEX"), operating continuously since the XRP Ledger's launch in 2012. The exchange allows users to buy and sell <a href="tokens.html">tokens</a> for XRP or other tokens, with minimal <a href="fees.html">fees</a> charged to the network itself (not paid out to any party).</p>
 <p class="devportal-callout caution"><strong>Caution:</strong> Anyone can <a href="issue-a-fungible-token.html">issue a token</a> with any currency code or ticker symbol they want and sell it in the decentralized exchange. Always perform due diligence before buying a token, and pay attention to the issuer. Otherwise, you might give up something of value and receive worthless tokens in exchange.</p>
 <h2 id="structure">Structure<a aria-hidden="true" class="hover_anchor" href="#structure"><i class="fa fa-link"></i></a></h2>
-<p>The XRP Ledger's decentralized exchange consists of an unlimited number of currency pairs, tracked on-demand when users make trades. A currency pair can consist of XRP and a token or two different tokens; tokens are always identified by the combination of an issuer and a currency code. It is possible to trade between two tokens with the same currency code and different issuers, or the same issuer and different currency codes. <!-- STYLE_OVERRIDE: limited number --></p>
+<p>The XRP Ledger's decentralized exchange consists of an unlimited number of currency pairs, tracked on-demand when users make trades. A currency pair can consist of XRP and a token or two different tokens; tokens are always identified by the combination of an issuer and a currency code. Therefore, it is possible to trade between two tokens with the same currency code and different issuers, or the same issuer and different currency codes.</p>
 <p>As with all changes to the XRP Ledger, you need to send a <a href="transaction-basics.html">transaction</a> to make a trade. A trade in the XRP Ledger is called an <a href="offers.html">Offer</a>. An Offer is effectively a <a class="external-link" href="https://en.wikipedia.org/wiki/Order_(exchange)#Limit_order" target="_blank"><em>limit order</em> <i aria-hidden="true" class="fa fa-external-link"></i></a> to buy or sell a specific amount of one currency (XRP or a token) for a specific amount of another. When the network executes an Offer, if there are any matching Offers for the same currency pair, they are consumed starting with the best exchange rate first.</p>
 <p>An Offer can be fully or partially filled; if it's not fully filled right away, it becomes a passive Offer object in the ledger for the remaining amount. Later on, other Offers or <a href="cross-currency-payments.html">Cross-currency payments</a> can match and consume the Offer. Because of this, Offers can execute at better than their requested exchange rate when initially placed, or at exactly their stated exchange rate later on (aside from minor differences to account for rounding).</p>
 <p>Offers can be manually or automatically canceled after being placed. For details on this and other properties of Offers, see <a href="offers.html">Offers</a>.</p>
@@ -268,7 +269,7 @@
 <p>The decentralized exchange is designed with the following limitations:</p>
 <p>Because trades are only executed each time a new ledger closes (approximately every 3-5 seconds), the XRP Ledger is not suitable for <a class="external-link" href="https://en.wikipedia.org/wiki/High-frequency_trading" target="_blank">high-frequency trading <i aria-hidden="true" class="fa fa-external-link"></i></a>. The order transactions execute within a ledger is designed to be unpredictable, to discourage <a class="external-link" href="https://en.wikipedia.org/wiki/Front_running" target="_blank">front-running <i aria-hidden="true" class="fa fa-external-link"></i></a>.</p>
 <p>The XRP Ledger does not natively represent concepts such as market orders, stop orders, or trading on leverage. Some of these may be possible with creative use of custom tokens and Offer properties.</p>
-<p>As a decentralized system, the XRP Ledger does not have any information on the actual people and organizations behind the <a href="accounts.html">accounts</a> involved in trading. The ledger itself cannot implement restrictions around who can or cannot participate in trading, and users and issuers must take care to follow any relevant laws to regulate trading tokens that represent various types of underlying assets. Features such as <a href="freezes.html">freezes</a> and <a href="authorized-trust-lines.html">authorized trust lines</a> are intended to help issuers comply with relevant laws and regulations.</p>
+<p>As a decentralized system, the XRP Ledger does not have any information on the actual people and organizations behind the <a href="accounts.html">accounts</a> involved in trading. Therefore, the ledger itself cannot implement restrictions around who can or cannot participate in trading, and users and issuers must take care to follow any relevant laws to regulate trading tokens that represent various types of underlying assets. Features such as <a href="freezes.html">freezes</a> and <a href="authorized-trust-lines.html">authorized trust lines</a> are intended to help issuers comply with relevant laws and regulations.</p>
 <h2 id="see-also">See Also<a aria-hidden="true" class="hover_anchor" href="#see-also"><i class="fa fa-link"></i></a></h2>
 <ul>
 <li><strong>Concepts:</strong><ul>
@@ -300,8 +301,7 @@
 
 <div class="children-display">
   <ul>
-          <li class="level-1"><a href="automated-market-makers.html">Automated Market Makers</a><p class="blurb child-blurb">Automated Market Makers (AMMs) provide liquidity between asset pairs, complemeting the order books in the decentralized exchange while providing passive income for their liquidity providers.</p></li>
-      <li class="level-1"><a href="offers.html">Offers</a><p class="blurb child-blurb">Offers are the XRP Ledger's form of currency trading orders. Understand their lifecycle and properties.</p></li>
+          <li class="level-1"><a href="offers.html">Offers</a><p class="blurb child-blurb">Offers are the XRP Ledger's form of currency trading orders. Understand their lifecycle and properties.</p></li>
       <li class="level-1"><a href="autobridging.html">Auto-Bridging</a><p class="blurb child-blurb">Autobriding automatically connects order books using XRP as an intermediary when it reduces costs.</p></li>
       <li class="level-1"><a href="ticksize.html">Tick Size</a><p class="blurb child-blurb">Issuers can set custom tick sizes for currencies to reduce churn in order books over miniscule differences in exchange rates.</p></li>
 
@@ -575,11 +575,6 @@
         <a class="nav-link" href="decentralized-exchange.html">Decentralized Exchange</a>
 
     <nav class="nav flex-column show " id="tree_nav_group_1_5">
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="automated-market-makers.html">Automated Market Makers <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="offers.html">Offers</a>
@@ -1564,11 +1559,6 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="amm.html">AMM <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="check.html">Check</a>
   </div>
 
@@ -1674,31 +1664,6 @@
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="accountdelete.html">AccountDelete</a>
-  </div>
-
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="ammbid.html">AMMBid <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="ammcreate.html">AMMCreate <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="ammdeposit.html">AMMDeposit <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="ammvote.html">AMMVote <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="ammwithdraw.html">AMMWithdraw <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
   </div>
 
       
@@ -2148,11 +2113,6 @@
         <a class="nav-link" href="path-and-order-book-methods.html">Path and Order Book Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_4">
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="amm_info.html">amm_info <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="book_offers.html">book_offers</a>
@@ -2607,11 +2567,6 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="label-amm.html">AMM</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="label-blockchain.html">Blockchain</a>
   </div>
 
@@ -2824,15 +2779,14 @@
 <link rel="stylesheet" href="assets/vendor/fontawesome/css/font-awesome.min.css" />
 
 <!-- Algolia DocSearch -->
-<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script type="text/javascript">
 $(document).ready(() => {
   const ds = docsearch({
-  apiKey: '3431349deec23b0bc3dcd3424beb9a6e',
+  apiKey: '70de5b9b8ef95460f3c6e04054b325b2',
   indexName: 'xrpl',
-  container: '#topsearchboxcontainer',
-  appId: 'R39QY3MZC7',
-  searchParameters: { 'facetFilters': ["lang:en"] },
+  inputSelector: '#topsearchbox',
+  algoliaOptions: { 'facetFilters': ["lang:en"] },
   debug: false
   });
   const search_params = new URLSearchParams(window.location.search)

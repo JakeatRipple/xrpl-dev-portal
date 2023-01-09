@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>Get Started Using JavaScript - XRPL.org</title>
+
     <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="Get Started Using JavaScript | XRPL.org">
     <meta property="og:url" content="https://xrpl.org/get-started-using-javascript.html" />
@@ -14,7 +15,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" content="https://xrpl.org/assets/img/xrpl-twitter-card.png" />
     <meta name="robots" content="index, follow" />
-    <meta name="docsearch:language" content="en" />
+
     <link rel="alternate" href="https://xrpl.org/get-started-using-javascript.html" hreflang="en" />
     <link rel="alternate" href="https://xrpl.org/ja/get-started-using-javascript.html" hreflang="ja" />
     <link rel="alternate" href="https://xrpl.org/get-started-using-javascript.html" hreflang="x-default" /><!-- Default: US english -->
@@ -51,12 +52,12 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KCQZ3L8');</script>
-    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v13.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v11b.css" rel="stylesheet" />
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
 
     <!-- Theme switch -->
@@ -81,7 +82,7 @@
 
 </head>
 
-<body class="xrp-ledger-dev-portal sidebar-primary lang-en " data-spy="scroll" data-target=".page-toc" data-offset="0" id="xrp-ledger-dev-portal">
+<body class="xrp-ledger-dev-portal sidebar-primary lang-en " data-spy="scroll" data-target=".page-toc" data-offset="0">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCQZ3L8"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -90,11 +91,11 @@
 <div class="top-banner fixed-top"> 
   <div class="d-none d-md-flex justify-content-center">
     <span><p class="mb-0">Native NFT support is now available on the XRP Ledger</p></span>
-    <span><a href="/mint-and-burn-nftokens.html" class="btn btn-outline-secondary">Learn More</a></span>
+    <span><a href="/mint-and-burn-nftokens.html?utm_source=web&utm_medium=web&utm_campaign=xls-20_launch&utm_content=pencil_banner" class="btn btn-outline-secondary">Learn More</a></span>
   </div>
   <div class="d-md-none d-block justify-content-center">
     <span><p class="mb-0">Native NFT support is now available</p></span>
-    <span><p class="mb-0">on the XRP Ledger<a href="/mint-and-burn-nftokens.html" class="btn btn-outline-secondary">Learn More</a></p></span>
+    <span><p class="mb-0">on the XRP Ledger<a href="/mint-and-burn-nftokens.html?utm_source=web&utm_medium=web&utm_campaign=xls-20_launch&utm_content=pencil_banner" class="btn btn-outline-secondary">Learn More</a></p></span>
   </div>
 </div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
@@ -202,7 +203,7 @@
     <div class="nav-item search" id="topnav-search">
       <form class="navbar-form navbar-right" role="search">
         <div class="form-inline">
-          <div class="input-group" id="topsearchboxcontainer">
+          <div class="input-group">
             <label class="input-group-prepend" for="topsearchbox"><i class="fa fa-search input-group-text"></i><span class="sr-only">Search</span></label>
             <input id="topsearchbox" name="q" type="text" class="form-control searchinput" placeholder="Search site...">
           </div><!--/.input-group-->
@@ -265,7 +266,7 @@
         <li class="nav-item level-2"><a class="nav-link" href="#start-building">Start Building</a></li>
         <li class="nav-item level-3"><a class="nav-link" href="#1-import-the-library">1. Import the Library</a></li>
         <li class="nav-item level-3"><a class="nav-link" href="#2-connect-to-the-xrp-ledger">2. Connect to the XRP Ledger</a></li>
-        <li class="nav-item level-3"><a class="nav-link" href="#3-get-account">3. Get Account</a></li>
+        <li class="nav-item level-3"><a class="nav-link" href="#3-generate-wallet">3. Generate Wallet</a></li>
         <li class="nav-item level-3"><a class="nav-link" href="#4-query-the-xrp-ledger">4. Query the XRP Ledger</a></li>
         <li class="nav-item level-3"><a class="nav-link" href="#5-listen-for-events">5. Listen for Events</a></li>
         <li class="nav-item level-2"><a class="nav-link" href="#keep-on-building">Keep on Building</a></li>
@@ -295,10 +296,10 @@
 <p>In this tutorial, you'll learn:</p>
 <ul>
 <li>The basic building blocks of XRP Ledger-based applications.</li>
-<li>How to connect to the XRP Ledger using <code>xrpl.js</code>.</li>
-<li>How to get an account on the <a href="xrp-testnet-faucet.html">Testnet</a> using <code>xrpl.js</code>.</li>
+<li>How to connect to the XRP Ledger using xrpl.js.</li>
+<li>How to generate a wallet on the <a href="xrp-testnet-faucet.html">Testnet</a> using xrpl.js.</li>
 <li>How to use the <code>xrpl.js</code> library to look up information about an account on the XRP Ledger.</li>
-<li>How to put these steps together to create a JavaScript app or web-app.</li>
+<li>How to put these steps together to create a simple JavaScript app or web-app.</li>
 </ul>
 <h2 id="requirements">Requirements<a aria-hidden="true" class="hover_anchor" href="#requirements"><i class="fa fa-link"></i></a></h2>
 <p>To follow this tutorial, you should have some familiarity with writing code in JavaScript and managing small JavaScript projects. In browsers, any modern web browser with JavaScript support should work fine. In Node.js, <strong>version 14</strong> is recommended. Node.js versions 12 and 16 are also regularly tested.</p>
@@ -307,12 +308,12 @@
 <div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-0" id="codeblock-0button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-0">npm install xrpl
 </code></pre></div>
 <h2 id="start-building">Start Building<a aria-hidden="true" class="hover_anchor" href="#start-building"><i class="fa fa-link"></i></a></h2>
-<p>When you're working with the XRP Ledger, there are a few things you'll need to manage, whether you're adding XRP to your <a href="accounts.html">account</a>, integrating with the <a href="decentralized-exchange.html">decentralized exchange</a>, or <a href="tokens.html">issuing tokens</a>. This tutorial walks you through basic patterns common to getting started with all of these use cases and provides sample code for implementing them.</p>
+<p>When you're working with the XRP Ledger, there are a few things you'll need to manage, whether you're adding XRP into your <a href="wallets.html">wallet</a>, integrating with the <a href="decentralized-exchange.html">decentralized exchange</a>, or <a href="issued-currencies.html">issuing tokens</a>. This tutorial walks you through basic patterns common to getting started with all of these use cases and provides sample code for implementing them.</p>
 <p>Here are some steps you use in many XRP Ledger projects:</p>
 <ol>
 <li><a href="#1-import-the-library">Import the library.</a></li>
 <li><a href="#2-connect-to-the-xrp-ledger">Connect to the XRP Ledger.</a></li>
-<li><a href="#3-get-account">Get an account.</a></li>
+<li><a href="#3-generate-wallet">Generate a wallet.</a></li>
 <li><a href="#4-query-the-xrp-ledger">Query the XRP Ledger.</a></li>
 <li><a href="#5-listen-for-events">Listen for Events.</a></li>
 </ol>
@@ -332,7 +333,7 @@
 <div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-3" id="codeblock-3button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-3"><span class="kd">const</span><span class="w"> </span><span class="nx">xrpl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"xrpl"</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <h3 id="2-connect-to-the-xrp-ledger">2. Connect to the XRP Ledger<a aria-hidden="true" class="hover_anchor" href="#2-connect-to-the-xrp-ledger"><i class="fa fa-link"></i></a></h3>
-<p>To make queries and submit transactions, you need to connect to the XRP Ledger. To do this with <code>xrpl.js</code>, you create an instance of the <code>Client</code> class and use the <code>connect()</code> method.</p>
+<p>To make queries and submit transactions, you need to establish a connection to the XRP Ledger. To do this with <code>xrpl.js</code>, you create an instance of the <code>Client</code> class and use the <code>connect()</code> method.</p>
 <p class="devportal-callout tip"><strong>Tip:</strong> Many network functions in <code>xrpl.js</code> use <a class="external-link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank">Promises <i aria-hidden="true" class="fa fa-external-link"></i></a> to return values asynchronously. The code samples here use the <a class="external-link" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await" target="_blank"><code>async/await</code> pattern <i aria-hidden="true" class="fa fa-external-link"></i></a> to wait for the actual result of the Promises.</p>
 <div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-4" id="codeblock-4button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-4"><span class="c1">// In browsers, use a &lt;script&gt; tag. In Node.js, uncomment the following line:</span><span class="w"></span>
 <span class="c1">// const xrpl = require('xrpl')</span><span class="w"></span>
@@ -371,17 +372,17 @@
 </code></pre></div>
 </li>
 </ul>
-<h3 id="3-get-account">3. Get Account<a aria-hidden="true" class="hover_anchor" href="#3-get-account"><i class="fa fa-link"></i></a></h3>
-<p>The <code>xrpl.js</code> library has a <code>Wallet</code> class for handling the keys and address of an XRP Ledger account. On Testnet, you can fund a new account like this:</p>
+<h3 id="3-generate-wallet">3. Generate Wallet<a aria-hidden="true" class="hover_anchor" href="#3-generate-wallet"><i class="fa fa-link"></i></a></h3>
+<p>The <code>xrpl.js</code> library has a <code>Wallet</code> class for handling the keys and address of an XRP Ledger account. On Testnet, you can fund a new wallet like this:</p>
 <div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-7" id="codeblock-7button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-7"><span class="c1">// Create a wallet and fund it with the Testnet faucet:</span><span class="w"></span>
 <span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">fund_result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">fundWallet</span><span class="p">()</span><span class="w"></span>
 <span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">test_wallet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fund_result</span><span class="p">.</span><span class="nx">wallet</span><span class="w"></span>
 <span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fund_result</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
-<p>If you only want to generate keys, you can create a new <code>Wallet</code> instance like this:</p>
+<p>If you just want to generate keys, you can create a new Wallet instance like this:</p>
 <div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-8" id="codeblock-8button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-8"><span class="kd">const</span><span class="w"> </span><span class="nx">test_wallet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">xrpl</span><span class="p">.</span><span class="nx">Wallet</span><span class="p">.</span><span class="nx">generate</span><span class="p">()</span><span class="w"></span>
 </code></pre></div>
-<p>Or, if you already have a seed encoded in <a href="base58-encodings.html">base58</a>, you can make a <code>Wallet</code> instance from it like this:</p>
+<p>Or, if you already have a seed encoded in <a href="base58-encodings.html">base58</a>, you can instantiate a Wallet from it like this:</p>
 <div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-9" id="codeblock-9button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-9"><span class="kd">const</span><span class="w"> </span><span class="nx">test_wallet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">xrpl</span><span class="p">.</span><span class="nx">Wallet</span><span class="p">.</span><span class="nx">fromSeed</span><span class="p">(</span><span class="s2">"sn3nxiW7v8KXzPzAqzyHXbSSKNuN9"</span><span class="p">)</span><span class="w"> </span><span class="c1">// Test secret; don't use for real</span><span class="w"></span>
 </code></pre></div>
 <h3 id="4-query-the-xrp-ledger">4. Query the XRP Ledger<a aria-hidden="true" class="hover_anchor" href="#4-query-the-xrp-ledger"><i class="fa fa-link"></i></a></h3>
@@ -406,7 +407,7 @@
 <span class="w">  </span><span class="p">})</span><span class="w"></span>
 </code></pre></div>
 <h2 id="keep-on-building">Keep on Building<a aria-hidden="true" class="hover_anchor" href="#keep-on-building"><i class="fa fa-link"></i></a></h2>
-<p>Now that you know how to use <code>xrpl.js</code> to connect to the XRP Ledger, get an account, and look up information about it, you can also:</p>
+<p>Now that you know how to use <code>xrpl.js</code> to connect to the XRP Ledger, generate a wallet, and look up information about an account, you can also:</p>
 <ul>
 <li><a href="send-xrp.html">Send XRP</a>.</li>
 <li><a href="issue-a-fungible-token.html">Issue a Fungible Token</a></li>
@@ -727,11 +728,6 @@
         <a class="nav-link" href="decentralized-exchange.html">Decentralized Exchange</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_1_5">
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="automated-market-makers.html">Automated Market Makers <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="offers.html">Offers</a>
@@ -1716,11 +1712,6 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="amm.html">AMM <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="check.html">Check</a>
   </div>
 
@@ -1826,31 +1817,6 @@
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="accountdelete.html">AccountDelete</a>
-  </div>
-
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="ammbid.html">AMMBid <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="ammcreate.html">AMMCreate <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="ammdeposit.html">AMMDeposit <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="ammvote.html">AMMVote <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="ammwithdraw.html">AMMWithdraw <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
   </div>
 
       
@@ -2300,11 +2266,6 @@
         <a class="nav-link" href="path-and-order-book-methods.html">Path and Order Book Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_4">
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="amm_info.html">amm_info <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="book_offers.html">book_offers</a>
@@ -2759,11 +2720,6 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="label-amm.html">AMM</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="label-blockchain.html">Blockchain</a>
   </div>
 
@@ -2976,15 +2932,14 @@
 <link rel="stylesheet" href="assets/vendor/fontawesome/css/font-awesome.min.css" />
 
 <!-- Algolia DocSearch -->
-<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script type="text/javascript">
 $(document).ready(() => {
   const ds = docsearch({
-  apiKey: '3431349deec23b0bc3dcd3424beb9a6e',
+  apiKey: '70de5b9b8ef95460f3c6e04054b325b2',
   indexName: 'xrpl',
-  container: '#topsearchboxcontainer',
-  appId: 'R39QY3MZC7',
-  searchParameters: { 'facetFilters': ["lang:en"] },
+  inputSelector: '#topsearchbox',
+  algoliaOptions: { 'facetFilters': ["lang:en"] },
   debug: false
   });
   const search_params = new URLSearchParams(window.location.search)

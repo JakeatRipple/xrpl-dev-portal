@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>SignerListSet - XRPL.org</title>
+
     <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="SignerListSet | XRPL.org">
     <meta property="og:url" content="https://xrpl.org/signerlistset.html" />
@@ -14,7 +15,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" content="https://xrpl.org/assets/img/xrpl-twitter-card.png" />
     <meta name="robots" content="index, follow" />
-    <meta name="docsearch:language" content="en" />
+
     <link rel="alternate" href="https://xrpl.org/signerlistset.html" hreflang="en" />
     <link rel="alternate" href="https://xrpl.org/ja/signerlistset.html" hreflang="ja" />
     <link rel="alternate" href="https://xrpl.org/signerlistset.html" hreflang="x-default" /><!-- Default: US english -->
@@ -51,12 +52,12 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KCQZ3L8');</script>
-    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45576805-2"></script>
 
     <!-- Stylesheet -->
-    <link href="assets/css/devportal2022-v13.css" rel="stylesheet" />
+    <link href="assets/css/devportal2022-v11b.css" rel="stylesheet" />
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
 
     <!-- Theme switch -->
@@ -81,7 +82,7 @@
 
 </head>
 
-<body class="xrp-ledger-dev-portal sidebar-primary lang-en " data-spy="scroll" data-target=".page-toc" data-offset="0" id="xrp-ledger-dev-portal">
+<body class="xrp-ledger-dev-portal sidebar-primary lang-en " data-spy="scroll" data-target=".page-toc" data-offset="0">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCQZ3L8"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -90,11 +91,11 @@
 <div class="top-banner fixed-top"> 
   <div class="d-none d-md-flex justify-content-center">
     <span><p class="mb-0">Native NFT support is now available on the XRP Ledger</p></span>
-    <span><a href="/mint-and-burn-nftokens.html" class="btn btn-outline-secondary">Learn More</a></span>
+    <span><a href="/mint-and-burn-nftokens.html?utm_source=web&utm_medium=web&utm_campaign=xls-20_launch&utm_content=pencil_banner" class="btn btn-outline-secondary">Learn More</a></span>
   </div>
   <div class="d-md-none d-block justify-content-center">
     <span><p class="mb-0">Native NFT support is now available</p></span>
-    <span><p class="mb-0">on the XRP Ledger<a href="/mint-and-burn-nftokens.html" class="btn btn-outline-secondary">Learn More</a></p></span>
+    <span><p class="mb-0">on the XRP Ledger<a href="/mint-and-burn-nftokens.html?utm_source=web&utm_medium=web&utm_campaign=xls-20_launch&utm_content=pencil_banner" class="btn btn-outline-secondary">Learn More</a></p></span>
   </div>
 </div>
 <nav class="top-nav navbar navbar-expand-lg navbar-dark fixed-top">
@@ -202,7 +203,7 @@
     <div class="nav-item search" id="topnav-search">
       <form class="navbar-form navbar-right" role="search">
         <div class="form-inline">
-          <div class="input-group" id="topsearchboxcontainer">
+          <div class="input-group">
             <label class="input-group-prepend" for="topsearchbox"><i class="fa fa-search input-group-text"></i><span class="sr-only">Search</span></label>
             <input id="topsearchbox" name="q" type="text" class="form-control searchinput" placeholder="Search site...">
           </div><!--/.input-group-->
@@ -283,7 +284,7 @@
     <div class="content">
         <h1 id="signerlistset">SignerListSet<a aria-hidden="true" class="hover_anchor" href="#signerlistset"><i class="fa fa-link"></i></a></h1>
 <p><a class="external-link" href="https://github.com/XRPLF/rippled/blob/master/src/ripple/app/tx/impl/SetSignerList.cpp" target="_blank" title="Source">[Source] <i aria-hidden="true" class="fa fa-external-link"></i></a></p>
-<p>The SignerListSet transaction creates, replaces, or removes a list of signers that can be used to <a href="multi-signing.html">multi-sign</a> a transaction. This transaction type was introduced by the <a href="known-amendments.html#multisign">MultiSign amendment</a>.</p>
+<p>The SignerListSet transaction creates, replaces, or removes a list of signers that can be used to <a href="multi-signing.html">multi-sign</a> a transaction. This transaction type was introduced by the <a href="known-amendments.html#multisign">MultiSign amendment</a>. <a class="external-link" href="https://github.com/ripple/rippled/releases/tag/0.31.0" target="_blank" title="New in: rippled 0.31.0"><img alt="New in: rippled 0.31.0" class="dactyl_badge" src="https://img.shields.io/badge/New%20in-rippled%200.31.0-blue.svg"/> <i aria-hidden="true" class="fa fa-external-link"></i></a></p>
 <h2 id="example-signerlistset-json">Example SignerListSet JSON<a aria-hidden="true" class="hover_anchor" href="#example-signerlistset-json"><i class="fa fa-link"></i></a></h2>
 <div class="codehilite"><div aria-label="Code Buttons" class="btn-group" role="group"><button alt="Copy to clipboard" class="btn btn-outline-secondary clipboard-btn" data-clipboard-target="#codeblock-0" id="codeblock-0button"><i class="fa fa-clipboard"></i></button></div><pre><span></span><code id="codeblock-0"><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nt">"Flags"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
@@ -313,9 +314,8 @@
 <span class="w">    </span><span class="p">]</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<p><a class="btn btn-primary" href="websocket-api-tool.html?server=wss%3A%2F%2Fxrplcluster.com%2F&amp;req=%7B%22id%22%3A%22example_SignerListSet%22%2C%22command%22%3A%22tx%22%2C%22transaction%22%3A%2209A9C86BF20695735AB03620EB1C32606635AC3DA0B70282F37C674FC889EFE7%22%2C%22binary%22%3Afalse%7D">Query example transaction.</a></p>
 <h2 id="signerlistset-fields">SignerListSet Fields<a aria-hidden="true" class="hover_anchor" href="#signerlistset-fields"><i class="fa fa-link"></i></a></h2>
-<p>In addition to the <a href="transaction-common-fields.html">common fields</a>, SignerListSet transactions use the following fields:</p>
+<p>In addition to the <a href="transaction-common-fields.html">common fields</a>, a SignerListSet transaction uses the following fields:</p>
 <!-- -->
 <table class="table-responsive">
 <thead>
@@ -345,7 +345,7 @@
 <p>You cannot create a signer list such that the <code>SignerQuorum</code> could never be met. The <code>SignerQuorum</code> must be greater than 0 but less than or equal to the sum of the <code>SignerWeight</code> values in the list. Otherwise, the transaction fails with the error <a href="tem-codes.html"><code>temMALFORMED</code></a>.</p>
 <p>You can create, update, or remove a signer list using the master key, regular key, or the current signer list, if those methods of signing transactions are available.</p>
 <p>You cannot remove the last method of signing transactions from an account. If an account's master key is disabled (the account has the <a href="accountroot.html#accountroot-flags"><code>lsfDisableMaster</code> flag</a> enabled) and the account does not have a <a href="cryptographic-keys.html">Regular Key</a> configured, then you cannot delete the signer list from the account. Instead, the transaction fails with the error <a href="tec-codes.html"><code>tecNO_ALTERNATIVE_KEY</code></a>.</p>
-<p>Creating or replacing a signer list enables the <code>lsfOneOwnerCount</code> flag on the <a href="signerlist.html">SignerList object</a>. Lists that were created before the <a href="known-amendments.html#multisignreserve">MultiSignReserve amendment</a> became enabled do not have this flag and have a higher <a href="reserves.html#owner-reserves">owner reserve</a>. You can decrease the owner reserve for these lists by replacing the list with the same list. For more information, see <a href="signerlist.html#signerlist-flags">SignerList Flags</a>.</p>
+<p>Creating or replacing a signer list enables the <code>lsfOneOwnerCount</code> flag on the <a href="signerlist.html">SignerList object</a>. Lists that were created before the <a href="known-amendments.html#multisignreserve">MultiSignReserve amendment</a> became enabled do not have this flag and have a higher <a href="reserves.html#owner-reserves">owner reserve</a>. You can decrease the owner reserve for these lists by replacing the list with an identical one. For more information, see <a href="signerlist.html#signerlist-flags">SignerList Flags</a>.</p>
 <!-- -->
 <!-- -->
 <!-- API object types -->
@@ -639,11 +639,6 @@
         <a class="nav-link" href="decentralized-exchange.html">Decentralized Exchange</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_1_5">
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="automated-market-makers.html">Automated Market Makers <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="offers.html">Offers</a>
@@ -1628,11 +1623,6 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="amm.html">AMM <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="check.html">Check</a>
   </div>
 
@@ -1738,31 +1728,6 @@
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="accountdelete.html">AccountDelete</a>
-  </div>
-
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="ammbid.html">AMMBid <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="ammcreate.html">AMMCreate <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="ammdeposit.html">AMMDeposit <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="ammvote.html">AMMVote <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="ammwithdraw.html">AMMWithdraw <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
   </div>
 
       
@@ -2212,11 +2177,6 @@
         <a class="nav-link" href="path-and-order-book-methods.html">Path and Order Book Methods</a>
 
     <nav class="nav flex-column collapse" id="tree_nav_group_3_3_2_4">
-      
-  <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="amm_info.html">amm_info <span class="status not_enabled" title="This feature is not currently enabled on the production XRP Ledger."><i class="fa fa-flask"></i></span></a>
-  </div>
-
       
   <div class="nav-item ">
     <a class="nav-link nav-leaf" href="book_offers.html">book_offers</a>
@@ -2671,11 +2631,6 @@
 
       
   <div class="nav-item ">
-    <a class="nav-link nav-leaf" href="label-amm.html">AMM</a>
-  </div>
-
-      
-  <div class="nav-item ">
     <a class="nav-link nav-leaf" href="label-blockchain.html">Blockchain</a>
   </div>
 
@@ -2888,15 +2843,14 @@
 <link rel="stylesheet" href="assets/vendor/fontawesome/css/font-awesome.min.css" />
 
 <!-- Algolia DocSearch -->
-<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script type="text/javascript">
 $(document).ready(() => {
   const ds = docsearch({
-  apiKey: '3431349deec23b0bc3dcd3424beb9a6e',
+  apiKey: '70de5b9b8ef95460f3c6e04054b325b2',
   indexName: 'xrpl',
-  container: '#topsearchboxcontainer',
-  appId: 'R39QY3MZC7',
-  searchParameters: { 'facetFilters': ["lang:en"] },
+  inputSelector: '#topsearchbox',
+  algoliaOptions: { 'facetFilters': ["lang:en"] },
   debug: false
   });
   const search_params = new URLSearchParams(window.location.search)
