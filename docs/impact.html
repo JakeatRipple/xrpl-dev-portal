@@ -277,11 +277,6 @@
         <div class="mt-10" id="map-light"></div>
       </div>
   
-      <!-- Small -->
-      <div class="col d-lg-none d-block">
-        <div class="mt-10" id="map-dark-small"></div>
-        <div class="mt-10" id="map-light-small"></div>
-      </div>
     </div>
   </section>
 
@@ -511,11 +506,9 @@ $(document).ready(() => {
 
 <!-- Light -->
 <script type="text/javascript" src="assets/js/impact/map-animation-light.json"></script>
-<script type="text/javascript" src="assets/js/impact/map-animation-light-small.json"></script>
 
 <!-- Dark -->
 <script type="text/javascript" src="assets/js/impact/map-animation-dark.json"></script>
-<script type="text/javascript" src="assets/js/impact/map-animation-dark-small.json"></script>
 
 <script type="text/javascript">
 
@@ -530,17 +523,6 @@ $(document).ready(() => {
     });
   };
   
-  function mapLightSmallAnimation(){
-    bodymovin.loadAnimation({
-      container: document.getElementById('map-light-small'),
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      animationData: mapLightSmall
-    });
-  };
-
-  mapLightSmallAnimation();
   mapLightAnimation();
 
 
@@ -555,19 +537,7 @@ $(document).ready(() => {
     });
   };
   
-  function mapDarkSmallAnimation(){
-    bodymovin.loadAnimation({
-      container: document.getElementById('map-dark-small'),
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      animationData: mapDarkSmall
-    });
-  };
-
-  mapDarkSmallAnimation();
   mapDarkAnimation();
-
   
 </script>
 
